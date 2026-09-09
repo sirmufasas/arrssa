@@ -4618,3 +4618,9 @@ body { top: 0 !important; }
 }
 .navbar__brand .brand-logo__pdf::-webkit-scrollbar { display: none; }
 .navbar__brand .brand-logo__pdf { appearance: none; -webkit-appearance: none; }
+
+/* Render the supplied PDF as a transparent raster asset: an image cannot create
+   the browser PDF viewer scrollbars or its grey page background. */
+.navbar__brand .brand-logo--pdf { width: 184px; height: 50px; overflow: hidden !important; }
+.navbar__brand .brand-logo__image { display: block; width: 184px; height: 50px; object-fit: contain; object-position: left center; background: transparent; border: 0; }
+@media (max-width: 640px) { .navbar__brand .brand-logo--pdf, .navbar__brand .brand-logo__image { width: 145px; height: 42px; } }

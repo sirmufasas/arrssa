@@ -23,16 +23,12 @@ export default function Logo({ size = "md", light = false, asAnchor = true }: Lo
 
   const content = (
     <span translate="no" className={`brand-logo brand-logo--pdf ${light ? "brand-logo--light" : ""}`}>
-      <object
-        data="/ARSSA_logo_main.pdf"
-        type="application/pdf"
-        className="brand-logo__pdf"
-        aria-label="ARSSA logo"
-      >
-        <span className="brand-logo__mark" aria-hidden="true">
-          <span className="brand-logo__a">A</span><span className="brand-logo__r">R</span><span className="brand-logo__s">S</span>
-        </span>
-      </object>
+      <img
+        src="/arssa-logo.png"
+        className="brand-logo__image"
+        alt="ARSSA"
+        draggable="false"
+      />
     </span>
   );
 
