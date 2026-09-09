@@ -9,7 +9,14 @@ export const translations = {
 
 declare global { interface Window { google?: any; arssaGoogleTranslateInit?: () => void; } }
 function setTranslationCookie(language: Language) {
-  document.cookie = language === "fr" ? "googtrans=/en/fr; path=/; max-age=31536000" : "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  if (language === "fr") {
+    document.cookie = "googtrans=/en/fr; path=/; max-age=31536000";
+    return;
+  }
+  // Clear both the host and parent-domain variants Google Translate may create.
+  document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie = "googtrans=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie = "googtrans=; path=/; domain=." + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 }
 function loadTranslator() {
   if (document.getElementById("google-translate-script")) return;
