@@ -4556,3 +4556,7 @@ h4 {
 }
 .corridor--planet .planet-glow { z-index: 0; }
 .corridor--planet .planet-caption { z-index: 2; }
+
+/* Let the official artwork sit directly on the navbar without a visible PDF page shade. */
+.navbar__brand .brand-logo__pdf { background: transparent; mix-blend-mode: multiply; }
+[data-theme="dark"] .navbar__brand .brand-logo__pdf { mix-blend-mode: screen; }
