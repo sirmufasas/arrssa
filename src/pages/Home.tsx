@@ -25,31 +25,9 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 function CorridorVisual() {
   return (
-    <div className="corridor corridor--planet" role="img" aria-label="ARSSA logo integrated into a floating planet showing Africa">
+    <div className="corridor corridor--planet" role="img" aria-label="Africa globe with ARSSA branding">
       <div className="planet-glow" aria-hidden="true" />
-      <svg className="planet-svg" viewBox="0 0 400 400" fill="none" aria-hidden="true">
-        <defs>
-          <radialGradient id="planetSurface" cx="35%" cy="25%" r="75%">
-            <stop offset="0" stopColor="#274b8e" />
-            <stop offset=".6" stopColor="#132b58" />
-            <stop offset="1" stopColor="#09152e" />
-          </radialGradient>
-          <linearGradient id="africaGradient" x1="135" y1="125" x2="270" y2="300" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#f2c200" /><stop offset=".48" stopColor="#d40000" /><stop offset="1" stopColor="#009639" />
-          </linearGradient>
-          <clipPath id="globeClip"><circle cx="200" cy="200" r="128" /></clipPath>
-        </defs>
-        <circle cx="200" cy="200" r="139" stroke="rgba(242,194,0,.25)" strokeWidth="1" />
-        <circle cx="200" cy="200" r="128" fill="url(#planetSurface)" stroke="#f2c200" strokeOpacity=".65" strokeWidth="2" />
-        <g clipPath="url(#globeClip)" opacity=".16" stroke="#b6d5ff" strokeWidth="1">
-          <ellipse cx="200" cy="200" rx="128" ry="48" /><ellipse cx="200" cy="200" rx="128" ry="92" /><ellipse cx="200" cy="200" rx="52" ry="128" /><ellipse cx="200" cy="200" rx="92" ry="128" />
-        </g>
-        {/* Stylised Africa silhouette with the ARS colours worked into the landmass */}
-        <path d="M173 108 188 101 205 107 216 119 230 126 239 139 253 145 247 158 256 168 249 179 257 190 249 199 252 211 244 221 240 235 232 243 228 259 218 270 215 285 206 299 198 316 190 305 184 292 178 279 169 267 164 253 157 244 160 230 151 219 143 209 136 198 129 188 133 177 142 169 143 157 151 148 153 136 163 128Z" fill="url(#africaGradient)" stroke="#fff" strokeOpacity=".38" strokeWidth="1.5" />
-        <path d="M247 221 258 230 264 243 262 257 256 267 252 254 249 241Z" fill="url(#africaGradient)" stroke="#fff" strokeOpacity=".3" strokeWidth="1" />
-        <g fontFamily="Georgia, serif" fontWeight="700" fontSize="32" textAnchor="middle"><text x="180" y="185" fill="#fff">A</text><text x="201" y="185" fill="#f2c200">R</text><text x="223" y="185" fill="#35c96b">S</text></g>
-        <circle cx="200" cy="200" r="128" stroke="rgba(255,255,255,.14)" strokeWidth="1" />
-      </svg>
+      <img className="planet-photo" src="/africa-globe.png" alt="Africa seen on Earth from space" />
       <div className="planet-caption"><strong>ARSSA</strong><small>Africa in motion</small></div>
     </div>
   );

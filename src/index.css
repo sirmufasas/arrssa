@@ -4540,3 +4540,19 @@ h4 {
   .navbar__brand .brand-logo--pdf,
   .navbar__brand .brand-logo__pdf { width: 145px; height: 42px; }
 }
+
+/* Photorealistic Africa globe supplied for the hero visual. The black image background
+   is screened out so only the globe sits on the hero canvas. */
+.corridor--planet .planet-photo {
+  position: relative;
+  z-index: 1;
+  width: 78%;
+  height: 78%;
+  object-fit: cover;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  animation: africaFloat 5.5s ease-in-out infinite;
+  filter: saturate(1.08) contrast(1.05);
+}
+.corridor--planet .planet-glow { z-index: 0; }
+.corridor--planet .planet-caption { z-index: 2; }
