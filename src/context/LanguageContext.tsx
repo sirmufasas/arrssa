@@ -18,7 +18,7 @@ const COPY: Record<string, string> = {
   "Four Core Divisions. One Integrated Partner.": "Quatre divisions clés. Un partenaire intégré.",
   "Explore what each division delivers": "Découvrez les services de chaque division",
   "Business Facilitation": "Facilitation des affaires", "Market Growth & Distribution": "Croissance des marchés et distribution",
-  "Import & Export": "Importation et exportation", "Maintenance & Cleaning": "Maintenance et nettoyage",
+  "Import & Export": "Importation et exportation", "Maintenance & Cleaning": "Maintenance et nettoyage", "Mining & Resources": "Mines et ressources", "Mining": "Mines", "Mining Support, Sourcing & Cross-Border Commercial Coordination": "Appui minier, approvisionnement et coordination commerciale transfrontalière",
   "About ARSSA": "À propos d'ARSSA", "Target Markets": "Marchés cibles", "Why ARSSA": "Pourquoi ARSSA",
   "Experience That Supports Confidence": "Une expérience qui inspire confiance", "Start Your Enquiry": "Commencez votre demande",
   "Contact ARSSA": "Contacter ARSSA", "Direct Telephone": "Téléphone direct", "Email Correspondence": "Correspondance par e-mail",

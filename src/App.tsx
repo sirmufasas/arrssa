@@ -12,6 +12,7 @@ import BusinessFacilitation from "./pages/services/BusinessFacilitation";
 import MarketGrowth from "./pages/services/MarketGrowth";
 import ImportExport from "./pages/services/ImportExport";
 import MaintenanceCleaning from "./pages/services/MaintenanceCleaning";
+import Mining from "./pages/services/Mining";
 import Markets from "./pages/Markets";
 import WhyArssa from "./pages/WhyArssa";
 import Legacy from "./pages/Legacy";
@@ -80,6 +81,7 @@ export default function App() {
             </PageTransition>
           }
         />
+        <Route path="/services/mining" element={<PageTransition><Mining /></PageTransition>} />
         <Route
           path="/services/maintenance-cleaning"
           element={
