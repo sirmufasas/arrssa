@@ -4560,3 +4560,8 @@ h4 {
 /* Let the official artwork sit directly on the navbar without a visible PDF page shade. */
 .navbar__brand .brand-logo__pdf { background: transparent; mix-blend-mode: multiply; }
 [data-theme="dark"] .navbar__brand .brand-logo__pdf { mix-blend-mode: screen; }
+
+/* Keep the automatic full-page translator invisible; the custom EN / FR control remains the UI. */
+#google_translate_element { position: fixed; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+.goog-te-banner-frame, .skiptranslate iframe { display: none !important; }
+body { top: 0 !important; }
