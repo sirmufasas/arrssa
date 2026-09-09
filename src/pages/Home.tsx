@@ -45,7 +45,8 @@ function CorridorVisual() {
           <ellipse cx="200" cy="200" rx="128" ry="48" /><ellipse cx="200" cy="200" rx="128" ry="92" /><ellipse cx="200" cy="200" rx="52" ry="128" /><ellipse cx="200" cy="200" rx="92" ry="128" />
         </g>
         {/* Stylised Africa silhouette with the ARS colours worked into the landmass */}
-        <path d="M181 105 211 111 229 128 245 143 239 160 250 179 242 194 247 211 235 225 229 246 216 263 207 294 193 313 184 286 173 269 167 249 156 235 160 218 145 204 151 188 143 174 153 158 160 141 174 131Z" fill="url(#africaGradient)" stroke="#fff" strokeOpacity=".38" strokeWidth="1.5" />
+        <path d="M173 108 188 101 205 107 216 119 230 126 239 139 253 145 247 158 256 168 249 179 257 190 249 199 252 211 244 221 240 235 232 243 228 259 218 270 215 285 206 299 198 316 190 305 184 292 178 279 169 267 164 253 157 244 160 230 151 219 143 209 136 198 129 188 133 177 142 169 143 157 151 148 153 136 163 128Z" fill="url(#africaGradient)" stroke="#fff" strokeOpacity=".38" strokeWidth="1.5" />
+        <path d="M247 221 258 230 264 243 262 257 256 267 252 254 249 241Z" fill="url(#africaGradient)" stroke="#fff" strokeOpacity=".3" strokeWidth="1" />
         <g fontFamily="Georgia, serif" fontWeight="700" fontSize="32" textAnchor="middle"><text x="180" y="185" fill="#fff">A</text><text x="201" y="185" fill="#f2c200">R</text><text x="223" y="185" fill="#35c96b">S</text></g>
         <circle cx="200" cy="200" r="128" stroke="rgba(255,255,255,.14)" strokeWidth="1" />
       </svg>
