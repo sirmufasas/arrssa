@@ -24,7 +24,7 @@ const COPY: Record<string, string> = {
   "Contact ARSSA": "Contacter ARSSA", "Direct Telephone": "Téléphone direct", "Email Correspondence": "Correspondance par e-mail",
   "Where We Operate": "Où nous opérons", "Prefer Direct Communication?": "Vous préférez communiquer directement ?",
   "Our Divisions": "Nos divisions", "All Services Overview": "Vue d'ensemble des services",
-  "Request an Enquiry": "Demander un devis", "Contact ARSSA": "Contacter ARSSA", "Loading": "Chargement",
+  "Request an Enquiry": "Demander un devis", "Loading": "Chargement",
   "South Africa — serving the South Africa–DRC corridor": "Afrique du Sud — au service du corridor Afrique du Sud–RDC",
   "Strategic Partnership": "Partenariat stratégique", "Bridging Realities": "Relier les réalités",
   "What We Do": "Ce que nous faisons", "How We Deliver Results": "Comment nous obtenons des résultats",
