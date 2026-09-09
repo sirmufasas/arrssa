@@ -22,7 +22,7 @@ export default function Logo({ size = "md", light = false, asAnchor = true }: Lo
   }[size];
 
   const content = (
-    <span className={`brand-logo brand-logo--pdf ${light ? "brand-logo--light" : ""}`}>
+    <span translate="no" className={`brand-logo brand-logo--pdf ${light ? "brand-logo--light" : ""}`}>
       <object
         data="/ARSSA_logo_main.pdf"
         type="application/pdf"
