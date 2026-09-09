@@ -22,35 +22,17 @@ export default function Logo({ size = "md", light = false, asAnchor = true }: Lo
   }[size];
 
   const content = (
-    <span className={`brand-logo ${light ? "brand-logo--light" : ""}`}>
-      <span
-        className="brand-logo__mark"
-        aria-hidden="true"
-        style={{
-          fontFamily: "var(--font-serif)",
-          fontWeight: 700,
-          letterSpacing: "0.02em",
-          fontSize: fontSizes.mark,
-          lineHeight: 1,
-        }}
+    <span className={`brand-logo brand-logo--pdf ${light ? "brand-logo--light" : ""}`}>
+      <object
+        data="/ARSSA_logo_main.pdf"
+        type="application/pdf"
+        className="brand-logo__pdf"
+        aria-label="ARSSA logo"
       >
-        <span className="brand-logo__a">A</span>
-        <span className="brand-logo__r">R</span>
-        <span className="brand-logo__s">S</span>
-      </span>
-      <span
-        className="brand-logo__sub"
-        style={{
-          fontSize: fontSizes.sub,
-          fontWeight: 700,
-          letterSpacing: "0.15em",
-          textTransform: "uppercase",
-          lineHeight: 1,
-          marginTop: 3,
-        }}
-      >
-        South Africa
-      </span>
+        <span className="brand-logo__mark" aria-hidden="true">
+          <span className="brand-logo__a">A</span><span className="brand-logo__r">R</span><span className="brand-logo__s">S</span>
+        </span>
+      </object>
     </span>
   );
 

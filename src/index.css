@@ -4511,3 +4511,8 @@ h4 {
 @keyframes africaFloat { 0%,100% { transform:translateY(0) rotate(-1deg); } 50% { transform:translateY(-14px) rotate(1deg); } }
 @keyframes planetPulse { 0%,100% { transform:scale(.9); opacity:.55; } 50% { transform:scale(1.1); opacity:.9; } }
 @media (prefers-reduced-motion: reduce) { .corridor--planet .planet-svg,.planet-caption,.corridor--planet .planet-glow { animation:none; } }
+
+/* Official supplied PDF logo in the navbar */
+.brand-logo--pdf { width: 150px; height: 44px; display:block; overflow:hidden; }
+.brand-logo__pdf { width: 150px; height: 48px; display:block; border:0; }
+@media (max-width: 640px) { .brand-logo--pdf, .brand-logo__pdf { width: 125px; } }
