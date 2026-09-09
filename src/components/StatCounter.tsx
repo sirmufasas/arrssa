@@ -20,26 +20,14 @@ export default function StatCounter({
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const reduced = useReducedMotion();
-  const [display, setDisplay] = useState(reduced ? value : 0);
+  // Keep the real value visible immediately. This prevents the language translator
+  // or a delayed viewport observer from leaving a misleading zero on screen.
+  const [display, setDisplay] = useState(value);
 
   useEffect(() => {
-    if (!inView || displayText) return;
-    if (reduced) {
-      setDisplay(value);
-      return;
-    }
-    let frame = 0;
-    const duration = 1400;
-    const start = performance.now();
-    const tick = (now: number) => {
-      const t = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - t, 4);
-      setDisplay(Math.round(eased * value));
-      frame = requestAnimationFrame(tick);
-    };
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [inView, reduced, value, displayText]);
+    // Numbers are content, not animation state: always restore the actual value.
+    if (!displayText) setDisplay(value);
+  }, [value, displayText]);
 
   const variantClass =
     variant === "red"
