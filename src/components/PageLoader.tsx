@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import { useT } from "../context/LanguageContext";
 
 const BOOT_DURATION = 3200 // first load — longer
 const NAV_DURATION = 2800;   // between pages — brief
@@ -27,6 +28,7 @@ export default function PageLoader() {
   const { pathname, search } = useLocation();
   const reduced = useReducedMotion();
   const embed = isEmbed(search, pathname);
+  const t = useT();
 
   const isBoot = useRef(true);
   const [visible, setVisible] = useState(!embed);
@@ -67,7 +69,7 @@ export default function PageLoader() {
           key={pathname}
           className="page-loader"
           role="status"
-          aria-label="Loading"
+          aria-label={t.loading}
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
@@ -81,7 +83,7 @@ export default function PageLoader() {
               <span>S</span>
             </span>
           </div>
-          <span className="page-loader__label">Agence Rebi Service South Africa</span>
+          <span className="page-loader__label">{t.loading} · ARSSA</span>
           <div className="page-loader__bar" aria-hidden="true">
             <span />
           </div>

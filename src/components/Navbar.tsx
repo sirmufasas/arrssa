@@ -12,6 +12,7 @@ import {
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
 import { NAV_LINKS, SERVICES } from "../data/site";
+import { useLanguage, useT } from "../context/LanguageContext";
 
 const ICONS: Record<string, React.ComponentType<{ size?: number | string }>> = {
   briefcase: Briefcase,
@@ -26,6 +27,9 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
   const reduced = useReducedMotion();
+  const { language, setLanguage } = useLanguage();
+  const t = useT();
+  const navLabels: Record<string, string> = { Home: t.home, About: t.about, Services: t.services, Markets: t.markets, "Why ARSSA": t.why, Legacy: t.legacy };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 15);
@@ -67,7 +71,7 @@ export default function Navbar() {
                     }
                     aria-haspopup="true"
                   >
-                    {link.label}
+                    {navLabels[link.label] ?? link.label}
                     <ChevronDown size={13} className="nav-link__chevron" aria-hidden="true" />
                   </NavLink>
                   <div className="nav-dropdown__menu" role="menu" aria-label="Services Menu">
@@ -105,16 +109,21 @@ export default function Navbar() {
                   end={link.path === "/"}
                   className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
                 >
-                  {link.label}
+                  {navLabels[link.label] ?? link.label}
                 </NavLink>
               )
             )}
           </nav>
 
           <div className="navbar__actions">
+            <div className="language-toggle" role="group" aria-label="Language">
+              <button type="button" className={language === "en" ? "active" : ""} onClick={() => setLanguage("en")} aria-pressed={language === "en"}>EN</button>
+              <span>/</span>
+              <button type="button" className={language === "fr" ? "active" : ""} onClick={() => setLanguage("fr")} aria-pressed={language === "fr"}>FR</button>
+            </div>
             <ThemeToggle />
             <Link to="/enquiry" className="btn btn--accent btn--sm navbar__cta-desktop">
-              Request an Enquiry
+              {t.enquiry}
             </Link>
             <button
               className={`navbar__burger ${mobileOpen ? "open" : ""}`}
@@ -158,7 +167,7 @@ export default function Navbar() {
                       aria-expanded={servicesOpen}
                       aria-controls="mobile-services"
                     >
-                      <span>{link.label}</span>
+                      <span>{navLabels[link.label] ?? link.label}</span>
                       <ChevronRight
                         size={17}
                         style={{
@@ -200,7 +209,7 @@ export default function Navbar() {
                       }
                       onClick={() => setMobileOpen(false)}
                     >
-                      {link.label}
+                      {navLabels[link.label] ?? link.label}
                     </NavLink>
                   </li>
                 )
