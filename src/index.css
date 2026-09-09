@@ -4679,3 +4679,11 @@ img, video, canvas, iframe { max-width: 100%; }
   .corridor { aspect-ratio: 1 / 1.05; }
   .btn { max-width: 100%; }
 }
+
+/* Globe motion: a simple, calm vertical hover only. */
+.corridor--planet .planet-photo,
+.corridor--planet .planet-caption { animation: africaFloatCentered 5.5s ease-in-out infinite; }
+.corridor--planet::before,
+.corridor--planet::after,
+.corridor--planet .planet-glow { animation: none !important; }
+.corridor--planet::after { opacity: .7; }
