@@ -58,28 +58,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try { localStorage.setItem(STORAGE_KEY, language); } catch {}
     document.documentElement.lang = language;
-    // Translate the complete rendered document, including paragraphs, forms, footer,
-    // legal copy and content added later by React. The custom dictionary handles the
-    // branded copy while Google Translate covers the remaining site text.
+    // Only our controlled copy dictionary may change text. Automatic page translation
+    // is intentionally disabled because it can rewrite numbers, dates, phone numbers,
+    // form values and ARSSA identifiers.
     translatePage(language);
-    if (language === "fr") {
-      document.cookie = "googtrans=/en/fr; path=/; max-age=31536000";
-      if (!document.getElementById("google-translate-script")) {
-        const script = document.createElement("script");
-        script.id = "google-translate-script";
-        script.src = "https://translate.google.com/translate_a/element.js?cb=arssaGoogleTranslateInit";
-        script.async = true;
-        document.body.appendChild(script);
-        (window as Window & { arssaGoogleTranslateInit?: () => void }).arssaGoogleTranslateInit = () => {
-          const google = (window as Window & { google?: { translate?: { TranslateElement?: new (config: object, id: string) => unknown } } }).google;
-          if (google?.translate?.TranslateElement && !document.getElementById("google_translate_element")?.children.length) {
-            new google.translate.TranslateElement({ pageLanguage: "en", includedLanguages: "fr", autoDisplay: false }, "google_translate_element");
-          }
-        };
-      }
-    } else {
-      document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    }
     const observer = new MutationObserver(() => translatePage(language));
     observer.observe(document.body, { childList: true, subtree: true });
     return () => observer.disconnect();
@@ -87,12 +69,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const setLanguage = (next: Language) => {
     setLanguageState(next);
-    // Google Translate reads its cookie on a fresh document; reload guarantees every
-    // text node is translated consistently and lets French spacing flow naturally.
-    window.setTimeout(() => window.location.reload(), 80);
   };
 
-  return <LanguageContext.Provider value={{ language, setLanguage }}>{children}<div id="google_translate_element" aria-hidden="true" /></LanguageContext.Provider>;
+  return <LanguageContext.Provider value={{ language, setLanguage }}>{children}</LanguageContext.Provider>;
 }
 export function useLanguage() { return useContext(LanguageContext); }
 export function useT() { const { language } = useLanguage(); return translations[language]; }
