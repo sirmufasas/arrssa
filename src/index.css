@@ -4516,3 +4516,27 @@ h4 {
 .brand-logo--pdf { width: 150px; height: 44px; display:block; overflow:hidden; }
 .brand-logo__pdf { width: 150px; height: 48px; display:block; border:0; }
 @media (max-width: 640px) { .brand-logo--pdf, .brand-logo__pdf { width: 125px; } }
+
+/* Keep the supplied horizontal logo seated cleanly in the navbar. */
+.navbar__brand .brand-logo--pdf {
+  width: 184px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  line-height: 0;
+}
+.navbar__brand .brand-logo__pdf {
+  display: block;
+  width: 184px;
+  height: 50px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .navbar__brand .brand-logo--pdf,
+  .navbar__brand .brand-logo__pdf { width: 145px; height: 42px; }
+}
