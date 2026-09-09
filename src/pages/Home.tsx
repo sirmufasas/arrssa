@@ -20,6 +20,7 @@ import StatCounter from "../components/StatCounter";
 import CTASection from "../components/CTASection";
 import GoogleReviews from "../components/GoogleReviews";
 import { SERVICES } from "../data/site";
+import { useT } from "../context/LanguageContext";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -37,6 +38,7 @@ function CorridorVisual() {
 export default function Home() {
   const [selectedDivision, setSelectedDivision] = useState(SERVICES[0].slug);
   const currentSvc = SERVICES.find((s) => s.slug === selectedDivision) || SERVICES[0];
+  const t = useT();
 
   return (
     <>
@@ -115,27 +117,27 @@ export default function Home() {
           <ScrollReveal>
             <div className="stats" role="list" aria-label="ARSSA at a glance">
               <div role="listitem">
-                <StatCounter value={4} label="Core Divisions" />
+                <StatCounter value={4} label={t.coreDivisions} />
               </div>
               <div role="listitem">
-                <StatCounter value={2} label="Countries Bridged" variant="gold" />
+                <StatCounter value={2} label={t.countriesBridged} variant="gold" />
               </div>
               <div role="listitem">
                 <StatCounter
                   value={1}
-                  suffix=" Cross-Border"
-                  label="Business Support"
+                  suffix={t.crossBorder}
+                  label={t.businessSupport}
                   variant="green"
-                  displayText="Cross-Border"
+                  displayText={t.crossBorder}
                 />
               </div>
               <div role="listitem">
                 <StatCounter
                   value={1}
-                  suffix=" Integrated"
-                  label="Market Solutions"
+                  suffix={t.integrated}
+                  label={t.marketSolutions}
                   variant="red"
-                  displayText="Integrated"
+                  displayText={t.integrated}
                 />
               </div>
             </div>
