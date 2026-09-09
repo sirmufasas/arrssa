@@ -25,65 +25,31 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 function CorridorVisual() {
   return (
-    <div className="corridor" role="img" aria-label="South Africa to DRC corridor bridged by ARSSA">
-      <svg viewBox="0 0 400 400" fill="none" aria-hidden="true">
+    <div className="corridor corridor--planet" role="img" aria-label="ARSSA logo integrated into a floating planet showing Africa">
+      <div className="planet-glow" aria-hidden="true" />
+      <svg className="planet-svg" viewBox="0 0 400 400" fill="none" aria-hidden="true">
         <defs>
-          <linearGradient id="lineA" x1="200" y1="70" x2="200" y2="200" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#f2c200" stopOpacity="0.9" />
-            <stop offset="1" stopColor="#f2c200" stopOpacity="0.3" />
-          </linearGradient>
-          <linearGradient id="lineB" x1="200" y1="330" x2="200" y2="200" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#009639" stopOpacity="0.9" />
-            <stop offset="1" stopColor="#009639" stopOpacity="0.3" />
-          </linearGradient>
-          <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#f2c200" stopOpacity="0.6" />
-            <stop offset="100%" stopColor="#f2c200" stopOpacity="0" />
+          <radialGradient id="planetSurface" cx="35%" cy="25%" r="75%">
+            <stop offset="0" stopColor="#274b8e" />
+            <stop offset=".6" stopColor="#132b58" />
+            <stop offset="1" stopColor="#09152e" />
           </radialGradient>
+          <linearGradient id="africaGradient" x1="135" y1="125" x2="270" y2="300" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#f2c200" /><stop offset=".48" stopColor="#d40000" /><stop offset="1" stopColor="#009639" />
+          </linearGradient>
+          <clipPath id="globeClip"><circle cx="200" cy="200" r="128" /></clipPath>
         </defs>
-
-        {/* Dynamic network nodes */}
-        <g opacity="0.6">
-          <circle cx="90" cy="140" r="4" fill="#f2c200" />
-          <circle cx="310" cy="130" r="4" fill="#3ecf6f" />
-          <circle cx="85" cy="265" r="4" fill="#3ecf6f" />
-          <circle cx="315" cy="275" r="4" fill="#f2c200" />
-          <line x1="90" y1="140" x2="200" y2="200" stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="3 3" />
-          <line x1="310" y1="130" x2="200" y2="200" stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="3 3" />
-          <line x1="85" y1="265" x2="200" y2="200" stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="3 3" />
-          <line x1="315" y1="275" x2="200" y2="200" stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="3 3" />
-          <circle cx="200" cy="70" r="6" fill="#f2c200" />
-          <circle cx="200" cy="330" r="6" fill="#3ecf6f" />
+        <circle cx="200" cy="200" r="139" stroke="rgba(242,194,0,.25)" strokeWidth="1" />
+        <circle cx="200" cy="200" r="128" fill="url(#planetSurface)" stroke="#f2c200" strokeOpacity=".65" strokeWidth="2" />
+        <g clipPath="url(#globeClip)" opacity=".16" stroke="#b6d5ff" strokeWidth="1">
+          <ellipse cx="200" cy="200" rx="128" ry="48" /><ellipse cx="200" cy="200" rx="128" ry="92" /><ellipse cx="200" cy="200" rx="52" ry="128" /><ellipse cx="200" cy="200" rx="92" ry="128" />
         </g>
-
-        {/* Active connection lines */}
-        <line x1="200" y1="75" x2="200" y2="150" stroke="url(#lineA)" strokeWidth="2.5" className="corridor__line" />
-        <line x1="200" y1="250" x2="200" y2="325" stroke="url(#lineB)" strokeWidth="2.5" className="corridor__line" />
-
-        {/* Ambient orbital rings */}
-        <circle cx="200" cy="200" r="85" stroke="rgba(255,255,255,0.1)" strokeWidth="1" strokeDasharray="4 6" />
-        <circle cx="200" cy="200" r="130" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
+        {/* Stylised Africa silhouette with the ARS colours worked into the landmass */}
+        <path d="M181 105 211 111 229 128 245 143 239 160 250 179 242 194 247 211 235 225 229 246 216 263 207 294 193 313 184 286 173 269 167 249 156 235 160 218 145 204 151 188 143 174 153 158 160 141 174 131Z" fill="url(#africaGradient)" stroke="#fff" strokeOpacity=".38" strokeWidth="1.5" />
+        <g fontFamily="Georgia, serif" fontWeight="700" fontSize="32" textAnchor="middle"><text x="180" y="185" fill="#fff">A</text><text x="201" y="185" fill="#f2c200">R</text><text x="223" y="185" fill="#35c96b">S</text></g>
+        <circle cx="200" cy="200" r="128" stroke="rgba(255,255,255,.14)" strokeWidth="1" />
       </svg>
-
-      <div className="corridor__node corridor__node--sa">
-        <div className="corridor__chip">
-          🇿🇦 South Africa
-          <small>Origin &amp; Enterprise Base</small>
-        </div>
-      </div>
-
-      <div className="corridor__hub" aria-hidden="true">
-        <span>A</span>
-        <span>R</span>
-        <span>S</span>
-      </div>
-
-      <div className="corridor__node corridor__node--drc">
-        <div className="corridor__chip">
-          🇨🇩 Democratic Republic of Congo
-          <small>Target Growth Market</small>
-        </div>
-      </div>
+      <div className="planet-caption"><strong>ARSSA</strong><small>Africa in motion</small></div>
     </div>
   );
 }
