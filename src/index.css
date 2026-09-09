@@ -4606,3 +4606,15 @@ body { top: 0 !important; }
 @keyframes globeRing { from { transform:translate(-50%,-50%) rotate(0deg); } to { transform:translate(-50%,-50%) rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .corridor--planet::before,.corridor--planet::after { animation:none; } }
 .notranslate { translate: no; }
+
+/* PDF logo viewport: no page background, no internal scrollbars, no extra box. */
+.navbar__brand,
+.navbar__brand .brand-logo,
+.navbar__brand .brand-logo--pdf,
+.navbar__brand .brand-logo__pdf {
+  background: transparent !important;
+  overflow: hidden !important;
+  scrollbar-width: none;
+}
+.navbar__brand .brand-logo__pdf::-webkit-scrollbar { display: none; }
+.navbar__brand .brand-logo__pdf { appearance: none; -webkit-appearance: none; }
