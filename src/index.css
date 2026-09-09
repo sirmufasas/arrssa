@@ -4605,3 +4605,4 @@ body { top: 0 !important; }
 @keyframes globeAura { 0%,100% { opacity:.65; transform:translate(-50%,-50%) scale(.92); } 50% { opacity:1; transform:translate(-50%,-50%) scale(1.08); } }
 @keyframes globeRing { from { transform:translate(-50%,-50%) rotate(0deg); } to { transform:translate(-50%,-50%) rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .corridor--planet::before,.corridor--planet::after { animation:none; } }
+.notranslate { translate: no; }

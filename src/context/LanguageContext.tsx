@@ -58,10 +58,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try { localStorage.setItem(STORAGE_KEY, language); } catch {}
     document.documentElement.lang = language;
-    // Only our controlled copy dictionary may change text. Automatic page translation
-    // is intentionally disabled because it can rewrite numbers, dates, phone numbers,
-    // form values and ARSSA identifiers.
+    // Translate rendered copy through the language provider; preserve brand and controls.
     translatePage(language);
+    document.querySelectorAll(".notranslate, [data-preserve-language]").forEach((el) => el.setAttribute("translate", "no"));
     const observer = new MutationObserver(() => translatePage(language));
     observer.observe(document.body, { childList: true, subtree: true });
     return () => observer.disconnect();
