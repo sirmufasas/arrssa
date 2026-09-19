@@ -29,7 +29,6 @@ function CorridorVisual() {
     <div className="corridor corridor--planet" role="img" aria-label="Africa globe with ARSSA branding">
       <div className="planet-glow" aria-hidden="true" />
       <img className="planet-photo planet-photo--unity" src="/arssa-unity-globe.jpg" alt="Hands from many nations holding a map of Africa bearing the ARSSA logo" />
-      <div translate="no" className="planet-mark" aria-label="ARSSA"><span>A</span><span>R</span><span>S</span><b>S</b><i>A</i></div>
       <div className="planet-caption"><strong>ARSSA</strong><small>Africa in motion</small></div>
     </div>
   );
