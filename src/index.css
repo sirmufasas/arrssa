@@ -4557,6 +4557,13 @@ h4 {
 .corridor--planet .planet-glow { z-index: 0; }
 .corridor--planet .planet-caption { z-index: 2; }
 
+/* New full-colour hero photo (hands + flags holding the ARSSA-branded map of Africa).
+   It has no black background to screen out, so the old blend/filter treatment is disabled here. */
+.corridor--planet .planet-photo--unity {
+  mix-blend-mode: normal;
+  filter: none;
+}
+
 /* Let the official artwork sit directly on the navbar without a visible PDF page shade. */
 .navbar__brand .brand-logo__pdf { background: transparent; mix-blend-mode: multiply; }
 [data-theme="dark"] .navbar__brand .brand-logo__pdf { mix-blend-mode: screen; }

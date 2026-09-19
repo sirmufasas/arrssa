@@ -116,11 +116,14 @@ export default function Navbar() {
           </nav>
 
           <div className="navbar__actions">
-            <div className="language-toggle" role="group" aria-label="Language">
-              <button type="button" className={language === "en" ? "active" : ""} onClick={() => setLanguage("en")} aria-pressed={language === "en"}>EN</button>
-              <span>/</span>
-              <button type="button" className={language === "fr" ? "active" : ""} onClick={() => setLanguage("fr")} aria-pressed={language === "fr"}>FR</button>
-            </div>
+            {/* Hidden for now — language toggle needs fixing. Restore by uncommenting. */}
+            {false && (
+              <div className="language-toggle" role="group" aria-label="Language">
+                <button type="button" className={language === "en" ? "active" : ""} onClick={() => setLanguage("en")} aria-pressed={language === "en"}>EN</button>
+                <span>/</span>
+                <button type="button" className={language === "fr" ? "active" : ""} onClick={() => setLanguage("fr")} aria-pressed={language === "fr"}>FR</button>
+              </div>
+            )}
             <ThemeToggle />
             <Link to="/enquiry" className="btn btn--accent btn--sm navbar__cta-desktop">
               {t.enquiry}
