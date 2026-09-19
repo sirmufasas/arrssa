@@ -4700,3 +4700,54 @@ img, video, canvas, iframe { max-width: 100%; }
 .corridor--planet::after,
 .corridor--planet .planet-glow { animation: none !important; }
 .corridor--planet::after { opacity: .7; }
+
+/* Enquiry / contact form success popup */
+.confirm-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 12, 24, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2000;
+  animation: confirmFadeIn 0.2s ease-out;
+}
+.confirm-modal {
+  position: relative;
+  background: var(--bg-surface-elevated, #fff);
+  border-radius: 16px;
+  padding: 40px 32px 32px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(7, 12, 24, 0.35);
+  animation: confirmPopIn 0.25s cubic-bezier(.34,1.56,.64,1);
+}
+.confirm-modal h2 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  margin: 18px 0 10px;
+  color: var(--ink-heading);
+}
+.confirm-modal p {
+  color: var(--ink-soft);
+  margin: 0 0 24px;
+  line-height: 1.55;
+}
+.confirm-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--ink-mute);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+}
+.confirm-modal__close:hover { background: var(--line-soft); color: var(--ink); }
+@keyframes confirmFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes confirmPopIn { from { opacity: 0; transform: scale(.92) translateY(8px); } to { opacity: 1; transform: scale(1) translateY(0); } }

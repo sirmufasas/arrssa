@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { CheckCircle2, Loader2, Send } from "lucide-react";
+import { Loader2, Send } from "lucide-react";
 import { useNetlifyForm } from "../../hooks/useNetlifyForm";
 import { Field, FormStatusBanner, isValidEmail } from "./FormField";
+import ConfirmationModal from "../ConfirmationModal";
 
 interface Errors {
   [key: string]: string;
 }
 
 export default function ContactForm() {
-  const { status, error, submit } = useNetlifyForm("contact");
+  const { status, error, submit, setStatus } = useNetlifyForm("contact");
   const [values, setValues] = useState({ name: "", email: "", phone: "", message: "" });
   const [errors, setErrors] = useState<Errors>({});
 
@@ -33,26 +34,24 @@ export default function ContactForm() {
     if (!validate()) return;
     const fd = new FormData();
     Object.entries(values).forEach(([k, v]) => fd.append(k, v));
-    await submit(fd);
+    const ok = await submit(fd);
+    if (ok) {
+      setValues({ name: "", email: "", phone: "", message: "" });
+    }
   };
 
-  if (status === "success") {
-    return (
-      <div className="form-panel" role="status">
-        <div style={{ textAlign: "center", padding: "32px 8px" }}>
-          <CheckCircle2 size={52} color="var(--green)" style={{ margin: "0 auto 20px" }} aria-hidden="true" />
-          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: 28, marginBottom: 12 }}>
-            Message Sent
-          </h2>
-          <p style={{ color: "var(--ink-soft)", maxWidth: 440, margin: "0 auto" }}>
-            Thank you for reaching out. We will get back to you as soon as possible.
-          </p>
-        </div>
-      </div>
-    );
-  }
+  const closeConfirmation = () => {
+    setStatus("idle");
+  };
 
   return (
+    <>
+      <ConfirmationModal
+        open={status === "success"}
+        title="Message Sent"
+        message="Thank you for reaching out to ARSSA. We've received your message and will get back to you as soon as possible."
+        onClose={closeConfirmation}
+      />
     <form className="form-panel" name="contact" data-netlify="true" onSubmit={onSubmit} noValidate>
       <input type="hidden" name="form-name" value="contact" />
       <div className="honeypot" aria-hidden="true">
@@ -136,5 +135,6 @@ export default function ContactForm() {
         </div>
       </div>
     </form>
+    </>
   );
 }

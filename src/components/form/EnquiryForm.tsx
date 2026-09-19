@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CheckCircle2, Loader2, Send } from "lucide-react";
+import { Loader2, Send } from "lucide-react";
 import { useNetlifyForm } from "../../hooks/useNetlifyForm";
 import { ENQUIRY_SERVICES, HEARING_SOURCES, INDUSTRIES } from "../../data/site";
 import { Field, FormStatusBanner, isValidEmail } from "./FormField";
+import ConfirmationModal from "../ConfirmationModal";
 
 interface Errors {
   [key: string]: string;
@@ -24,7 +25,7 @@ const EMPTY = {
 };
 
 export default function EnquiryForm() {
-  const { status, error, submit } = useNetlifyForm("enquiry");
+  const { status, error, submit, setStatus } = useNetlifyForm("enquiry");
   const [values, setValues] = useState({ ...EMPTY });
   const [errors, setErrors] = useState<Errors>({});
 
@@ -52,39 +53,23 @@ export default function EnquiryForm() {
     const fd = new FormData();
     Object.entries(values).forEach(([k, v]) => fd.append(k, v));
     const ok = await submit(fd);
-    if (!ok) {
+    if (ok) {
       setValues({ ...EMPTY });
     }
   };
 
-  const success = status === "success";
-
-  if (success) {
-    return (
-      <div className="form-panel" role="status">
-        <div style={{ textAlign: "center", padding: "32px 8px" }}>
-          <CheckCircle2 size={52} color="var(--green)" style={{ margin: "0 auto 20px" }} aria-hidden="true" />
-          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: 28, marginBottom: 12 }}>
-            Enquiry Received
-          </h2>
-          <p style={{ color: "var(--ink-soft)", maxWidth: 440, margin: "0 auto 28px" }}>
-            Thank you for contacting ARSSA. Our team will review your enquiry and respond
-            with next steps. For urgent matters, you can reach us directly.
-          </p>
-          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link to="/" className="btn btn--primary">
-              Return Home
-            </Link>
-            <Link to="/contact" className="btn btn--ghost">
-              Contact ARSSA
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const closeConfirmation = () => {
+    setStatus("idle");
+  };
 
   return (
+    <>
+      <ConfirmationModal
+        open={status === "success"}
+        title="Enquiry Received"
+        message="Thank you for contacting ARSSA. We've received your enquiry and our team will review it and respond with next steps shortly."
+        onClose={closeConfirmation}
+      />
     <form className="form-panel" name="enquiry" data-netlify="true" onSubmit={onSubmit} noValidate>
       <input type="hidden" name="form-name" value="enquiry" />
       {/* Honeypot — humans never see this */}
@@ -264,5 +249,6 @@ export default function EnquiryForm() {
         </div>
       </div>
     </form>
+    </>
   );
 }
