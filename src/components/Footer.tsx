@@ -12,7 +12,7 @@ export default function Footer() {
             <Logo light asAnchor={false} />
             <p>
               ARSSA is a South African-based business facilitation, market-growth and trade
-              services company supporting enterprises operating between South Africa (SADC) and the
+              services company supporting enterprises operating between South Africa (SADAC) and the
               Democratic Republic of Congo.
             </p>
             <p className="footer__tagline">“{SITE.tagline}”</p>
@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li>
                 <MapPin size={16} aria-hidden="true" />
-                <span>South Africa (SADC) — serving the South Africa (SADC)–DRC corridor</span>
+                <span>South Africa (SADAC) — serving the South Africa (SADAC)–DRC corridor</span>
               </li>
             </ul>
             <Link to="/enquiry" className="btn btn--accent btn--sm" style={{ marginTop: 8 }}>

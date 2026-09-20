@@ -60,7 +60,7 @@ export const SERVICES: ServiceDef[] = [
     shortTitle: "Import & Export",
     subtitle: "Trade Facilitation, Compliance, Logistics & Cross-Border Movement",
     description:
-      "Trade facilitation, compliance, logistics and cross-border movement for goods across the South Africa (SADC)–DRC corridor.",
+      "Trade facilitation, compliance, logistics and cross-border movement for goods across the South Africa (SADAC)–DRC corridor.",
     accent: "#b89200",
     icon: "globe",
     preview: ["Customs", "Logistics", "Trade advisory", "Goods supply"],
@@ -72,7 +72,7 @@ export const SERVICES: ServiceDef[] = [
     title: "Mining & Resources",
     shortTitle: "Mining",
     subtitle: "Mining Support, Sourcing & Cross-Border Commercial Coordination",
-    description: "Practical support for mining-related sourcing, partnerships, supplies and commercial coordination across the South Africa (SADC)–DRC corridor.",
+    description: "Practical support for mining-related sourcing, partnerships, supplies and commercial coordination across the South Africa (SADAC)–DRC corridor.",
     accent: "#8b5e34",
     icon: "globe",
     preview: ["Mining support", "Sourcing", "Partnerships", "Supply coordination"],

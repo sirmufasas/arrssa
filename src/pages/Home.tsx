@@ -42,8 +42,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="ARSSA | Business Facilitation & Trade Services South Africa (SADC)–DRC"
-        description="One partner for market entry, compliance, distribution and trade between South Africa (SADC) and the DRC."
+        title="ARSSA | Business Facilitation & Trade Services South Africa (SADAC)–DRC"
+        description="One partner for market entry, compliance, distribution and trade between South Africa (SADAC) and the DRC."
         path="/"
       />
 
@@ -60,7 +60,7 @@ export default function Home() {
           >
             <div className="home-hero__tagline-badge">
               <span className="dot" />
-              <span>South Africa (SADC) ↔ DRC Commercial Corridor</span>
+              <span>South Africa (SADAC) ↔ DRC Commercial Corridor</span>
             </div>
 
             <h1>

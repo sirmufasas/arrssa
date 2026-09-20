@@ -35,7 +35,7 @@ export default function Services() {
     <>
       <SEO
         title="ARSSA Services | Business Facilitation, Trade & Market Growth"
-        description="Explore ARSSA's five core divisions: Business Facilitation, Market Growth & Distribution, Import & Export, Mining & Resources, and Maintenance, Cleaning & Compliance — one integrated partner for the South Africa (SADC)–DRC corridor."
+        description="Explore ARSSA's five core divisions: Business Facilitation, Market Growth & Distribution, Import & Export, Mining & Resources, and Maintenance, Cleaning & Compliance — one integrated partner for the South Africa (SADAC)–DRC corridor."
         path="/services"
       />
 

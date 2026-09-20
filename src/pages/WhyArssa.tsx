@@ -66,7 +66,7 @@ export default function WhyArssa() {
       <PageHero
         eyebrow="The ARSSA Value Proposition"
         title="Why ARSSA"
-        subtitle="One integrated partner instead of a chain of disconnected service providers — built specifically for the South Africa (SADC)–DRC corridor."
+        subtitle="One integrated partner instead of a chain of disconnected service providers — built specifically for the South Africa (SADAC)–DRC corridor."
         crumbs={[{ label: "Home", path: "/" }, { label: "Why ARSSA" }]}
       />
 

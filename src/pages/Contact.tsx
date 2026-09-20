@@ -86,11 +86,11 @@ export default function Contact() {
                     <MapPin size={18} aria-hidden="true" />
                     <div>
                       <h4>Where We Operate</h4>
-                      <p>Based in South Africa (SADC) — serving the South Africa (SADC)–DRC corridor</p>
+                      <p>Based in South Africa (SADAC) — serving the South Africa (SADAC)–DRC corridor</p>
                     </div>
                   </div>
                   <iframe
-                    title="ARSSA — South Africa (SADC) operations map"
+                    title="ARSSA — South Africa (SADAC) operations map"
                     src="https://maps.google.com/maps?q=Johannesburg,+South+Africa&z=6&output=embed"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
