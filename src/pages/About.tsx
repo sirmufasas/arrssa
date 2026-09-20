@@ -74,14 +74,14 @@ export default function About() {
     <>
       <SEO
         title="About ARSSA | South Africa (SADAC)–DRC Business Facilitation"
-        description="Learn about ARSSA — the South African extension of ARS S.A.R.L. Our approach, vision, mission and core values for cross-border business between South Africa and the DRC."
+        description="Learn about ARSSA — the South African (SADAC) extension of ARS S.A.R.L. Our approach, vision, mission and core values for cross-border business between South Africa (SADAC) and the DRC."
         path="/about"
       />
 
       <PageHero
         eyebrow="Who We Are"
         title="About ARSSA"
-        subtitle="Agence Rebi Service South Africa — the South African extension of ARS S.A.R.L. in the DRC, built to simplify and strengthen cross-border business."
+        subtitle="Agence Rebi Service South Africa — the South African (SADAC) extension of ARS S.A.R.L. in the DRC, built to simplify and strengthen cross-border business."
         crumbs={[{ label: "Home", path: "/" }, { label: "About" }]}
       />
 
@@ -109,8 +109,8 @@ export default function About() {
             <ScrollReveal>
               <SectionHeading
                 eyebrow="Who We Are"
-                title="The South African extension of ARS S.A.R.L."
-                description="ARSSA is the South African extension of ARS S.A.R.L. in the Democratic Republic of Congo. We exist to give South African businesses a structured, experienced, and accountable partner for operating across the corridor."
+                title="The South African (SADAC) extension of ARS S.A.R.L."
+                description="ARSSA is the South African (SADAC) extension of ARS S.A.R.L. in the Democratic Republic of Congo. We exist to give South African (SADAC) businesses a structured, experienced, and accountable partner for operating across the corridor."
               />
             </ScrollReveal>
 

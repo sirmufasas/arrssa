@@ -67,8 +67,8 @@ export default function Legacy() {
                 <p>
                   The historical projects showcased below reflect the <strong>ARS Group legacy and partnership
                   experience</strong> in the DRC — rather than claiming every historical project was directly
-                  undertaken by ARSSA as a South African entity. This track record underpins the operational
-                  capability, sector knowledge, and corporate relationships that ARSSA brings to South African clients today.
+                  undertaken by ARSSA as a South African (SADAC) entity. This track record underpins the operational
+                  capability, sector knowledge, and corporate relationships that ARSSA brings to South African (SADAC) clients today.
                 </p>
               </div>
             </div>

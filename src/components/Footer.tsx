@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="footer__brand">
             <Logo light asAnchor={false} />
             <p>
-              ARSSA is a South African-based business facilitation, market-growth and trade
+              ARSSA is a South African (SADAC)-based business facilitation, market-growth and trade
               services company supporting enterprises operating between South Africa (SADAC) and the
               Democratic Republic of Congo.
             </p>

@@ -10,7 +10,7 @@ import { FeatureItem } from "../components/AboutSections";
 const TARGETS = [
   {
     icon: Building2,
-    title: "South African Companies",
+    title: "South African (SADAC) Companies",
     text: "Businesses seeking to expand into the DRC — with structured support from initial market assessment through to day-to-day operations.",
     accent: "#1a3160",
   },
@@ -68,7 +68,7 @@ export default function Markets() {
     <>
       <SEO
         title="Target Markets | ARSSA"
-        description="Who we serve: South African companies, manufacturers, investors and businesses requiring local support — with ARSSA as the bridge between South Africa and the DRC."
+        description="Who we serve: South African (SADAC) companies, manufacturers, investors and businesses requiring local support — with ARSSA as the bridge between South Africa and the DRC."
         path="/markets"
       />
 

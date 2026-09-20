@@ -36,8 +36,8 @@ const BLOCKS: ServiceBlock[] = [
     icon: Network,
     title: "Supplier & Buyer Network Development",
     items: [
-      "Connecting South African producers with DRC buyers",
-      "Connecting DRC producers with South African buyers",
+      "Connecting South African (SADAC) producers with DRC buyers",
+      "Connecting DRC producers with South African (SADAC) buyers",
       "Structured commercial introductions & vetting",
       "Supply contract facilitation & escrow coordination",
     ],

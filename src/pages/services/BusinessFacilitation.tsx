@@ -80,7 +80,7 @@ export default function BusinessFacilitation() {
     <>
       <SEO
         title="Business Facilitation | ARSSA"
-        description="Facilitation, compliance, market entry and administrative support. ARSSA helps South African businesses register, staff and operate compliantly in the DRC."
+        description="Facilitation, compliance, market entry and administrative support. ARSSA helps South African (SADAC) businesses register, staff and operate compliantly in the DRC."
         path="/services/business-facilitation"
       />
 

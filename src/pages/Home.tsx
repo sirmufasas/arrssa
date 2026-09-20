@@ -154,10 +154,10 @@ export default function Home() {
                 loading="lazy"
               />
               <div className="showcase-media__overlay">
-                <span className="showcase-media__tag">ARS S.A.R.L. South African Extension</span>
+                <span className="showcase-media__tag">ARS S.A.R.L. South African (SADAC) Extension</span>
                 <h3 className="showcase-media__title">Bridging Capital &amp; Opportunity</h3>
                 <p className="showcase-media__desc">
-                  Providing South African enterprises with deep local understanding and structured execution in the DRC.
+                  Providing South African (SADAC) enterprises with deep local understanding and structured execution in the DRC.
                 </p>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="About ARSSA"
                 title="A structured partner for cross-border expansion"
-                description="ARSSA is the South African extension of ARS S.A.R.L. in the DRC — one partner for marketing, facilitation, compliance, distribution and trade."
+                description="ARSSA is the South African (SADAC) extension of ARS S.A.R.L. in the DRC — one partner for marketing, facilitation, compliance, distribution and trade."
               />
             </ScrollReveal>
 

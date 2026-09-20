@@ -87,7 +87,7 @@ export default function MarketGrowth() {
                   strong distributor alignment, and active demand generation.
                 </p>
                 <p style={{ color: "var(--ink-soft)", fontSize: 15, lineHeight: 1.65 }}>
-                  ARSSA connects South African brands directly with vetted wholesalers, retailers,
+                  ARSSA connects South African (SADAC) brands directly with vetted wholesalers, retailers,
                   and commercial buyers, orchestrating promotions and distribution channels that
                   deliver repeatable revenue.
                 </p>
