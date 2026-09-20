@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FloatingContact from "../components/FloatingContact";
+import CookieConsent from "../components/CookieConsent";
 import { useEmbed } from "../hooks/useEmbed";
 
 export default function MainLayout() {
@@ -18,6 +19,7 @@ export default function MainLayout() {
       </div>
       <Footer />
       {!embed && <FloatingContact />}
+      {!embed && <CookieConsent />}
     </>
   );
 }

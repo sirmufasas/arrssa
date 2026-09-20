@@ -123,7 +123,7 @@ export default function GoogleReviews() {
               <h3>Have you worked with ARSSA?</h3>
               <p>
                 We're building our public track record on Google. If ARSSA has supported
-                your business across the South Africa–DRC corridor, we'd genuinely value
+                your business across the South Africa (SADC)–DRC corridor, we'd genuinely value
                 a review — it helps other businesses make confident decisions.
               </p>
               <div className="greviews__invite-stars" aria-hidden="true">

@@ -13,7 +13,7 @@ interface CTASectionProps {
 
 export default function CTASection({
   headline = "Ready to explore the DRC market?",
-  text = "ARSSA provides practical, integrated support for businesses seeking to establish, operate and grow across the South Africa–DRC corridor.",
+  text = "ARSSA provides practical, integrated support for businesses seeking to establish, operate and grow across the South Africa (SADC)–DRC corridor.",
   primaryLabel = "Start an Enquiry",
   primaryPath = "/enquiry",
   secondaryLabel = "Contact ARSSA",

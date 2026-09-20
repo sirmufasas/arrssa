@@ -73,7 +73,7 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About ARSSA | South Africa–DRC Business Facilitation"
+        title="About ARSSA | South Africa (SADC)–DRC Business Facilitation"
         description="Learn about ARSSA — the South African extension of ARS S.A.R.L. Our approach, vision, mission and core values for cross-border business between South Africa and the DRC."
         path="/about"
       />
@@ -183,7 +183,7 @@ export default function About() {
                   }}
                 >
                   “To be the leading partner that simplifies and strengthens cross-border
-                  business between South Africa and the DRC, empowering pharmaceutical,
+                  business between South Africa (SADC) and the DRC, empowering pharmaceutical,
                   cosmetic, and agri-food companies to expand with confidence.”
                 </p>
               </div>

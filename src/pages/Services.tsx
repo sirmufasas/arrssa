@@ -35,14 +35,14 @@ export default function Services() {
     <>
       <SEO
         title="ARSSA Services | Business Facilitation, Trade & Market Growth"
-        description="Explore ARSSA's four core divisions: Business Facilitation, Market Growth & Distribution, Import & Export, and Maintenance, Cleaning & Compliance — one integrated partner for the South Africa–DRC corridor."
+        description="Explore ARSSA's five core divisions: Business Facilitation, Market Growth & Distribution, Import & Export, Mining & Resources, and Maintenance, Cleaning & Compliance — one integrated partner for the South Africa (SADC)–DRC corridor."
         path="/services"
       />
 
       <PageHero
         eyebrow="Our Capabilities"
         title="Integrated Services for the Corridor"
-        subtitle="Four specialised divisions operating in unison — covering everything from market entry and compliance to distribution and cross-border trade."
+        subtitle="Five specialised divisions operating in unison — covering everything from market entry and compliance to distribution and cross-border trade."
         crumbs={[{ label: "Home", path: "/" }, { label: "Services" }]}
       />
 
@@ -69,19 +69,19 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Four Divisions */}
+      {/* Five Divisions */}
       <section className="section section--paper">
         <div className="container">
           <ScrollReveal>
             <SectionHeading
               center
-              eyebrow="Our Four Divisions"
+              eyebrow="Our Five Divisions"
               title="Comprehensive Cross-Border Solutions"
               description="Each division can be deployed individually or combined into an end-to-end operational roadmap."
             />
           </ScrollReveal>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 28 }} className="divisions-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 28 }} className="divisions-grid">
             {SERVICES.map((svc, i) => (
               <ScrollReveal key={svc.slug} delay={i * 0.07}>
                 <ServiceCard service={svc} />

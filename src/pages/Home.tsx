@@ -43,7 +43,7 @@ export default function Home() {
     <>
       <SEO
         title="ARSSA | Business Facilitation & Trade Services South Africa (SADC)–DRC"
-        description="ARSSA is a South African-based business facilitation, market-growth, and trade services company supporting enterprises operating between South Africa and the DRC."
+        description="One partner for market entry, compliance, distribution and trade between South Africa (SADC) and the DRC."
         path="/"
       />
 
@@ -69,9 +69,8 @@ export default function Home() {
             </h1>
 
             <p className="home-hero__sub">
-              ARSSA is a South African-based business facilitation, market-growth, and trade
-              services company supporting enterprises operating between South Africa and the
-              Democratic Republic of Congo.
+              Your fast track into the DRC market — one partner for facilitation,
+              compliance, distribution and trade. No fragmented agencies, no guesswork.
             </p>
 
             <div className="home-hero__actions">
@@ -116,7 +115,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="stats" role="list" aria-label="ARSSA at a glance">
               <div role="listitem">
-                <StatCounter value={4} label={t.coreDivisions} />
+                <StatCounter value={5} label={t.coreDivisions} />
               </div>
               <div role="listitem">
                 <StatCounter value={2} label={t.countriesBridged} variant="gold" />
@@ -150,8 +149,8 @@ export default function Home() {
           <ScrollReveal>
             <div className="showcase-media">
               <img
-                src="https://images.pexels.com/photos/33798862/pexels-photo-33798862.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                alt="Aerial view of the Sandton business district in Johannesburg, South Africa"
+                src="/arssa-boardroom.jpg"
+                alt="A cross-border business meeting in a modern boardroom overlooking the city"
                 loading="lazy"
               />
               <div className="showcase-media__overlay">
@@ -169,7 +168,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="About ARSSA"
                 title="A structured partner for cross-border expansion"
-                description="ARSSA is the South African extension of ARS S.A.R.L. in the DRC. The company integrates strategic marketing, business facilitation, compliance support, distribution, import/export support, and trade services."
+                description="ARSSA is the South African extension of ARS S.A.R.L. in the DRC — one partner for marketing, facilitation, compliance, distribution and trade."
               />
             </ScrollReveal>
 
@@ -184,6 +183,7 @@ export default function Home() {
                   "Cosmetic",
                   "Agri-food",
                   "Agricultural",
+                  "Mining",
                   "Corporate Supply",
                 ].map((s) => (
                   <span key={s} className="badge">
@@ -206,19 +206,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- FOUR CORE DIVISIONS CARDS ---------- */}
+      {/* ---------- FIVE CORE DIVISIONS CARDS ---------- */}
       <section className="section">
         <div className="container">
           <ScrollReveal>
             <SectionHeading
               center
               eyebrow="Our Divisions"
-              title="Four Core Divisions. One Integrated Partner."
-              description="Each division solves a distinct operational challenge across market entry, commercial growth, cross-border logistics, and operational compliance."
+              title="Five Core Divisions. One Integrated Partner."
+              description="From market entry to compliance, distribution and cross-border logistics — every challenge, covered."
             />
           </ScrollReveal>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 28 }} className="divisions-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 28 }} className="divisions-grid">
             {SERVICES.map((svc, i) => (
               <ScrollReveal key={svc.slug} delay={i * 0.08}>
                 <ServiceCard service={svc} />
@@ -234,8 +234,8 @@ export default function Home() {
           <ScrollReveal>
             <SectionHeading
               eyebrow="Interactive Capability Explorer"
-              title="Explore what each division delivers"
-              description="Click through our service lines to see how ARSSA coordinates each phase of your cross-border journey."
+              title="See what each division delivers"
+              description="Tap a division to see how ARSSA gets it done."
             />
           </ScrollReveal>
 
@@ -329,7 +329,7 @@ export default function Home() {
               <div>
                 <p className="eyebrow eyebrow--light">Regulated Sector Focus</p>
                 <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(24px, 3.2vw, 36px)", fontWeight: 600, maxWidth: 540 }}>
-                  Built for sectors where compliance &amp; precision are non-negotiable
+                  Built for sectors where getting it wrong isn't an option
                 </h2>
               </div>
             </ScrollReveal>
@@ -345,6 +345,9 @@ export default function Home() {
                   <Globe2 size={15} color="var(--gold)" aria-hidden="true" /> Agri-Food &amp; Agricultural
                 </span>
                 <span className="badge">
+                  <Layers size={15} color="var(--gold)" aria-hidden="true" /> Mining &amp; Resources
+                </span>
+                <span className="badge">
                   <Layers size={15} color="var(--gold)" aria-hidden="true" /> Corporate Supply Chain
                 </span>
               </div>
@@ -358,8 +361,8 @@ export default function Home() {
 
       {/* ---------- FINAL CTA ---------- */}
       <CTASection
-        headline="Ready to explore the DRC market?"
-        text="ARSSA provides practical, integrated support for businesses seeking to establish, operate and grow across the South Africa–DRC corridor."
+        headline="Ready to move into the DRC?"
+        text="Let's talk about what you're trying to do — and how fast ARSSA can get you there."
         primaryLabel="Start an Enquiry"
         secondaryLabel="Contact ARSSA"
       />

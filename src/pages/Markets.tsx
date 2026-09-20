@@ -75,7 +75,7 @@ export default function Markets() {
       <PageHero
         eyebrow="Who We Serve"
         title="Target Markets"
-        subtitle="ARSSA is built for organisations that need more than reports — they need dependable, on-the-ground execution across the South Africa–DRC corridor."
+        subtitle="ARSSA is built for organisations that need more than reports — they need dependable, on-the-ground execution across the South Africa (SADC)–DRC corridor."
         crumbs={[{ label: "Home", path: "/" }, { label: "Markets" }]}
       />
 
@@ -86,7 +86,7 @@ export default function Markets() {
             <SectionHeading
               eyebrow="Market Profiles"
               title="Four Core Target Segments"
-              description="Each client segment faces unique regulatory, logistical, and commercial hurdles. Our four divisions coordinate to provide the exact solution needed."
+              description="Each client segment faces unique regulatory, logistical, and commercial hurdles. Our five divisions coordinate to provide the exact solution needed."
             />
           </ScrollReveal>
 
@@ -109,7 +109,7 @@ export default function Markets() {
             <SectionHeading
               center
               eyebrow="The Cross-Border Bridge"
-              title="South Africa → ARSSA → DRC"
+              title="South Africa (SADC) → ARSSA → DRC"
               description="ARSSA acts as the single accountable bridge between where your business originates and where it creates commercial impact."
             />
           </ScrollReveal>
@@ -118,7 +118,7 @@ export default function Markets() {
             <div className="bridge">
               <div className="bridge__node">
                 <div className="bridge__flag" aria-hidden="true">🇿🇦</div>
-                <h3>South Africa</h3>
+                <h3>South Africa (SADC)</h3>
                 <p>Enterprise base — where capital, manufacturing, executive strategy, and product supply originate.</p>
               </div>
 

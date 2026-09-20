@@ -60,7 +60,7 @@ export default function ImportExport() {
     <>
       <SEO
         title="Import & Export | ARSSA"
-        description="Trade facilitation, compliance, logistics and cross-border movement. ARSSA ensures goods move efficiently and legally across the South Africa–DRC corridor."
+        description="Trade facilitation, compliance, logistics and cross-border movement. ARSSA ensures goods move efficiently and legally across the South Africa (SADC)–DRC corridor."
         path="/services/import-export"
       />
 
@@ -102,7 +102,7 @@ export default function ImportExport() {
                   End-to-End Trade Execution Across Borders
                 </h2>
                 <p className="lead" style={{ fontSize: 16, marginBottom: 20 }}>
-                  Moving goods between South Africa and the DRC involves complex customs
+                  Moving goods between South Africa (SADC) and the DRC involves complex customs
                   regulations, multi-modal transport handoffs, import certifications, and strict
                   documentary checks.
                 </p>
