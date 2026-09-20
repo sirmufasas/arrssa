@@ -69,8 +69,10 @@ export default function Home() {
             </h1>
 
             <p className="home-hero__sub">
-              Your fast track into the DRC market — one partner for facilitation,
-              compliance, distribution and trade. No fragmented agencies, no guesswork.
+              ARSSA is your fast track into the DRC market — one accountable partner
+              for facilitation, compliance, marketing, distribution and trade, built
+              for pharmaceutical, cosmetic, agri-food and mining sectors. No fragmented
+              agencies, no guesswork — just structured execution from day one.
             </p>
 
             <div className="home-hero__actions">
@@ -214,7 +216,7 @@ export default function Home() {
               center
               eyebrow="Our Divisions"
               title="Five Core Divisions. One Integrated Partner."
-              description="From market entry to compliance, distribution and cross-border logistics — every challenge, covered."
+              description="Market entry, marketing and distribution, cross-border trade, mining support, and regulatory compliance — five specialised divisions coordinated under one accountable partner, so nothing falls through the cracks between agencies."
             />
           </ScrollReveal>
 
@@ -235,7 +237,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Interactive Capability Explorer"
               title="See what each division delivers"
-              description="Tap a division to see how ARSSA gets it done."
+              description="Tap a division below to see exactly how ARSSA handles that phase of your cross-border journey — from first market entry through to ongoing operations."
             />
           </ScrollReveal>
 
@@ -331,6 +333,10 @@ export default function Home() {
                 <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(24px, 3.2vw, 36px)", fontWeight: 600, maxWidth: 540 }}>
                   Built for sectors where getting it wrong isn't an option
                 </h2>
+                <p style={{ color: "rgba(255,255,255,0.75)", maxWidth: 480, marginTop: 12 }}>
+                  Heavily regulated industries need a partner who understands compliance
+                  as well as commerce. That's where ARSSA operates.
+                </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
@@ -362,7 +368,7 @@ export default function Home() {
       {/* ---------- FINAL CTA ---------- */}
       <CTASection
         headline="Ready to move into the DRC?"
-        text="Let's talk about what you're trying to do — and how fast ARSSA can get you there."
+        text="Whether you're exploring the market for the first time or ready to scale distribution, ARSSA gives you one accountable partner for the whole journey — compliant, coordinated, and built for the South Africa (SADAC)–DRC corridor."
         primaryLabel="Start an Enquiry"
         secondaryLabel="Contact ARSSA"
       />
