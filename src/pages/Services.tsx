@@ -26,7 +26,7 @@ const MODEL = [
   {
     icon: ShieldCheck,
     title: "Sectors Demanding Rigor",
-    text: "Deep domain focus in pharmaceutical, medical, cosmetic, agri-food, agricultural inputs, and regulated corporate supply chains.",
+    text: "Deep domain focus in pharmaceutical, medical, cosmetic, agri-food, agricultural inputs, mining, and regulated corporate supply chains.",
     accent: "#009639",
   },
 ];
@@ -170,6 +170,12 @@ export default function Services() {
                     <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
                     <div>
                       <strong>{tr("Agri-Food & Agricultural Inputs")}:</strong> {tr("Sanitary import clearances, cold chain logistics, bulk supply contracts, and wholesale grocery placement.")}
+                    </div>
+                  </li>
+                  <li>
+                    <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
+                    <div>
+                      <strong>{tr("Mining & Resources")}:</strong> {tr("Equipment and input sourcing, cross-border supply chain facilitation, regulatory stakeholder coordination, and on-the-ground operational follow-through in the DRC.")}
                     </div>
                   </li>
                   <li>

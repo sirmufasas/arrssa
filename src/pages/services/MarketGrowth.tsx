@@ -103,6 +103,7 @@ export default function MarketGrowth() {
               "Cosmetic Products",
               "Agri-Food Products",
               "Agricultural Inputs",
+              "Mining Equipment & Industrial Consumables",
               "Office & Corporate Supply Chain Support",
             ]}
           />

@@ -81,7 +81,7 @@ const TARGETS = [
   {
     icon: Users,
     title: "Investors & Entrepreneurs",
-    text: "Cross-border investors seeking structured due diligence, local regulatory mapping, and reliable corporate governance for their investments.",
+    text: "Cross-border investors and entrepreneurs seeking to enter or expand in the DRC, with support in market assessment, regulatory navigation, local partner verification, business establishment and on-the-ground coordination.",
     accent: "#b89200",
   },
   {
@@ -116,6 +116,10 @@ const SECTORS_DETAILED = [
   {
     name: "Agricultural Inputs",
     desc: "Distribution of fertilizers, agro-chemicals, and farming supplies to commercial agricultural operations in the DRC.",
+  },
+  {
+    name: "Mining & Resources",
+    desc: "Equipment and input sourcing, cross-border supply chain facilitation, regulatory stakeholder coordination, and on-the-ground operational follow-through in the DRC.",
   },
 ];
 

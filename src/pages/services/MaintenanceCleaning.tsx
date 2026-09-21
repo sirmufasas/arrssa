@@ -120,6 +120,7 @@ export default function MaintenanceCleaning() {
               "Pharmaceutical Facilities",
               "Cosmetic Facilities",
               "Food & Cold Storage Facilities",
+              "Mining & Industrial Facilities",
               "Regulated Operational Environments",
             ]}
           />
