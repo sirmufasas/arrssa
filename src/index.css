@@ -4882,11 +4882,6 @@ h4 {
 .navbar__brand .brand-logo__pdf { background: transparent; mix-blend-mode: multiply; }
 [data-theme="dark"] .navbar__brand .brand-logo__pdf { mix-blend-mode: screen; }
 
-/* Keep the automatic full-page translator invisible; the custom EN / FR control remains the UI. */
-#google_translate_element { position: fixed; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
-.goog-te-banner-frame, .skiptranslate iframe { display: none !important; }
-body { top: 0 !important; }
-
 /* Center the globe and keep the ARSSA mark locked to its visual center. */
 .corridor--planet { margin-left: auto; margin-right: auto; display:flex; align-items:center; justify-content:center; overflow:hidden; }
 .corridor--planet .planet-photo { position:absolute; inset:50% auto auto 50%; transform:translate(-50%, -50%); width:78%; height:78%; }

@@ -75,7 +75,7 @@ const TARGETS = [
   {
     icon: Briefcase,
     title: "Manufacturers & Producers",
-    text: "Especially pharmaceutical, cosmetic, agri-food, and agricultural-input manufacturers looking for verified distributor placement and off-take channels in the DRC.",
+    text: "Especially pharmaceutical, cosmetic, agri-food, agricultural-input, and mining manufacturers looking for verified distributor placement and off-take channels in the DRC.",
     accent: "#d40000",
   },
   {

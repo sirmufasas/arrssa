@@ -20,6 +20,10 @@ const STORAGE_SELECTED_KEY = "arssa_language_selected";
 
 const VALID_LANGS: Language[] = LANGUAGES.map((l) => l.code);
 
+function normalize(s: string): string {
+  return s.replace(/\s+/g, " ").trim();
+}
+
 function getInitialLanguage(): Language {
   try {
     const saved = localStorage.getItem(STORAGE_LANG_KEY) as Language;
@@ -111,10 +115,6 @@ function augmentDictionary(dict: TranslationDictionary): AugmentedTranslation {
   };
 }
 
-function normalize(s: string): string {
-  return s.replace(/\s+/g, " ").trim();
-}
-
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(getInitialLanguage);
   const [showLanguageModal, setShowLanguageModal] = useState<boolean>(() => {
@@ -147,6 +147,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     (text: string): string => {
       if (!text || language === "en") return text;
 
+      const trimmed = text.trim();
+      if (
+        trimmed === "ARSSA" ||
+        trimmed === "ARS S.A.R.L." ||
+        trimmed === "ARS" ||
+        trimmed.startsWith("ARSSA ·") ||
+        trimmed.endsWith("· ARSSA")
+      ) {
+        return text;
+      }
+
       // 1. Exact match
       if (UNIVERSAL_PHRASES[text]?.[language]) {
         return UNIVERSAL_PHRASES[text]![language]!;
@@ -159,7 +170,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       }
 
       // 3. Match without surrounding quotation marks
-      const unquoted = norm.replace(/^[“"']+|[”"']+$/g, "");
+      const unquoted = norm.replace(/^[“"']+|[”"']+$/g, "").trim();
       if (UNIVERSAL_PHRASES[unquoted]?.[language]) {
         const trans = UNIVERSAL_PHRASES[unquoted]![language]!;
         if (norm.startsWith("“") || norm.startsWith('"')) {
@@ -185,82 +196,30 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   }, [language, currentLanguageMeta]);
 
-  // Universal native DOM translation engine with original-text caching
+  // Universal native DOM translation safety net for static content inside #main
   useEffect(() => {
-    const isEnglish = language === "en";
-
-    // Pre-sort phrases by length descending to match longest phrases first
-    const sortedPhrases = Object.entries(UNIVERSAL_PHRASES)
-      .filter(([phrase]) => phrase && phrase.length >= 2)
-      .sort((a, b) => b[0].length - a[0].length);
+    if (language === "en") return;
 
     const translateNode = (node: Node) => {
       if (node.nodeType === Node.TEXT_NODE) {
-        // Cache original English text on first encounter
-        const anyNode = node as any;
-        if (anyNode.__origText === undefined) {
-          anyNode.__origText = node.nodeValue || "";
-        }
-
-        const original = anyNode.__origText;
-        if (!original || original.trim().length < 2) return;
-
-        // Revert to English if user selected English
-        if (isEnglish) {
-          if (node.nodeValue !== original) {
-            node.nodeValue = original;
-          }
-          return;
-        }
+        const raw = node.nodeValue?.trim();
+        if (!raw || raw.length < 2) return;
 
         // Strictly preserve brand identifiers and codes
-        const trimmed = original.trim();
         if (
-          trimmed === "ARSSA" ||
-          trimmed === "ARS S.A.R.L." ||
-          trimmed === "ARS" ||
-          trimmed.startsWith("ARSSA ·") ||
-          trimmed.endsWith("· ARSSA")
+          raw === "ARSSA" ||
+          raw === "ARS S.A.R.L." ||
+          raw === "ARS" ||
+          raw.startsWith("ARSSA ·") ||
+          raw.endsWith("· ARSSA") ||
+          raw.startsWith("© 2026")
         ) {
           return;
         }
 
-        // Check for direct or normalized match
-        const norm = normalize(trimmed);
-        const match =
-          UNIVERSAL_PHRASES[trimmed]?.[language] ||
-          UNIVERSAL_PHRASES[norm]?.[language];
-
-        if (match) {
-          node.nodeValue = match;
-          return;
-        }
-
-        // Check unquoted match
-        const unquoted = norm.replace(/^[“"']+|[”"']+$/g, "");
-        const unquotedMatch = UNIVERSAL_PHRASES[unquoted]?.[language];
-        if (unquotedMatch) {
-          const replacement = trimmed.startsWith("“") || trimmed.startsWith('"')
-            ? `“${unquotedMatch}”`
-            : unquotedMatch;
-          node.nodeValue = replacement;
-          return;
-        }
-
-        // Partial / multi-phrase replacement within text node using longest-to-shortest
-        let updated = original;
-        let modified = false;
-        for (const [enPhrase, transMap] of sortedPhrases) {
-          if (enPhrase.length >= 4 && updated.includes(enPhrase)) {
-            const target = transMap[language];
-            if (target) {
-              updated = updated.split(enPhrase).join(target);
-              modified = true;
-            }
-          }
-        }
-        if (modified) {
-          node.nodeValue = updated;
+        const match = UNIVERSAL_PHRASES[raw];
+        if (match && match[language]) {
+          node.nodeValue = node.nodeValue!.replace(raw, match[language]!);
         }
       } else if (node.nodeType === Node.ELEMENT_NODE) {
         const el = node as HTMLElement;
@@ -282,39 +241,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       }
     };
 
-    const runTranslation = () => {
-      translateNode(document.body);
-    };
+    const container = document.getElementById("main");
+    if (!container) return;
 
-    // Run immediately and staggered timeouts for initial transitions
-    runTranslation();
-    const timer1 = setTimeout(runTranslation, 100);
-    const timer2 = setTimeout(runTranslation, 300);
-    const timer3 = setTimeout(runTranslation, 800);
+    translateNode(container);
 
-    // Continuous interval to catch React Router page changes and Framer Motion animated elements
-    const interval = setInterval(runTranslation, 600);
-
-    // Re-run on dynamic DOM mutations
     const observer = new MutationObserver((mutations) => {
       for (const m of mutations) {
         m.addedNodes.forEach(translateNode);
       }
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    // Re-run on route changes or history navigation
-    window.addEventListener("popstate", runTranslation);
-
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-      clearInterval(interval);
-      observer.disconnect();
-      window.removeEventListener("popstate", runTranslation);
-    };
+    observer.observe(container, { childList: true, subtree: true });
+    return () => observer.disconnect();
   }, [language]);
 
   const dict = getDictionary(language);
