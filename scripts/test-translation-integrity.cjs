@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const phrasesFile = fs.readFileSync(path.join(__dirname, "../src/translations/universalPhrases.ts"), "utf8");
-const match = phrasesFile.match(/export const UNIVERSAL_PHRASES: Record<string, Partial<Record<Language, string>>> = (\{[\s\S]*\});\n$/);
+const match = phrasesFile.match(/export const UNIVERSAL_PHRASES: Record<string,[\s\S]*?> = (\{[\s\S]*\});?\s*$/);
 const phrases = eval("(" + match[1] + ")");
 
 const allLangs = ["en", "fr", "pt", "sw", "ln", "af", "zu", "xh", "zh", "ar", "es", "de", "hi", "ru", "ja", "ko", "it", "nl"];
