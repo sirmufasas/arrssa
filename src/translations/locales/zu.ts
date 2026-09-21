@@ -41,7 +41,7 @@ export const zu: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Izingxenye Zethu Ezikhethekile",
     "title": "Izinsika Ezinhlanu Zohwebo Oludidiyelwe",
-    "subtitle": "Ukuxhumanisa iNingizimu Afrika (SADAC) ne-DRC ngamakhono aqinile okusebenza, ezomthetho nezokuthutha."
+    "subtitle": "Ukuxhumanisa iNingizimu Afrika (SADC) ne-DRC ngamakhono aqinile okusebenza, ezomthetho nezokuthutha."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const zu: TranslationDictionary = {
       "title": "Ukungenisa Nokuthumela Ngaphandle",
       "shortTitle": "Ukungenisa Nokuthumela",
       "subtitle": "Ukuxhasa Ezohwebo, Imigomo Yentela, Ezokuthutha Nemingcele",
-      "description": "Ukuxhasa ukuhweba, ukuthobela imithetho yempahla, ezokuthutha nokuhamba kwempahla emngceleni weNingizimu Afrika (SADAC)–DRC.",
+      "description": "Ukuxhasa ukuhweba, ukuthobela imithetho yempahla, ezokuthutha nokuhamba kwempahla emngceleni weNingizimu Afrika (SADC)–DRC.",
       "preview": [
         "Intela yempahla",
         "Ezokuthutha",
@@ -92,7 +92,7 @@ export const zu: TranslationDictionary = {
       "title": "Ezimbiwa Phansi Nemithombo",
       "shortTitle": "Ezimayini",
       "subtitle": "Ukwesekwa Kwezimayini, Ukuhlinzekwa & Ukudidiyelwa Kwezohwebo",
-      "description": "Ukwesekwa okubambekayo kokuthola izinsiza zezimayini, ubambiswano, impahla nokuxhumana kwezohwebo phakathi kweNingizimu Afrika (SADAC) ne-DRC.",
+      "description": "Ukwesekwa okubambekayo kokuthola izinsiza zezimayini, ubambiswano, impahla nokuxhumana kwezohwebo phakathi kweNingizimu Afrika (SADC) ne-DRC.",
       "preview": [
         "Ukwesekwa kwezimayini",
         "Ukuthola izinsiza",
@@ -117,9 +117,9 @@ export const zu: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Inzuzo Yephasishi",
-    "title": "Iphasishi laseNingizimu Afrika (SADAC) – DRC",
+    "title": "Iphasishi laseNingizimu Afrika (SADC) – DRC",
     "lead": "Uzakwethu Oyedwa Onokwethenjelwa Ezimakethe Ezimbili Ezinamandla",
-    "desc": "Ukwandisa amabhizinisi phakathi kweNingizimu Afrika (SADAC) ne-DRC kudinga ulwazi olunzulu lwendawo, imithetho eqinile kanye nezokuthutha eziphephile. I-ARSSA isusa ubunzima ngokuhlanganisa yonke into ngaphansi kophahla olulodwa.",
+    "desc": "Ukwandisa amabhizinisi phakathi kweNingizimu Afrika (SADC) ne-DRC kudinga ulwazi olunzulu lwendawo, imithetho eqinile kanye nezokuthutha eziphephile. I-ARSSA isusa ubunzima ngokuhlanganisa yonke into ngaphansi kophahla olulodwa.",
     "point1Title": "Ulwazi Lwendawo",
     "point1Desc": "Ukuba khona eLubumbashi, Kinshasa, Kolwezi naseGoli.",
     "point2Title": "Ukungabi Nazinkinga Zomthetho",
@@ -129,16 +129,16 @@ export const zu: TranslationDictionary = {
   },
   "cta": {
     "headline": "Ingabe usukulungele ukungena emakethe yase-DRC?",
-    "text": "I-ARSSA inikeza ukwesekwa okudidiyelwe kwamabhizinisi afisa ukusungula nokukhula ephasishini laseNingizimu Afrika (SADAC)–DRC.",
+    "text": "I-ARSSA inikeza ukwesekwa okudidiyelwe kwamabhizinisi afisa ukusungula nokukhula ephasishini laseNingizimu Afrika (SADC)–DRC.",
     "primary": "Faka Isicelo",
     "secondary": "Xhumana ne-ARSSA"
   },
   "footer": {
-    "desc": "I-ARSSA yinkampani eseNingizimu Afrika (SADAC) exhumanisa amabhizinisi nokuhweba, esekela amabhizinisi asebenza phakathi kweNingizimu Afrika (SADAC) neDemocratic Republic of Congo.",
+    "desc": "I-ARSSA yinkampani eseNingizimu Afrika (SADC) exhumanisa amabhizinisi nokuhweba, esekela amabhizinisi asebenza phakathi kweNingizimu Afrika (SADC) neDemocratic Republic of Congo.",
     "quickLinks": "Izixhumanisi Ezisheshayo",
     "services": "Izinsizakalo",
     "contact": "Ukuxhumana",
-    "location": "INingizimu Afrika (SADAC) — sikhonza iphasishi laseNingizimu Afrika (SADAC)–DRC",
+    "location": "INingizimu Afrika (SADC) — sikhonza iphasishi laseNingizimu Afrika (SADC)–DRC",
     "terms": "Imigomo Nemibandela",
     "privacy": "Inqubomgomo Yobumfihlo",
     "cookies": "Inqubomgomo Yamakhukhi",
@@ -149,7 +149,7 @@ export const zu: TranslationDictionary = {
     "title": "Khetha Ulimi Olukhethayo",
     "subtitle": "Khetha ulimi lwakho lwendabuko ukuze uhlole izinsizakalo zokuhweba ze-ARSSA.",
     "searchPlaceholder": "Sesha ulimi noma izwe...",
-    "regionalTab": "Iphasishi & Isifunda (SADAC & DRC)",
+    "regionalTab": "Iphasishi & Isifunda (SADC & DRC)",
     "globalTab": "Ozakwethu Bohwebo Lomhlaba",
     "continueBtn": "Qhubeka nge-",
     "preserveNotice": "Igama lebhizinisi (ARSSA, ARS S.A.R.L.) ligodliwe ngokusemthethweni."

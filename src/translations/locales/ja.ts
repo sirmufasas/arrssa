@@ -41,7 +41,7 @@ export const ja: TranslationDictionary = {
   "divisionsSection": {
     "badge": "専門事業部門",
     "title": "総合越境貿易の5つの柱",
-    "subtitle": "確かなオペレーション、法規制対応、現地ネットワークで南アフリカ (SADAC) とコンゴ民主共和国を直結します。"
+    "subtitle": "確かなオペレーション、法規制対応、現地ネットワークで南アフリカ (SADC) とコンゴ民主共和国を直結します。"
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const ja: TranslationDictionary = {
       "title": "貿易・輸出入通関物流",
       "shortTitle": "輸出入・通関",
       "subtitle": "通関手続き、貿易コンプライアンス、国際物流・越境輸送",
-      "description": "南アフリカ (SADAC) とコンゴ民主共和国を結ぶ回廊において、輸出入通関、貿易管理、国際物流をワンストップで支援。",
+      "description": "南アフリカ (SADC) とコンゴ民主共和国を結ぶ回廊において、輸出入通関、貿易管理、国際物流をワンストップで支援。",
       "preview": [
         "通関業務",
         "国際物流",
@@ -92,7 +92,7 @@ export const ja: TranslationDictionary = {
       "title": "鉱山・資源開発支援",
       "shortTitle": "鉱山資源",
       "subtitle": "鉱山向け調達、戦略的パートナーシップ・越境サプライチェーン",
-      "description": "南アフリカ (SADAC)–コンゴ民主共和国回廊における鉱業向け資機材調達、パートナーシップ構築、商業調整を支援。",
+      "description": "南アフリカ (SADC)–コンゴ民主共和国回廊における鉱業向け資機材調達、パートナーシップ構築、商業調整を支援。",
       "preview": [
         "鉱山支援",
         "戦略調達",
@@ -117,9 +117,9 @@ export const ja: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "貿易回廊の強み",
-    "title": "南アフリカ (SADAC) – コンゴ民主共和国 貿易回廊",
+    "title": "南アフリカ (SADC) – コンゴ民主共和国 貿易回廊",
     "lead": "急成長する2大市場をワンストップで結ぶ唯一のパートナー",
-    "desc": "南アフリカ (SADAC) とコンゴ民主共和国の間での事業展開には、深い現地知見、厳格な法令対応、安定した物流が不可欠です。ARSSAはこれら全てを単一窓口で統括し、越境摩擦を解消します。",
+    "desc": "南アフリカ (SADC) とコンゴ民主共和国の間での事業展開には、深い現地知見、厳格な法令対応、安定した物流が不可欠です。ARSSAはこれら全てを単一窓口で統括し、越境摩擦を解消します。",
     "point1Title": "確かな現地拠点",
     "point1Desc": "ルブンバシ、キンシャサ、コルウェジ、ヨハネスブルグに常設拠点を展開。",
     "point2Title": "行政手続きの円滑化",
@@ -129,16 +129,16 @@ export const ja: TranslationDictionary = {
   },
   "cta": {
     "headline": "コンゴ民主共和国市場への進出をお考えですか？",
-    "text": "ARSSAは、南アフリカ (SADAC)–コンゴ民主共和国回廊での事業立ち上げと持続的成長を総合的にサポートします。",
+    "text": "ARSSAは、南アフリカ (SADC)–コンゴ民主共和国回廊での事業立ち上げと持続的成長を総合的にサポートします。",
     "primary": "お問い合わせを開始",
     "secondary": "ARSSAへのお問い合わせ"
   },
   "footer": {
-    "desc": "ARSSAは南アフリカ (SADAC) に拠点を置き、南アフリカ (SADAC) とコンゴ民主共和国を結ぶビジネス進出・貿易・流通支援を提供する総合商務サービス企業です。",
+    "desc": "ARSSAは南アフリカ (SADC) に拠点を置き、南アフリカ (SADC) とコンゴ民主共和国を結ぶビジネス進出・貿易・流通支援を提供する総合商務サービス企業です。",
     "quickLinks": "クイックリンク",
     "services": "サービス",
     "contact": "お問い合わせ",
-    "location": "南アフリカ (SADAC) — 南アフリカ (SADAC)–DRC回廊をサポート",
+    "location": "南アフリカ (SADC) — 南アフリカ (SADC)–DRC回廊をサポート",
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
     "cookies": "Cookieポリシー",
@@ -149,7 +149,7 @@ export const ja: TranslationDictionary = {
     "title": "表示言語を選択してください",
     "subtitle": "ARSSAの越境貿易およびビジネス支援サービスをご希望の言語でご覧いただけます。",
     "searchPlaceholder": "言語または国名を検索...",
-    "regionalTab": "回廊・地域言語 (SADAC & DRC)",
+    "regionalTab": "回廊・地域言語 (SADC & DRC)",
     "globalTab": "国際貿易パートナー言語",
     "continueBtn": "この言語で進む - ",
     "preserveNotice": "公式ブランド名（ARSSA, ARS S.A.R.L.）は世界共通で変更されず維持されます。"

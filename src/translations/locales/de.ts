@@ -41,7 +41,7 @@ export const de: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Spezialisierte Geschäftsbereiche",
     "title": "Fünf Säulen Integrierten Handels",
-    "subtitle": "Verbindung von Südafrika (SADAC) und der DR Kongo durch operative Exzellenz, Rechtssicherheit und Vor-Ort-Kompetenz."
+    "subtitle": "Verbindung von Südafrika (SADC) und der DR Kongo durch operative Exzellenz, Rechtssicherheit und Vor-Ort-Kompetenz."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const de: TranslationDictionary = {
       "title": "Import & Export",
       "shortTitle": "Import & Export",
       "subtitle": "Handelserleichterung, Zoll-Compliance, Logistik & Grenzüberschreitender Transport",
-      "description": "Handelsabwicklung, Zoll-Compliance, Logistik und grenzüberschreitender Güterverkehr entlang des Korridors Südafrika (SADAC)–DR Kongo.",
+      "description": "Handelsabwicklung, Zoll-Compliance, Logistik und grenzüberschreitender Güterverkehr entlang des Korridors Südafrika (SADC)–DR Kongo.",
       "preview": [
         "Zollabwicklung",
         "Logistik",
@@ -92,7 +92,7 @@ export const de: TranslationDictionary = {
       "title": "Bergbau & Rohstoffe",
       "shortTitle": "Bergbau",
       "subtitle": "Bergbau-Support, Beschaffung & Grenzüberschreitende Koordination",
-      "description": "Praktische Unterstützung bei bergbaubezogener Beschaffung, Partnerschaften, Industriegütern und kommerzieller Koordination im Korridor Südafrika (SADAC)–DR Kongo.",
+      "description": "Praktische Unterstützung bei bergbaubezogener Beschaffung, Partnerschaften, Industriegütern und kommerzieller Koordination im Korridor Südafrika (SADC)–DR Kongo.",
       "preview": [
         "Bergbau-Support",
         "Beschaffung",
@@ -117,9 +117,9 @@ export const de: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Korridor-Vorteil",
-    "title": "Der Handelskorridor Südafrika (SADAC) – DR Kongo",
+    "title": "Der Handelskorridor Südafrika (SADC) – DR Kongo",
     "lead": "Ein Verantwortlicher Partner für Zwei Wachstumsstarke Märkte",
-    "desc": "Die Expansion zwischen Südafrika (SADAC) und der DR Kongo erfordert profunde lokale Kenntnisse, präzise Einhaltung von Vorschriften und zuverlässige Logistikketten. ARSSA eliminiert grenzüberschreitende Reibungsverluste durch die Bündelung aller Dienstleistungen.",
+    "desc": "Die Expansion zwischen Südafrika (SADC) und der DR Kongo erfordert profunde lokale Kenntnisse, präzise Einhaltung von Vorschriften und zuverlässige Logistikketten. ARSSA eliminiert grenzüberschreitende Reibungsverluste durch die Bündelung aller Dienstleistungen.",
     "point1Title": "Vor-Ort-Kompetenz",
     "point1Desc": "Feste operative Präsenz in Lubumbashi, Kinshasa, Kolwezi und Johannesburg.",
     "point2Title": "Reibungslose Behördenwege",
@@ -129,16 +129,16 @@ export const de: TranslationDictionary = {
   },
   "cta": {
     "headline": "Bereit für den Markteintritt in der DR Kongo?",
-    "text": "ARSSA bietet ganzheitliche, praxiserprobte Unterstützung für Unternehmen, die im Korridor Südafrika (SADAC)–DR Kongo wachsen wollen.",
+    "text": "ARSSA bietet ganzheitliche, praxiserprobte Unterstützung für Unternehmen, die im Korridor Südafrika (SADC)–DR Kongo wachsen wollen.",
     "primary": "Anfrage starten",
     "secondary": "ARSSA kontaktieren"
   },
   "footer": {
-    "desc": "ARSSA ist ein in Südafrika (SADAC) ansässiges Dienstleistungsunternehmen für Markterweiterung, Handelsförderung und operative Abwicklung zwischen Südafrika (SADAC) und der Demokratischen Republik Kongo.",
+    "desc": "ARSSA ist ein in Südafrika (SADC) ansässiges Dienstleistungsunternehmen für Markterweiterung, Handelsförderung und operative Abwicklung zwischen Südafrika (SADC) und der Demokratischen Republik Kongo.",
     "quickLinks": "Direktlinks",
     "services": "Dienstleistungen",
     "contact": "Kontakt",
-    "location": "Südafrika (SADAC) — im Einsatz für den Korridor Südafrika (SADAC)–DR Kongo",
+    "location": "Südafrika (SADC) — im Einsatz für den Korridor Südafrika (SADC)–DR Kongo",
     "terms": "AGB",
     "privacy": "Datenschutzerklärung",
     "cookies": "Cookie-Richtlinie",
@@ -149,7 +149,7 @@ export const de: TranslationDictionary = {
     "title": "Wählen Sie Ihre bevorzugte Sprache",
     "subtitle": "Erfahren Sie mehr über die grenzüberschreitenden Handels- und Markteintrittsdienste von ARSSA in Ihrer Sprache.",
     "searchPlaceholder": "Sprache oder Land suchen...",
-    "regionalTab": "Korridor & Regionale Sprachen (SADAC & DR Kongo)",
+    "regionalTab": "Korridor & Regionale Sprachen (SADC & DR Kongo)",
     "globalTab": "Globale Handelspartner",
     "continueBtn": "Fortfahren auf",
     "preserveNotice": "Der Markenname (ARSSA, ARS S.A.R.L.) bleibt international einheitlich geschützt."

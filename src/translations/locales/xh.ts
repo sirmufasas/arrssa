@@ -41,7 +41,7 @@ export const xh: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Amacandelo Ethu aKhethekileyo",
     "title": "Iintsika Ezintlanu zoRhwebo oluDityanisiweyo",
-    "subtitle": "Ukudibanisa uMzantsi Afrika (SADAC) ne-DRC ngamakhono aqinileyo okusebenza, ezomthetho nezothutho."
+    "subtitle": "Ukudibanisa uMzantsi Afrika (SADC) ne-DRC ngamakhono aqinileyo okusebenza, ezomthetho nezothutho."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const xh: TranslationDictionary = {
       "title": "Ukungenisa nokuThumela kweeMpahla",
       "shortTitle": "Ukungenisa nokuThumela",
       "subtitle": "Uququzelelo loRhwebo, Izithethe, uThutho lweMpahla nokuNqumla iMida",
-      "description": "Uququzelelo lorhwebo, ukuthotyelwa kwemithetho yeempahla, ulogistiki nokuthuthwa kweempahla kummandla woMzantsi Afrika (SADAC)–DRC.",
+      "description": "Uququzelelo lorhwebo, ukuthotyelwa kwemithetho yeempahla, ulogistiki nokuthuthwa kweempahla kummandla woMzantsi Afrika (SADC)–DRC.",
       "preview": [
         "Impahla yentela",
         "Uthutho",
@@ -92,7 +92,7 @@ export const xh: TranslationDictionary = {
       "title": "EzokuMba Nemithombo yeNdalo",
       "shortTitle": "EzokuMba",
       "subtitle": "Inkxaso yokuMba, Ukufunyanwa kweMpahla nokuLungelelaniswa koRhwebo",
-      "description": "Inkxaso esebenzayo yokufumana izixhobo zokumba, ubudlelwane, unikezelo lweempahla kunye nolungelelaniso lorhwebo kumda woMzantsi Afrika (SADAC)–DRC.",
+      "description": "Inkxaso esebenzayo yokufumana izixhobo zokumba, ubudlelwane, unikezelo lweempahla kunye nolungelelaniso lorhwebo kumda woMzantsi Afrika (SADC)–DRC.",
       "preview": [
         "Inkxaso yokumba",
         "Ukufunyanwa kwezixhobo",
@@ -117,9 +117,9 @@ export const xh: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Inzuzo yoRhwebo",
-    "title": "Indlela yoMzantsi Afrika (SADAC) – DRC",
+    "title": "Indlela yoMzantsi Afrika (SADC) – DRC",
     "lead": "Iqabane Elinye Elithembekileyo KwiiMarike Ezimbini Ezomeleleyo",
-    "desc": "Ukwandisa amashishini phakathi koMzantsi Afrika (SADAC) ne-DRC kufuna ulwazi olunzulu lwasekhaya, imimiselo engqongqo kunye nothutho oluthembekileyo. I-ARSSA isusa imiqobo ngokudibanisa yonke into phantsi kophahla olunye.",
+    "desc": "Ukwandisa amashishini phakathi koMzantsi Afrika (SADC) ne-DRC kufuna ulwazi olunzulu lwasekhaya, imimiselo engqongqo kunye nothutho oluthembekileyo. I-ARSSA isusa imiqobo ngokudibanisa yonke into phantsi kophahla olunye.",
     "point1Title": "Ulwazi lwaseKhaya",
     "point1Desc": "Ubukho bokusebenza eLubumbashi, Kinshasa, Kolwezi naseRhawutini.",
     "point2Title": "Ukunqongophala kweZiphazamiso",
@@ -129,16 +129,16 @@ export const xh: TranslationDictionary = {
   },
   "cta": {
     "headline": "Ukulungele ukungena kwimarike yase-DRC?",
-    "text": "I-ARSSA ibonelela ngenkxaso edityanisiweyo kumashishini afuna ukuzinza nokukhula kwindlela yoMzantsi Afrika (SADAC)–DRC.",
+    "text": "I-ARSSA ibonelela ngenkxaso edityanisiweyo kumashishini afuna ukuzinza nokukhula kwindlela yoMzantsi Afrika (SADC)–DRC.",
     "primary": "Qala Isicelo",
     "secondary": "Qhagamshelana ne-ARSSA"
   },
   "footer": {
-    "desc": "I-ARSSA yinkampani yoququzelelo loshishino norhwebo ezinze eMzantsi Afrika (SADAC), exhasa amashishini asebenza phakathi koMzantsi Afrika (SADAC) neDemocratic Republic of Congo.",
+    "desc": "I-ARSSA yinkampani yoququzelelo loshishino norhwebo ezinze eMzantsi Afrika (SADC), exhasa amashishini asebenza phakathi koMzantsi Afrika (SADC) neDemocratic Republic of Congo.",
     "quickLinks": "Amakhonkco aKhawulezayo",
     "services": "Iinkonzo",
     "contact": "Qhagamshelana",
-    "location": "UMzantsi Afrika (SADAC) — sikhonza indlela yoMzantsi Afrika (SADAC)–DRC",
+    "location": "UMzantsi Afrika (SADC) — sikhonza indlela yoMzantsi Afrika (SADC)–DRC",
     "terms": "Imigaqo Nemimiselo",
     "privacy": "Umgaqo-nkqubo waBucala",
     "cookies": "Umgaqo-nkqubo weeKhukhi",
@@ -149,7 +149,7 @@ export const xh: TranslationDictionary = {
     "title": "Khetha Ulwimi Oluthandayo",
     "subtitle": "Khetha ulwimi lwakho lwenkobe ukuze uphonononge iinkonzo zikashishino zika-ARSSA.",
     "searchPlaceholder": "Khangela ulwimi okanye ilizwe...",
-    "regionalTab": "Indlela & UmMandla (SADAC & DRC)",
+    "regionalTab": "Indlela & UmMandla (SADC & DRC)",
     "globalTab": "Amaqabane oRhwebo lweHlabathi",
     "continueBtn": "Qhubeka nge-",
     "preserveNotice": "Igama lenkampani (ARSSA, ARS S.A.R.L.) ligcinwe ngokusemthethweni."

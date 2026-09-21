@@ -41,7 +41,7 @@ export const sw: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Idara Zetu Maalum",
     "title": "Nguzo Tano za Biashara Iliyounganishwa",
-    "subtitle": "Kuunganisha Afrika Kusini (SADAC) na DRC kwa utaalamu thabiti wa kisheria, kiutendaji na usambazaji wa mashinani."
+    "subtitle": "Kuunganisha Afrika Kusini (SADC) na DRC kwa utaalamu thabiti wa kisheria, kiutendaji na usambazaji wa mashinani."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const sw: TranslationDictionary = {
       "title": "Uagizaji na Usafirishaji Nje",
       "shortTitle": "Uagizaji na Usafirishaji",
       "subtitle": "Uwezeshaji wa Biashara, Forodha, Vifaa na Usafirishaji wa Mipakani",
-      "description": "Uwezeshaji wa biashara, vibali vya forodha na usafirishaji salama wa mizigo katika ukanda wa Afrika Kusini (SADAC)–DRC.",
+      "description": "Uwezeshaji wa biashara, vibali vya forodha na usafirishaji salama wa mizigo katika ukanda wa Afrika Kusini (SADC)–DRC.",
       "preview": [
         "Forodha",
         "Usafirishaji",
@@ -92,7 +92,7 @@ export const sw: TranslationDictionary = {
       "title": "Madini na Maliasili",
       "shortTitle": "Madini",
       "subtitle": "Msaada wa Uchimbaji Madini, Ununuzi & Uratibu wa Biashara ya Mipakani",
-      "description": "Usaidizi madhubuti wa ununuzi wa vifaa vya migodi, ushirikiano, ugavi wa viwandani na uratibu wa kibiashara katika ukanda wa Afrika Kusini (SADAC)–DRC.",
+      "description": "Usaidizi madhubuti wa ununuzi wa vifaa vya migodi, ushirikiano, ugavi wa viwandani na uratibu wa kibiashara katika ukanda wa Afrika Kusini (SADC)–DRC.",
       "preview": [
         "Msaada wa migodi",
         "Ugavi wa vifaa",
@@ -117,9 +117,9 @@ export const sw: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Faida ya Ukanda",
-    "title": "Ukanda wa Afrika Kusini (SADAC) – DRC",
+    "title": "Ukanda wa Afrika Kusini (SADC) – DRC",
     "lead": "Mshirika Mmoja wa Kuaminika Katika Masoko Mawili Yenye Nguvu",
-    "desc": "Kupanua biashara kati ya Afrika Kusini (SADAC) na DRC kunahitaji ufahamu wa kina wa ndani, uzingatiaji thabiti wa sheria na usafirishaji wa kutegemewa. ARSSA inaondoa vikwazo vya mipakani kwa kuunganisha huduma zote chini ya paa moja.",
+    "desc": "Kupanua biashara kati ya Afrika Kusini (SADC) na DRC kunahitaji ufahamu wa kina wa ndani, uzingatiaji thabiti wa sheria na usafirishaji wa kutegemewa. ARSSA inaondoa vikwazo vya mipakani kwa kuunganisha huduma zote chini ya paa moja.",
     "point1Title": "Uelewa wa Mashinani",
     "point1Desc": "Uwepo thabiti wa kiutendaji huko Lubumbashi, Kinshasa, Kolwezi na Johannesburg.",
     "point2Title": "Bila Vikwazo vya Kisheria",
@@ -129,16 +129,16 @@ export const sw: TranslationDictionary = {
   },
   "cta": {
     "headline": "Uko tayari kuingia katika soko la DRC?",
-    "text": "ARSSA inatoa msaada kamili wa kiutendaji kwa wafanyabiashara wanaotaka kuanzisha, kuendesha na kukuza biashara katika ukanda wa Afrika Kusini (SADAC)–DRC.",
+    "text": "ARSSA inatoa msaada kamili wa kiutendaji kwa wafanyabiashara wanaotaka kuanzisha, kuendesha na kukuza biashara katika ukanda wa Afrika Kusini (SADC)–DRC.",
     "primary": "Tuma Ombi la Huduma",
     "secondary": "Wasiliana na ARSSA"
   },
   "footer": {
-    "desc": "ARSSA ni kampuni ya uratibu wa biashara na ukuzaji wa masoko iliyo nchini Afrika Kusini (SADAC), inayosaidia makampuni yanayofanya kazi kati ya Afrika Kusini (SADAC) na Jamhuri ya Kidemokrasia ya Kongo.",
+    "desc": "ARSSA ni kampuni ya uratibu wa biashara na ukuzaji wa masoko iliyo nchini Afrika Kusini (SADC), inayosaidia makampuni yanayofanya kazi kati ya Afrika Kusini (SADC) na Jamhuri ya Kidemokrasia ya Kongo.",
     "quickLinks": "Viungo vya Haraka",
     "services": "Huduma",
     "contact": "Mawasiliano",
-    "location": "Afrika Kusini (SADAC) — inahudumia ukanda wa Afrika Kusini (SADAC)–DRC",
+    "location": "Afrika Kusini (SADC) — inahudumia ukanda wa Afrika Kusini (SADC)–DRC",
     "terms": "Vigezo na Masharti",
     "privacy": "Sera ya Faragha",
     "cookies": "Sera ya Vidakuzi",
@@ -149,7 +149,7 @@ export const sw: TranslationDictionary = {
     "title": "Chagua Lugha Unayopendelea",
     "subtitle": "Chagua lugha yako ya asili ili kufahamu huduma za biashara ya mipakani za ARSSA.",
     "searchPlaceholder": "Tafuta lugha au nchi...",
-    "regionalTab": "Ukanda & Kanda (SADAC & DRC)",
+    "regionalTab": "Ukanda & Kanda (SADC & DRC)",
     "globalTab": "Washirika wa Kimataifa wa Biashara",
     "continueBtn": "Endelea kwa",
     "preserveNotice": "Utambulisho wa chapa (ARSSA, ARS S.A.R.L.) unabaki vile vile kimataifa."

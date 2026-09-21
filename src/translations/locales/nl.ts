@@ -41,7 +41,7 @@ export const nl: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Gespecialiseerde Divisies",
     "title": "Vijf Pijlers van Geïntegreerde Handel",
-    "subtitle": "Zuid-Afrika (SADAC) en de DRC verbinden met hoogwaardige operationele, wettelijke en logistieke capaciteiten."
+    "subtitle": "Zuid-Afrika (SADC) en de DRC verbinden met hoogwaardige operationele, wettelijke en logistieke capaciteiten."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const nl: TranslationDictionary = {
       "title": "Import & Export",
       "shortTitle": "Import & Export",
       "subtitle": "Handelsfacilitering, Douanecompliance, Logistiek & Grensoverschrijdend Vervoer",
-      "description": "Handelsfacilitering, douane-afhandeling, logistiek en grensoverschrijdend goederenvervoer over de corridor Zuid-Afrika (SADAC)–DRC.",
+      "description": "Handelsfacilitering, douane-afhandeling, logistiek en grensoverschrijdend goederenvervoer over de corridor Zuid-Afrika (SADC)–DRC.",
       "preview": [
         "Douane",
         "Logistiek",
@@ -92,7 +92,7 @@ export const nl: TranslationDictionary = {
       "title": "Mijnbouw & Grondstoffen",
       "shortTitle": "Mijnbouw",
       "subtitle": "Mijnbouwondersteuning, Inkoop & Grensoverschrijdende Commerciële Coördinatie",
-      "description": "Praktische ondersteuning voor mijnbouwgerelateerde inkoop, industriële partnerschappen, leveringen en commerciële coördinatie over de corridor Zuid-Afrika (SADAC)–DRC.",
+      "description": "Praktische ondersteuning voor mijnbouwgerelateerde inkoop, industriële partnerschappen, leveringen en commerciële coördinatie over de corridor Zuid-Afrika (SADC)–DRC.",
       "preview": [
         "Mijnbouwsupport",
         "Inkoop",
@@ -117,9 +117,9 @@ export const nl: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Corridorvoordeel",
-    "title": "De Zuid-Afrika (SADAC) – DRC Corridor",
+    "title": "De Zuid-Afrika (SADC) – DRC Corridor",
     "lead": "Eén Betrouwbare Partner in Twee Dynamische Markten",
-    "desc": "Uitbreiden tussen Zuid-Afrika (SADAC) en de DRC vereist diepgaande lokale kennis, sterke naleving van wetgeving en betrouwbare logistiek. ARSSA neemt alle grensoverschrijdende obstakels weg.",
+    "desc": "Uitbreiden tussen Zuid-Afrika (SADC) en de DRC vereist diepgaande lokale kennis, sterke naleving van wetgeving en betrouwbare logistiek. ARSSA neemt alle grensoverschrijdende obstakels weg.",
     "point1Title": "Lokale Aanwezigheid",
     "point1Desc": "Actieve operationele aanwezigheid in Lubumbashi, Kinshasa, Kolwezi en Johannesburg.",
     "point2Title": "Geen Bureaucratische Vertraging",
@@ -129,16 +129,16 @@ export const nl: TranslationDictionary = {
   },
   "cta": {
     "headline": "Klaar om de markt in de DRC te betreden?",
-    "text": "ARSSA biedt praktische, integrale ondersteuning voor bedrijven die willen starten en groeien over de Zuid-Afrika (SADAC)–DRC corridor.",
+    "text": "ARSSA biedt praktische, integrale ondersteuning voor bedrijven die willen starten en groeien over de Zuid-Afrika (SADC)–DRC corridor.",
     "primary": "Start een Aanvraag",
     "secondary": "Contact met ARSSA"
   },
   "footer": {
-    "desc": "ARSSA is een in Zuid-Afrika (SADAC) gevestigd advies- en handelsbedrijf dat ondernemingen ondersteunt die zakendoen tussen Zuid-Afrika (SADAC) en de Democratische Republiek Congo.",
+    "desc": "ARSSA is een in Zuid-Afrika (SADC) gevestigd advies- en handelsbedrijf dat ondernemingen ondersteunt die zakendoen tussen Zuid-Afrika (SADC) en de Democratische Republiek Congo.",
     "quickLinks": "Snelle Links",
     "services": "Diensten",
     "contact": "Contact",
-    "location": "Zuid-Afrika (SADAC) — ten dienste van de Zuid-Afrika (SADAC)–DRC corridor",
+    "location": "Zuid-Afrika (SADC) — ten dienste van de Zuid-Afrika (SADC)–DRC corridor",
     "terms": "Algemene Voorwaarden",
     "privacy": "Privacybeleid",
     "cookies": "Cookiebeleid",
@@ -149,7 +149,7 @@ export const nl: TranslationDictionary = {
     "title": "Selecteer uw voorkeurstaal",
     "subtitle": "Kies uw moedertaal om ARSSA's grensoverschrijdende handels- en marktdiensten te ontdekken.",
     "searchPlaceholder": "Zoek taal of land...",
-    "regionalTab": "Corridor & Regionale Talen (SADAC & DRC)",
+    "regionalTab": "Corridor & Regionale Talen (SADC & DRC)",
     "globalTab": "Wereldwijde Handelspartners",
     "continueBtn": "Doorgaan in het",
     "preserveNotice": "De merkidentiteit (ARSSA, ARS S.A.R.L.) blijft internationaal ongewijzigd behouden."

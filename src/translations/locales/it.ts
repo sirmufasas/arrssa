@@ -41,7 +41,7 @@ export const it: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Le Nostre Divisioni",
     "title": "Cinque Pilastri di Commercio Integrato",
-    "subtitle": "Connettere Sudafrica (SADAC) e la RDC con elevate competenze operative, regolatorie e logistiche sul campo."
+    "subtitle": "Connettere Sudafrica (SADC) e la RDC con elevate competenze operative, regolatorie e logistiche sul campo."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const it: TranslationDictionary = {
       "title": "Importazione ed Esportazione",
       "shortTitle": "Importazione ed Esportazione",
       "subtitle": "Facilitazione Commerciale, Dogana, Logistica e Trasporto Transfrontaliero",
-      "description": "Facilitazione del commercio, sdoganamento, logistica e trasporto merci transfrontaliero nel corridoio Sudafrica (SADAC)–RDC.",
+      "description": "Facilitazione del commercio, sdoganamento, logistica e trasporto merci transfrontaliero nel corridoio Sudafrica (SADC)–RDC.",
       "preview": [
         "Operazioni doganali",
         "Logistica",
@@ -92,7 +92,7 @@ export const it: TranslationDictionary = {
       "title": "Miniere e Risorse",
       "shortTitle": "Settore Minerario",
       "subtitle": "Supporto al Settore Minerario, Approvvigionamento e Coordinamento Commerciale",
-      "description": "Supporto operativo per approvvigionamenti nel settore minerario, partnership industriali e coordinamento commerciale nel corridoio Sudafrica (SADAC)–RDC.",
+      "description": "Supporto operativo per approvvigionamenti nel settore minerario, partnership industriali e coordinamento commerciale nel corridoio Sudafrica (SADC)–RDC.",
       "preview": [
         "Supporto minerario",
         "Approvvigionamento",
@@ -117,9 +117,9 @@ export const it: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Vantaggio del Corridoio",
-    "title": "Il Corridoio Sudafrica (SADAC) – RDC",
+    "title": "Il Corridoio Sudafrica (SADC) – RDC",
     "lead": "Un Unico Partner di Fiducia su Due Mercati Dinamici",
-    "desc": "Espandersi tra il Sudafrica (SADAC) e la RDC richiede una solida conoscenza locale, rigore normativo e logistica affidabile. ARSSA elimina ogni ostacolo coordinando tutto sotto una sola regia.",
+    "desc": "Espandersi tra il Sudafrica (SADC) e la RDC richiede una solida conoscenza locale, rigore normativo e logistica affidabile. ARSSA elimina ogni ostacolo coordinando tutto sotto una sola regia.",
     "point1Title": "Presenza sul Campo",
     "point1Desc": "Sedi operative consolidate a Lubumbashi, Kinshasa, Kolwezi e Johannesburg.",
     "point2Title": "Zero Frizioni Burocratiche",
@@ -129,16 +129,16 @@ export const it: TranslationDictionary = {
   },
   "cta": {
     "headline": "Pronto a conquistare il mercato della RDC?",
-    "text": "ARSSA offre un supporto completo e pratico per le aziende che desiderano insediarsi e prosperare lungo il corridoio Sudafrica (SADAC)–RDC.",
+    "text": "ARSSA offre un supporto completo e pratico per le aziende che desiderano insediarsi e prosperare lungo il corridoio Sudafrica (SADC)–RDC.",
     "primary": "Richiedi un Preventivo",
     "secondary": "Contatta ARSSA"
   },
   "footer": {
-    "desc": "ARSSA è una società con sede in Sudafrica (SADAC) specializzata in facilitazione aziendale, sviluppo commerciale e scambi tra il Sudafrica (SADAC) e la Repubblica Democratica del Congo.",
+    "desc": "ARSSA è una società con sede in Sudafrica (SADC) specializzata in facilitazione aziendale, sviluppo commerciale e scambi tra il Sudafrica (SADC) e la Repubblica Democratica del Congo.",
     "quickLinks": "Link Rapidi",
     "services": "Servizi",
     "contact": "Contatti",
-    "location": "Sudafrica (SADAC) — a supporto del corridoio Sudafrica (SADAC)–RDC",
+    "location": "Sudafrica (SADC) — a supporto del corridoio Sudafrica (SADC)–RDC",
     "terms": "Termini e Condizioni",
     "privacy": "Informativa sulla Privacy",
     "cookies": "Informativa sui Cookie",
@@ -149,7 +149,7 @@ export const it: TranslationDictionary = {
     "title": "Seleziona la tua lingua preferita",
     "subtitle": "Scegli la tua lingua madre per consultare i servizi commerciali di ARSSA.",
     "searchPlaceholder": "Cerca lingua o paese...",
-    "regionalTab": "Corridoio & Lingue Regionali (SADAC & DRC)",
+    "regionalTab": "Corridoio & Lingue Regionali (SADC & DRC)",
     "globalTab": "Partner Commerciali Globali",
     "continueBtn": "Continua in",
     "preserveNotice": "I marchi ufficiali (ARSSA, ARS S.A.R.L.) rimangono rigorosamente invariati a livello internazionale."

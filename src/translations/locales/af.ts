@@ -41,7 +41,7 @@ export const af: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Ons Gespesialiseerde Afdelings",
     "title": "Vyf Pilare van Geïntegreerde Handel",
-    "subtitle": "Verbind Suid-Afrika (SADAC) en die DRK met omvattende operasionele, regulatoriese en veldvermoëns."
+    "subtitle": "Verbind Suid-Afrika (SADC) en die DRK met omvattende operasionele, regulatoriese en veldvermoëns."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const af: TranslationDictionary = {
       "title": "In- en Uitvoer",
       "shortTitle": "In- en Uitvoer",
       "subtitle": "Handelsfasilitering, Nakoming, Logistiek & Oorgrensbeweging",
-      "description": "Handelsfasilitering, doeane-nakoming, logistiek en oorgrensvervoer van goedere oor die Suid-Afrika (SADAC)–DRK-korridor.",
+      "description": "Handelsfasilitering, doeane-nakoming, logistiek en oorgrensvervoer van goedere oor die Suid-Afrika (SADC)–DRK-korridor.",
       "preview": [
         "Doeane",
         "Logistiek",
@@ -92,7 +92,7 @@ export const af: TranslationDictionary = {
       "title": "Mynbou en Hulpbronne",
       "shortTitle": "Mynbou",
       "subtitle": "Mynbou-ondersteuning, Verkryging & Oorgrens Kommersiële Koördinering",
-      "description": "Praktiese ondersteuning vir mynbouverwante verkryging, vennootskappe, voorrade en kommersiële koördinering oor die Suid-Afrika (SADAC)–DRK-korridor.",
+      "description": "Praktiese ondersteuning vir mynbouverwante verkryging, vennootskappe, voorrade en kommersiële koördinering oor die Suid-Afrika (SADC)–DRK-korridor.",
       "preview": [
         "Mynboubystand",
         "Verkryging",
@@ -117,9 +117,9 @@ export const af: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Korridorvoordeel",
-    "title": "Die Suid-Afrika (SADAC) – DRK Korridor",
+    "title": "Die Suid-Afrika (SADC) – DRK Korridor",
     "lead": "Een Betroubare Vennoot Oor Twee Dinamiese Marke",
-    "desc": "Uitbreiding tussen Suid-Afrika (SADAC) en die DRK verg diepgaande plaaslike kennis, sterk regulatoriese raamwerke en gevestigde logistiek. ARSSA verwyder oorgrenswrywing deur fasilitering, verkope, logistiek en nakoming onder een dak te verenig.",
+    "desc": "Uitbreiding tussen Suid-Afrika (SADC) en die DRK verg diepgaande plaaslike kennis, sterk regulatoriese raamwerke en gevestigde logistiek. ARSSA verwyder oorgrenswrywing deur fasilitering, verkope, logistiek en nakoming onder een dak te verenig.",
     "point1Title": "Plaaslike Kennis",
     "point1Desc": "Operasionele teenwoordigheid in Lubumbashi, Kinshasa, Kolwezi en Johannesburg.",
     "point2Title": "Geen Reguleringswrywing",
@@ -129,16 +129,16 @@ export const af: TranslationDictionary = {
   },
   "cta": {
     "headline": "Gereed om die DRK-mark te betree?",
-    "text": "ARSSA bied praktiese, geïntegreerde ondersteuning vir ondernemings wat wil vestig, bedryf en groei oor die Suid-Afrika (SADAC)–DRK-korridor.",
+    "text": "ARSSA bied praktiese, geïntegreerde ondersteuning vir ondernemings wat wil vestig, bedryf en groei oor die Suid-Afrika (SADC)–DRK-korridor.",
     "primary": "Begin 'n Navraag",
     "secondary": "Kontak ARSSA"
   },
   "footer": {
-    "desc": "ARSSA is 'n Suid-Afrikaanse (SADAC) besigheidsfasilitering-, markgroei- en handelsdiensmaatskappy wat ondernemings ondersteun wat tussen Suid-Afrika (SADAC) en die Demokratiese Republiek van die Kongo sake doen.",
+    "desc": "ARSSA is 'n Suid-Afrikaanse (SADC) besigheidsfasilitering-, markgroei- en handelsdiensmaatskappy wat ondernemings ondersteun wat tussen Suid-Afrika (SADC) en die Demokratiese Republiek van die Kongo sake doen.",
     "quickLinks": "Vinnige Skakels",
     "services": "Dienste",
     "contact": "Kontak",
-    "location": "Suid-Afrika (SADAC) — bedien die Suid-Afrika (SADAC)–DRK-korridor",
+    "location": "Suid-Afrika (SADC) — bedien die Suid-Afrika (SADC)–DRK-korridor",
     "terms": "Bepalings en Voorwaardes",
     "privacy": "Privaatheidsbeleid",
     "cookies": "Koekiebeleid",
@@ -149,7 +149,7 @@ export const af: TranslationDictionary = {
     "title": "Kies U Voorkeurtaal",
     "subtitle": "Kies u moedertaal om ARSSA se oorgrenshandel- en fasiliteringsdienste te verken.",
     "searchPlaceholder": "Soek taal of land...",
-    "regionalTab": "Korridor & Streeks (SADAC & DRK)",
+    "regionalTab": "Korridor & Streeks (SADC & DRK)",
     "globalTab": "Wêreldwye Handelsvennote",
     "continueBtn": "Gaan voort in",
     "preserveNotice": "Handelsmerkidentiteit (ARSSA, ARS S.A.R.L.) bly internasionaal beskerm."

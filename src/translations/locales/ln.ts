@@ -41,7 +41,7 @@ export const ln: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Biteni na Biso ya Sikisiki",
     "title": "Makonzi Mitano ya Mombongo ya Kokoka",
-    "subtitle": "Kosangisa Afrika ya Sudi (SADAC) mpe RDC na bokasi ya mibeko, ya mosala mpe ya kobimisa biloko na mabele."
+    "subtitle": "Kosangisa Afrika ya Sudi (SADC) mpe RDC na bokasi ya mibeko, ya mosala mpe ya kobimisa biloko na mabele."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const ln: TranslationDictionary = {
       "title": "Bokotisi mpe Bobimisi Biloko",
       "shortTitle": "Bokotisi mpe Bobimisi",
       "subtitle": "Lisalisi ya Douane, Logistique & Kotambola ya Biloko na Ndelo",
-      "description": "Kosala makambo ya douane, logistique mpe kotinda biloko na bokengi nyonso na nzela ya mombongo Afrika ya Sudi (SADAC)–RDC.",
+      "description": "Kosala makambo ya douane, logistique mpe kotinda biloko na bokengi nyonso na nzela ya mombongo Afrika ya Sudi (SADC)–RDC.",
       "preview": [
         "Douane",
         "Logistique",
@@ -92,7 +92,7 @@ export const ln: TranslationDictionary = {
       "title": "Mabanga ya Talo mpe Mabele",
       "shortTitle": "Mabanga ya Talo",
       "subtitle": "Lisalisi ya Misala ya Mabanga, Bozwi Biloko & Boyokani ya Mombongo",
-      "description": "Lisalisi ya solosolo mpo na biloko ya misala ya mabanga ya talo, boyokani ya bakompani mpe botamboli ya biloko na nzela ya Afrika ya Sudi (SADAC)–RDC.",
+      "description": "Lisalisi ya solosolo mpo na biloko ya misala ya mabanga ya talo, boyokani ya bakompani mpe botamboli ya biloko na nzela ya Afrika ya Sudi (SADC)–RDC.",
       "preview": [
         "Lisalisi ya mabanga",
         "Bozwi biloko",
@@ -117,9 +117,9 @@ export const ln: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Litomba ya Nzela",
-    "title": "Nzela ya Afrika ya Sudi (SADAC) – RDC",
+    "title": "Nzela ya Afrika ya Sudi (SADC) – RDC",
     "lead": "Mobateli Moko ya Talo Kati na Zando Mibale ya Makasi",
-    "desc": "Kokola kati na Afrika ya Sudi (SADAC) mpe RDC esengaka boyebi ya solosolo ya mabele, botosi mibeko ya makasi mpe logistique ya kolonga. ARSSA elongoli mikakatano nyonso ya ndelo na kokangisa misala nyonso esika moko.",
+    "desc": "Kokola kati na Afrika ya Sudi (SADC) mpe RDC esengaka boyebi ya solosolo ya mabele, botosi mibeko ya makasi mpe logistique ya kolonga. ARSSA elongoli mikakatano nyonso ya ndelo na kokangisa misala nyonso esika moko.",
     "point1Title": "Boyebi ya Mabele",
     "point1Desc": "Kozala na bisika ya misala na Lubumbashi, Kinshasa, Kolwezi mpe Johannesburg.",
     "point2Title": "Mikakatano ya Mibeko Te",
@@ -129,16 +129,16 @@ export const ln: TranslationDictionary = {
   },
   "cta": {
     "headline": "Olingi kokota na zando ya RDC?",
-    "text": "ARSSA epesaka lisalisi ya solo mpe ya kokoka mpo na bakompani oyo elingi kofungola, kosala mpe kokola na nzela ya Afrika ya Sudi (SADAC)–RDC.",
+    "text": "ARSSA epesaka lisalisi ya solo mpe ya kokoka mpo na bakompani oyo elingi kofungola, kosala mpe kokola na nzela ya Afrika ya Sudi (SADC)–RDC.",
     "primary": "Senga Lisalisi",
     "secondary": "Solola na ARSSA"
   },
   "footer": {
-    "desc": "ARSSA ezali kompani ya bofungoli mombongo mpe bokoli ya zando oyo efandi na Afrika ya Sudi (SADAC), kosalisa bakompani oyo ezali kosala kati na Afrika ya Sudi (SADAC) mpe Republíki ya Kongó.",
+    "desc": "ARSSA ezali kompani ya bofungoli mombongo mpe bokoli ya zando oyo efandi na Afrika ya Sudi (SADC), kosalisa bakompani oyo ezali kosala kati na Afrika ya Sudi (SADC) mpe Republíki ya Kongó.",
     "quickLinks": "Ba Liens ya Lombangu",
     "services": "Misala",
     "contact": "Boyokani",
-    "location": "Afrika ya Sudi (SADAC) — kosala na nzela ya Afrika ya Sudi (SADAC)–RDC",
+    "location": "Afrika ya Sudi (SADC) — kosala na nzela ya Afrika ya Sudi (SADC)–RDC",
     "terms": "Mibeko ya Mosala",
     "privacy": "Bokengi ya Ba Données",
     "cookies": "Mibeko ya Ba Cookies",
@@ -149,7 +149,7 @@ export const ln: TranslationDictionary = {
     "title": "Pona Lokota Olingi",
     "subtitle": "Pona lokota na yo mpo na kotala misala ya mombongo mpe ya ndelo ya ARSSA.",
     "searchPlaceholder": "Luka lokota to ekolo...",
-    "regionalTab": "Nzela & Mboka (SADAC & RDC)",
+    "regionalTab": "Nzela & Mboka (SADC & RDC)",
     "globalTab": "Bakompani ya Mikili Misusu",
     "continueBtn": "Koba na",
     "preserveNotice": "Kombo ya kompani (ARSSA, ARS S.A.R.L.) etikalaka bongo na mokili mobimba."

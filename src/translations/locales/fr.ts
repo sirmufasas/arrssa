@@ -41,7 +41,7 @@ export const fr: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Nos Divisions Spécialisées",
     "title": "Cinq Piliers du Commerce Intégré",
-    "subtitle": "Relier l'Afrique du Sud (SADAC) et la RDC avec des capacités opérationnelles, réglementaires et de terrain complètes."
+    "subtitle": "Relier l'Afrique du Sud (SADC) et la RDC avec des capacités opérationnelles, réglementaires et de terrain complètes."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const fr: TranslationDictionary = {
       "title": "Import & Export",
       "shortTitle": "Import & Export",
       "subtitle": "Facilitation Douanière, Logistique & Flux Transfrontaliers",
-      "description": "Facilitation des échanges, dédouanement, logistique intégrée et acheminement transfrontalier sécurisé le long du corridor Afrique du Sud (SADAC)–RDC.",
+      "description": "Facilitation des échanges, dédouanement, logistique intégrée et acheminement transfrontalier sécurisé le long du corridor Afrique du Sud (SADC)–RDC.",
       "preview": [
         "Dédouanement",
         "Logistique",
@@ -92,7 +92,7 @@ export const fr: TranslationDictionary = {
       "title": "Mines & Ressources",
       "shortTitle": "Mines",
       "subtitle": "Soutien Minier, Approvisionnement & Coordination Commerciale",
-      "description": "Accompagnement pratique pour l'approvisionnement minier, partenariats stratégiques, fournitures industrielles et coordination commerciale sur le corridor Afrique du Sud (SADAC)–RDC.",
+      "description": "Accompagnement pratique pour l'approvisionnement minier, partenariats stratégiques, fournitures industrielles et coordination commerciale sur le corridor Afrique du Sud (SADC)–RDC.",
       "preview": [
         "Soutien minier",
         "Approvisionnement",
@@ -117,9 +117,9 @@ export const fr: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Avantage Corridor",
-    "title": "Le Corridor Afrique du Sud (SADAC) – RDC",
+    "title": "Le Corridor Afrique du Sud (SADC) – RDC",
     "lead": "Un Partenaire Unique de Confiance sur Deux Marchés Majeurs",
-    "desc": "Se développer entre l'Afrique du Sud (SADAC) et la RDC exige une solide intelligence locale, une maîtrise réglementaire rigoureuse et une logistique ancrée sur le terrain. ARSSA supprime les frictions transfrontalières en réunissant implantation, distribution, conformité et opérations sous un même toit.",
+    "desc": "Se développer entre l'Afrique du Sud (SADC) et la RDC exige une solide intelligence locale, une maîtrise réglementaire rigoureuse et une logistique ancrée sur le terrain. ARSSA supprime les frictions transfrontalières en réunissant implantation, distribution, conformité et opérations sous un même toit.",
     "point1Title": "Intelligence de Terrain",
     "point1Desc": "Présence opérationnelle continue à Lubumbashi, Kinshasa, Kolwezi et Johannesburg.",
     "point2Title": "Zéro Friction Réglementaire",
@@ -129,16 +129,16 @@ export const fr: TranslationDictionary = {
   },
   "cta": {
     "headline": "Prêt à conquérir le marché de la RDC ?",
-    "text": "ARSSA offre un accompagnement opérationnel et intégré pour les entreprises souhaitant s'implanter, opérer et grandir le long du corridor Afrique du Sud (SADAC)–RDC.",
+    "text": "ARSSA offre un accompagnement opérationnel et intégré pour les entreprises souhaitant s'implanter, opérer et grandir le long du corridor Afrique du Sud (SADC)–RDC.",
     "primary": "Demander un devis",
     "secondary": "Contacter ARSSA"
   },
   "footer": {
-    "desc": "ARSSA est une société de facilitation d'affaires, de croissance commerciale et de services d'échanges basée en Afrique du Sud (SADAC), au service des entreprises opérant entre l'Afrique du Sud (SADAC) et la République Démocratique du Congo.",
+    "desc": "ARSSA est une société de facilitation d'affaires, de croissance commerciale et de services d'échanges basée en Afrique du Sud (SADC), au service des entreprises opérant entre l'Afrique du Sud (SADC) et la République Démocratique du Congo.",
     "quickLinks": "Liens Rapides",
     "services": "Services",
     "contact": "Contact",
-    "location": "Afrique du Sud (SADAC) — au service du corridor Afrique du Sud (SADAC)–RDC",
+    "location": "Afrique du Sud (SADC) — au service du corridor Afrique du Sud (SADC)–RDC",
     "terms": "Conditions Générales",
     "privacy": "Politique de Confidentialité",
     "cookies": "Politique de Cookies",
@@ -149,7 +149,7 @@ export const fr: TranslationDictionary = {
     "title": "Choisissez votre langue préférée",
     "subtitle": "Découvrez les services commerciaux et transfrontaliers d'ARSSA dans votre langue maternelle.",
     "searchPlaceholder": "Rechercher une langue ou un pays...",
-    "regionalTab": "Corridor & Régional (SADAC & RDC)",
+    "regionalTab": "Corridor & Régional (SADC & RDC)",
     "globalTab": "Partenaires Commerciaux Mondiaux",
     "continueBtn": "Continuer en",
     "preserveNotice": "L'identité de marque (ARSSA, ARS S.A.R.L.) et les désignations officielles restent strictement préservées."

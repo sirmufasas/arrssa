@@ -41,7 +41,7 @@ export const ko: TranslationDictionary = {
   "divisionsSection": {
     "badge": "전문 사업 부문",
     "title": "통합 무역의 5대 핵심 축",
-    "subtitle": "남아프리카 공화국 (SADAC)과 콩고민주공화국을 연결하는 최고 수준의 실무, 규제 및 물류 역량."
+    "subtitle": "남아프리카 공화국 (SADC)과 콩고민주공화국을 연결하는 최고 수준의 실무, 규제 및 물류 역량."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const ko: TranslationDictionary = {
       "title": "수출입 및 크로스보더 무역",
       "shortTitle": "수출입 무역",
       "subtitle": "통관 지원, 무역 규제 준수, 복합 물류 및 국경 간 수송",
-      "description": "남아프리카 공화국 (SADAC)과 콩고민주공화국 간 통상 회랑에서 통관, 무역 규제 준수, 국제 물류 및 공급망을 종합 지원합니다.",
+      "description": "남아프리카 공화국 (SADC)과 콩고민주공화국 간 통상 회랑에서 통관, 무역 규제 준수, 국제 물류 및 공급망을 종합 지원합니다.",
       "preview": [
         "통관",
         "복합 물류",
@@ -92,7 +92,7 @@ export const ko: TranslationDictionary = {
       "title": "광업 및 천연자원 지원",
       "shortTitle": "광업 자원",
       "subtitle": "광산 장비·자재 조달, 전략적 파트너십 및 통상 조정",
-      "description": "남아프리카 공화국 (SADAC)과 콩고민주공화국 간 광업 관련 장비 조달, 공급망 구축 및 통상 비즈니스 협력을 지원합니다.",
+      "description": "남아프리카 공화국 (SADC)과 콩고민주공화국 간 광업 관련 장비 조달, 공급망 구축 및 통상 비즈니스 협력을 지원합니다.",
       "preview": [
         "광업 지원",
         "기자재 조달",
@@ -117,9 +117,9 @@ export const ko: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "통상 회랑의 강점",
-    "title": "남아프리카 공화국 (SADAC) – 콩고민주공화국 통상 회랑",
+    "title": "남아프리카 공화국 (SADC) – 콩고민주공화국 통상 회랑",
     "lead": "성장하는 두 거대 시장을 잇는 단 하나의 책임 파트너",
-    "desc": "남아프리카 공화국 (SADAC)과 콩고민주공화국 간 사업 확장은 현지 전문 지식, 철저한 법률 준수, 안정적 물류가 뒷받침되어야 합니다. ARSSA는 모든 과정을 단일 창구로 일원화합니다.",
+    "desc": "남아프리카 공화국 (SADC)과 콩고민주공화국 간 사업 확장은 현지 전문 지식, 철저한 법률 준수, 안정적 물류가 뒷받침되어야 합니다. ARSSA는 모든 과정을 단일 창구로 일원화합니다.",
     "point1Title": "현지 네트워크와 인사이트",
     "point1Desc": "루붐바시, 킨샤사, 콜웨지, 요하네스버그에 걸친 강력한 상주 운영망.",
     "point2Title": "규제 마찰 제로",
@@ -129,16 +129,16 @@ export const ko: TranslationDictionary = {
   },
   "cta": {
     "headline": "콩고민주공화국 시장 진출을 준비 중이신가요?",
-    "text": "ARSSA는 남아프리카 공화국 (SADAC)–콩고민주공화국 회랑을 아우르는 전문적이고 실용적인 원스톱 지원을 제공합니다.",
+    "text": "ARSSA는 남아프리카 공화국 (SADC)–콩고민주공화국 회랑을 아우르는 전문적이고 실용적인 원스톱 지원을 제공합니다.",
     "primary": "문의 신청",
     "secondary": "ARSSA 문의"
   },
   "footer": {
-    "desc": "ARSSA는 남아프리카 공화국 (SADAC)에 본사를 두고, 남아프리카 공화국 (SADAC)과 콩고민주공화국 간 비즈니스 진출, 시장 개척 및 통상 서비스를 제공하는 전문 파트너입니다.",
+    "desc": "ARSSA는 남아프리카 공화국 (SADC)에 본사를 두고, 남아프리카 공화국 (SADC)과 콩고민주공화국 간 비즈니스 진출, 시장 개척 및 통상 서비스를 제공하는 전문 파트너입니다.",
     "quickLinks": "바로가기",
     "services": "서비스",
     "contact": "연락처",
-    "location": "남아프리카 공화국 (SADAC) — 남아프리카 공화국 (SADAC)–DRC 회랑 전문",
+    "location": "남아프리카 공화국 (SADC) — 남아프리카 공화국 (SADC)–DRC 회랑 전문",
     "terms": "이용약관",
     "privacy": "개인정보처리방침",
     "cookies": "쿠키 정책",
@@ -149,7 +149,7 @@ export const ko: TranslationDictionary = {
     "title": "원하시는 언어를 선택하세요",
     "subtitle": "ARSSA의 크로스보더 무역 및 비즈니스 지원 서비스를 편리한 언어로 확인하세요.",
     "searchPlaceholder": "언어 또는 국가 검색...",
-    "regionalTab": "회랑 및 지역 언어 (SADAC & DRC)",
+    "regionalTab": "회랑 및 지역 언어 (SADC & DRC)",
     "globalTab": "글로벌 교역 파트너 언어",
     "continueBtn": "이 언어로 계속하기 - ",
     "preserveNotice": "공식 브랜드명(ARSSA, ARS S.A.R.L.)은 변경되지 않고 전 세계 표준으로 유지됩니다."
