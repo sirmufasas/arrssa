@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import { useT } from "../context/LanguageContext";
+import { useT, useTranslate } from "../context/LanguageContext";
 
 interface CTASectionProps {
   headline?: string;
@@ -21,6 +21,7 @@ export default function CTASection({
   secondaryPath = "/contact",
 }: CTASectionProps) {
   const t = useT();
+  const tr = useTranslate();
 
   const finalHeadline = headline || t.cta?.headline || "Ready to explore the DRC market?";
   const finalText = text || t.cta?.text || "ARSSA provides practical, integrated support for businesses seeking to establish, operate and grow across the South Africa (SADAC)–DRC corridor.";
@@ -33,15 +34,15 @@ export default function CTASection({
         <ScrollReveal>
           <div className="cta-band">
             <div className="cta-band__inner">
-              <h2>{finalHeadline}</h2>
-              <p>{finalText}</p>
+              <h2>{tr(finalHeadline)}</h2>
+              <p>{tr(finalText)}</p>
               <div className="cta-band__actions">
                 <Link to={primaryPath} className="btn btn--accent btn--lg">
-                  {finalPrimary}
+                  {tr(finalPrimary)}
                   <ArrowRight size={18} aria-hidden="true" />
                 </Link>
                 <Link to={secondaryPath} className="btn btn--outline-light btn--lg">
-                  {finalSecondary}
+                  {tr(finalSecondary)}
                   <Phone size={18} aria-hidden="true" />
                 </Link>
               </div>

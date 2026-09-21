@@ -9,6 +9,7 @@ import {
   ServiceBlocks,
   type ServiceBlock,
 } from "../../components/ServiceSections";
+import { useTranslate } from "../../context/LanguageContext";
 
 const BLOCKS: ServiceBlock[] = [
   {
@@ -54,6 +55,8 @@ const BLOCKS: ServiceBlock[] = [
 ];
 
 export default function MaintenanceCleaning() {
+  const tr = useTranslate();
+
   return (
     <>
       <SEO
@@ -84,10 +87,10 @@ export default function MaintenanceCleaning() {
                   loading="lazy"
                 />
                 <div className="showcase-media__overlay">
-                  <span className="showcase-media__tag">Regulated Standards</span>
-                  <h3 className="showcase-media__title">Sterile &amp; Safe Environments</h3>
+                  <span className="showcase-media__tag">{tr("Regulated Standards")}</span>
+                  <h3 className="showcase-media__title">{tr("Sterile & Safe Environments")}</h3>
                   <p className="showcase-media__desc">
-                    Maintaining high hygiene and environmental safety protocols for regulated industries.
+                    {tr("Maintaining high hygiene and environmental safety protocols for regulated industries.")}
                   </p>
                 </div>
               </div>
@@ -95,19 +98,15 @@ export default function MaintenanceCleaning() {
 
             <div>
               <ScrollReveal>
-                <p className="eyebrow eyebrow--navy">Division Overview</p>
+                <p className="eyebrow eyebrow--navy">{tr("Division Overview")}</p>
                 <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(26px, 3.5vw, 36px)", marginBottom: 18 }}>
-                  Maintaining Rigorous Operational &amp; Sanitary Standards
+                  {tr("Maintaining Rigorous Operational & Sanitary Standards")}
                 </h2>
                 <p className="lead" style={{ fontSize: 16, marginBottom: 20 }}>
-                  Pharmaceutical laboratories, cosmetic facilities, and food-processing plants
-                  require specialised hygiene, sanitary compliance, and preventative maintenance
-                  to prevent contamination and regulatory shutdown.
+                  {tr("Pharmaceutical laboratories, cosmetic facilities, and food-processing plants require specialised hygiene, sanitary compliance, and preventative maintenance to prevent contamination and regulatory shutdown.")}
                 </p>
                 <p style={{ color: "var(--ink-soft)", fontSize: 15, lineHeight: 1.65 }}>
-                  ARSSA provides rigorous operational support — including medical-grade disinfection,
-                  preventative equipment maintenance, waste management, and occupational health compliance —
-                  so your facilities always pass inspection and run smoothly.
+                  {tr("ARSSA provides rigorous operational support — including medical-grade disinfection, preventative equipment maintenance, waste management, and occupational health compliance — so your facilities always pass inspection and run smoothly.")}
                 </p>
               </ScrollReveal>
             </div>

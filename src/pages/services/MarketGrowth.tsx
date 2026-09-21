@@ -9,6 +9,7 @@ import {
   ServiceBlocks,
   type ServiceBlock,
 } from "../../components/ServiceSections";
+import { useTranslate } from "../../context/LanguageContext";
 
 const BLOCKS: ServiceBlock[] = [
   {
@@ -36,6 +37,8 @@ const BLOCKS: ServiceBlock[] = [
 ];
 
 export default function MarketGrowth() {
+  const tr = useTranslate();
+
   return (
     <>
       <SEO
@@ -66,10 +69,10 @@ export default function MarketGrowth() {
                   loading="lazy"
                 />
                 <div className="showcase-media__overlay">
-                  <span className="showcase-media__tag">Commercial Traction</span>
-                  <h3 className="showcase-media__title">From Placement to Offtake</h3>
+                  <span className="showcase-media__tag">{tr("Commercial Traction")}</span>
+                  <h3 className="showcase-media__title">{tr("From Placement to Offtake")}</h3>
                   <p className="showcase-media__desc">
-                    Driving real consumer demand and dependable wholesale distribution pipelines.
+                    {tr("Driving real consumer demand and dependable wholesale distribution pipelines.")}
                   </p>
                 </div>
               </div>
@@ -77,19 +80,15 @@ export default function MarketGrowth() {
 
             <div>
               <ScrollReveal>
-                <p className="eyebrow eyebrow--navy">Division Overview</p>
+                <p className="eyebrow eyebrow--navy">{tr("Division Overview")}</p>
                 <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(26px, 3.5vw, 36px)", marginBottom: 18 }}>
-                  Transforming Brand Presence into Commercial Offtake
+                  {tr("Transforming Brand Presence into Commercial Offtake")}
                 </h2>
                 <p className="lead" style={{ fontSize: 16, marginBottom: 20 }}>
-                  Gaining shelf presence is only half the battle. In competitive and fast-evolving
-                  markets like Lubumbashi and Kinshasa, products need continuous brand resonance,
-                  strong distributor alignment, and active demand generation.
+                  {tr("Gaining shelf presence is only half the battle. In competitive and fast-evolving markets like Lubumbashi and Kinshasa, products need continuous brand resonance, strong distributor alignment, and active demand generation.")}
                 </p>
                 <p style={{ color: "var(--ink-soft)", fontSize: 15, lineHeight: 1.65 }}>
-                  ARSSA connects South African (SADAC) brands directly with vetted wholesalers, retailers,
-                  and commercial buyers, orchestrating promotions and distribution channels that
-                  deliver repeatable revenue.
+                  {tr("ARSSA connects South African (SADAC) brands directly with vetted wholesalers, retailers, and commercial buyers, orchestrating promotions and distribution channels that deliver repeatable revenue.")}
                 </p>
               </ScrollReveal>
             </div>

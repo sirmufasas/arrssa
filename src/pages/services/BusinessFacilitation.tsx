@@ -11,6 +11,7 @@ import SEO from "../../components/SEO";
 import ScrollReveal from "../../components/ScrollReveal";
 import CTASection from "../../components/CTASection";
 import { PurposeCallout, ServiceBlocks, type ServiceBlock } from "../../components/ServiceSections";
+import { useTranslate } from "../../context/LanguageContext";
 
 const BLOCKS: ServiceBlock[] = [
   {
@@ -76,6 +77,8 @@ const BLOCKS: ServiceBlock[] = [
 ];
 
 export default function BusinessFacilitation() {
+  const tr = useTranslate();
+
   return (
     <>
       <SEO
@@ -106,10 +109,10 @@ export default function BusinessFacilitation() {
                   loading="lazy"
                 />
                 <div className="showcase-media__overlay">
-                  <span className="showcase-media__tag">Compliant Market Entry</span>
-                  <h3 className="showcase-media__title">Clear Path to Market</h3>
+                  <span className="showcase-media__tag">{tr("Compliant Market Entry")}</span>
+                  <h3 className="showcase-media__title">{tr("Clear Path to Market")}</h3>
                   <p className="showcase-media__desc">
-                    Navigating corporate filings, licensing, and workforce mobility without delays.
+                    {tr("Navigating corporate filings, licensing, and workforce mobility without delays.")}
                   </p>
                 </div>
               </div>
@@ -117,19 +120,15 @@ export default function BusinessFacilitation() {
 
             <div>
               <ScrollReveal>
-                <p className="eyebrow eyebrow--navy">Division Overview</p>
+                <p className="eyebrow eyebrow--navy">{tr("Division Overview")}</p>
                 <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(26px, 3.5vw, 36px)", marginBottom: 18 }}>
-                  Establishing Your Operations Safely &amp; Compliantly
+                  {tr("Establishing Your Operations Safely & Compliantly")}
                 </h2>
                 <p className="lead" style={{ fontSize: 16, marginBottom: 20 }}>
-                  Entering the Democratic Republic of Congo requires clear understanding of local
-                  administrative procedures, corporate governance statutes, immigration regulations,
-                  and licensing requirements.
+                  {tr("Entering the Democratic Republic of Congo requires clear understanding of local administrative procedures, corporate governance statutes, immigration regulations, and licensing requirements.")}
                 </p>
                 <p style={{ color: "var(--ink-soft)", fontSize: 15, lineHeight: 1.65 }}>
-                  ARSSA’s Business Facilitation division acts as your on-the-ground administrative
-                  and regulatory compass — ensuring that from your initial feasibility study to
-                  your daily operations, your business is fully compliant and legally protected.
+                  {tr("ARSSA’s Business Facilitation division acts as your on-the-ground administrative and regulatory compass — ensuring that from your initial feasibility study to your daily operations, your business is fully compliant and legally protected.")}
                 </p>
               </ScrollReveal>
             </div>
@@ -138,8 +137,8 @@ export default function BusinessFacilitation() {
           <ServiceBlocks blocks={BLOCKS} accent="#1a3160" />
 
           <PurposeCallout
-            title="Division Purpose"
-            text="Reduce administrative friction and establish compliant, well-prepared operations in the DRC."
+            title={tr("Division Purpose")}
+            text={tr("Reduce administrative friction and establish compliant, well-prepared operations in the DRC.")}
           />
         </div>
       </section>

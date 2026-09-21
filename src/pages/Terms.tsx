@@ -15,7 +15,7 @@ export default function Terms() {
       <PageHero
         eyebrow="Legal"
         title="Terms & Conditions"
-        subtitle={`Last updated: January 2026. These terms govern your use of the ${SITE.fullName} website and the provision of services by ARSSA.`}
+        subtitle="These terms govern your use of the ARSSA website and the provision of services. Last updated: January 2026."
         crumbs={[{ label: "Home", path: "/" }, { label: "Terms & Conditions" }]}
       />
 

@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="footer__brand">
             <Logo light asAnchor={false} />
             <p>{t.footer.desc}</p>
-            <p className="footer__tagline" translate="no">&ldquo;{SITE.tagline}&rdquo;</p>
+            <p className="footer__tagline">&ldquo;{t.hero.headline1} {t.hero.headlineGold}&rdquo;</p>
 
             <button
               type="button"

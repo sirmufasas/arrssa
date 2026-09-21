@@ -15,7 +15,7 @@ export default function Cookies() {
       <PageHero
         eyebrow="Legal"
         title="Cookie Policy"
-        subtitle={`How the ${SITE.name} website uses cookies. Last updated: January 2026.`}
+        subtitle="How the ARSSA website uses cookies. Last updated: January 2026."
         crumbs={[{ label: "Home", path: "/" }, { label: "Cookie Policy" }]}
       />
 

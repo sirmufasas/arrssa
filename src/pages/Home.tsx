@@ -20,7 +20,7 @@ import StatCounter from "../components/StatCounter";
 import CTASection from "../components/CTASection";
 import GoogleReviews from "../components/GoogleReviews";
 import { SERVICES } from "../data/site";
-import { useT } from "../context/LanguageContext";
+import { useLanguage, useT, useTranslate } from "../context/LanguageContext";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -44,6 +44,7 @@ function CorridorVisual({ caption }: { caption: string }) {
 export default function Home() {
   const [selectedDivision, setSelectedDivision] = useState(SERVICES[0].slug);
   const t = useT();
+  const tr = useTranslate();
 
   const currentSvc = SERVICES.find((s) => s.slug === selectedDivision) || SERVICES[0];
   const currentDivTrans = Array.isArray(t.divisions)
@@ -167,7 +168,7 @@ export default function Home() {
                 loading="lazy"
               />
               <div className="showcase-media__overlay">
-                <span className="showcase-media__tag" translate="no">ARS S.A.R.L. South African (SADAC) Extension</span>
+                <span className="showcase-media__tag"><strong translate="no">ARS S.A.R.L.</strong> {tr("South African (SADAC) Extension")}</span>
                 <h3 className="showcase-media__title">{t.corridor.lead}</h3>
                 <p className="showcase-media__desc">{t.corridor.desc}</p>
               </div>
@@ -196,7 +197,7 @@ export default function Home() {
                 ].map((s) => (
                   <span key={s} className="badge">
                     <CheckCircle2 size={14} color="var(--green)" aria-hidden="true" />
-                    {s}
+                    {tr(s)}
                   </span>
                 ))}
               </div>
@@ -332,13 +333,13 @@ export default function Home() {
                       }}
                     >
                       <Sparkles size={16} color="var(--brand-gold)" aria-hidden="true" />
-                      Key Capabilities &amp; Focus Areas
+                      {tr("Key Capabilities & Focus Areas")}
                     </h4>
                     <ul className="check-list">
                       {displayPreview.map((p) => (
                         <li key={p}>
                           <CheckCircle2 size={16} color="var(--green)" aria-hidden="true" />
-                          <span style={{ fontWeight: 500 }}>{p}</span>
+                          <span style={{ fontWeight: 500 }}>{tr(p)}</span>
                         </li>
                       ))}
                     </ul>
@@ -383,19 +384,19 @@ export default function Home() {
             <ScrollReveal delay={0.1}>
               <div className="badge-row">
                 <span className="badge">
-                  <Building2 size={15} color="var(--gold)" aria-hidden="true" /> Pharmaceutical &amp; Medical
+                  <Building2 size={15} color="var(--gold)" aria-hidden="true" /> {tr("Pharmaceutical & Medical")}
                 </span>
                 <span className="badge">
-                  <BarChart3 size={15} color="var(--gold)" aria-hidden="true" /> Cosmetic Products
+                  <BarChart3 size={15} color="var(--gold)" aria-hidden="true" /> {tr("Cosmetic Products")}
                 </span>
                 <span className="badge">
-                  <Globe2 size={15} color="var(--gold)" aria-hidden="true" /> Agri-Food &amp; Agricultural
+                  <Globe2 size={15} color="var(--gold)" aria-hidden="true" /> {tr("Agri-Food & Agricultural")}
                 </span>
                 <span className="badge">
-                  <Layers size={15} color="var(--gold)" aria-hidden="true" /> Mining &amp; Resources
+                  <Layers size={15} color="var(--gold)" aria-hidden="true" /> {tr("Mining & Resources")}
                 </span>
                 <span className="badge">
-                  <Layers size={15} color="var(--gold)" aria-hidden="true" /> Corporate Supply Chain
+                  <Layers size={15} color="var(--gold)" aria-hidden="true" /> {tr("Corporate Supply Chain")}
                 </span>
               </div>
             </ScrollReveal>

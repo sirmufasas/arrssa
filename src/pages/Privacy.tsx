@@ -15,7 +15,7 @@ export default function Privacy() {
       <PageHero
         eyebrow="Legal"
         title="Privacy Policy"
-        subtitle={`How ARSSA handles personal information in line with the Protection of Personal Information Act (POPIA), South Africa. Last updated: January 2026.`}
+        subtitle="How ARSSA handles personal information in line with POPIA (Protection of Personal Information Act). Last updated: January 2026."
         crumbs={[{ label: "Home", path: "/" }, { label: "Privacy Policy" }]}
       />
 

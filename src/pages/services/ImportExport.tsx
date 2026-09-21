@@ -9,6 +9,7 @@ import {
   ServiceBlocks,
   type ServiceBlock,
 } from "../../components/ServiceSections";
+import { useTranslate } from "../../context/LanguageContext";
 
 const BLOCKS: ServiceBlock[] = [
   {
@@ -56,6 +57,8 @@ const BLOCKS: ServiceBlock[] = [
 ];
 
 export default function ImportExport() {
+  const tr = useTranslate();
+
   return (
     <>
       <SEO
@@ -86,10 +89,10 @@ export default function ImportExport() {
                   loading="lazy"
                 />
                 <div className="showcase-media__overlay">
-                  <span className="showcase-media__tag">Corridor Trade</span>
-                  <h3 className="showcase-media__title">Compliant Cargo Movement</h3>
+                  <span className="showcase-media__tag">{tr("Corridor Trade")}</span>
+                  <h3 className="showcase-media__title">{tr("Compliant Cargo Movement")}</h3>
                   <p className="showcase-media__desc">
-                    Eliminating customs bottlenecks, demurrage costs, and documentation errors.
+                    {tr("Eliminating customs bottlenecks, demurrage costs, and documentation errors.")}
                   </p>
                 </div>
               </div>
@@ -97,19 +100,15 @@ export default function ImportExport() {
 
             <div>
               <ScrollReveal>
-                <p className="eyebrow eyebrow--navy">Division Overview</p>
+                <p className="eyebrow eyebrow--navy">{tr("Division Overview")}</p>
                 <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(26px, 3.5vw, 36px)", marginBottom: 18 }}>
-                  End-to-End Trade Execution Across Borders
+                  {tr("End-to-End Trade Execution Across Borders")}
                 </h2>
                 <p className="lead" style={{ fontSize: 16, marginBottom: 20 }}>
-                  Moving goods between South Africa (SADAC) and the DRC involves complex customs
-                  regulations, multi-modal transport handoffs, import certifications, and strict
-                  documentary checks.
+                  {tr("Moving goods between South Africa (SADAC) and the DRC involves complex customs regulations, multi-modal transport handoffs, import certifications, and strict documentary checks.")}
                 </p>
                 <p style={{ color: "var(--ink-soft)", fontSize: 15, lineHeight: 1.65 }}>
-                  ARSSA oversees the entire supply chain — managing tariff classifications,
-                  freight forwarding, customs clearance, and local receiving to ensure your
-                  shipments arrive on schedule, fully compliant, and within budget.
+                  {tr("ARSSA oversees the entire supply chain — managing tariff classifications, freight forwarding, customs clearance, and local receiving to ensure your shipments arrive on schedule, fully compliant, and within budget.")}
                 </p>
               </ScrollReveal>
             </div>

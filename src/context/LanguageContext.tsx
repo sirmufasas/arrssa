@@ -189,6 +189,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const isEnglish = language === "en";
 
+    // Pre-sort phrases by length descending to match longest phrases first
+    const sortedPhrases = Object.entries(UNIVERSAL_PHRASES)
+      .filter(([phrase]) => phrase && phrase.length >= 2)
+      .sort((a, b) => b[0].length - a[0].length);
+
     const translateNode = (node: Node) => {
       if (node.nodeType === Node.TEXT_NODE) {
         // Cache original English text on first encounter
@@ -242,11 +247,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
           return;
         }
 
-        // Partial phrase replacement within text node
+        // Partial / multi-phrase replacement within text node using longest-to-shortest
         let updated = original;
         let modified = false;
-        for (const [enPhrase, transMap] of Object.entries(UNIVERSAL_PHRASES)) {
-          if (enPhrase.length > 5 && updated.includes(enPhrase)) {
+        for (const [enPhrase, transMap] of sortedPhrases) {
+          if (enPhrase.length >= 4 && updated.includes(enPhrase)) {
             const target = transMap[language];
             if (target) {
               updated = updated.split(enPhrase).join(target);
@@ -278,12 +283,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     };
 
     const runTranslation = () => {
-      const container = document.getElementById("main") || document.body;
-      translateNode(container);
+      translateNode(document.body);
     };
 
-    // Run immediately
+    // Run immediately and staggered timeouts for initial transitions
     runTranslation();
+    const timer1 = setTimeout(runTranslation, 100);
+    const timer2 = setTimeout(runTranslation, 300);
+    const timer3 = setTimeout(runTranslation, 800);
+
+    // Continuous interval to catch React Router page changes and Framer Motion animated elements
+    const interval = setInterval(runTranslation, 600);
 
     // Re-run on dynamic DOM mutations
     const observer = new MutationObserver((mutations) => {
@@ -298,6 +308,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     window.addEventListener("popstate", runTranslation);
 
     return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+      clearInterval(interval);
       observer.disconnect();
       window.removeEventListener("popstate", runTranslation);
     };
