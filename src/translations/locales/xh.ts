@@ -41,7 +41,7 @@ export const xh: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Amacandelo Ethu aKhethekileyo",
     "title": "Iintsika Ezintlanu zoRhwebo oluDityanisiweyo",
-    "subtitle": "Ukudibanisa uMzantsi Afrika (SADC) ne-DRC ngamakhono aqinileyo okusebenza, ezomthetho nezothutho."
+    "subtitle": "Ukudibanisa i-DRC noMzantsi Afrika wonke ngamakhono aqinileyo okusebenza, ezomthetho nezothutho."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const xh: TranslationDictionary = {
       "title": "Ukungenisa nokuThumela kweeMpahla",
       "shortTitle": "Ukungenisa nokuThumela",
       "subtitle": "Uququzelelo loRhwebo, Izithethe, uThutho lweMpahla nokuNqumla iMida",
-      "description": "Uququzelelo lorhwebo, ukuthotyelwa kwemithetho yeempahla, ulogistiki nokuthuthwa kweempahla kummandla woMzantsi Afrika (SADC)–DRC.",
+      "description": "Uququzelelo lorhwebo, ukuthotyelwa kwemithetho yeempahla, ulogistiki nokuthuthwa kweempahla kummandla we-DRC–Mazantsi e-Afrika.",
       "preview": [
         "Impahla yentela",
         "Uthutho",
@@ -92,12 +92,14 @@ export const xh: TranslationDictionary = {
       "title": "EzokuMba Nemithombo yeNdalo",
       "shortTitle": "EzokuMba",
       "subtitle": "Inkxaso yokuMba, Ukufunyanwa kweMpahla nokuLungelelaniswa koRhwebo",
-      "description": "Inkxaso esebenzayo yokufumana izixhobo zokumba, ubudlelwane, unikezelo lweempahla kunye nolungelelaniso lorhwebo kumda woMzantsi Afrika (SADC)–DRC.",
+      "description": "Inkxaso esebenzayo yokufumana izixhobo zokumba, ukubekwa kwabasebenzi, ubudlelwane, unikezelo lweempahla kunye nolungelelaniso lorhwebo kumda we-DRC–Mazantsi e-Afrika.",
       "preview": [
-        "Inkxaso yokumba",
-        "Ukufunyanwa kwezixhobo",
+        
+        "Inkxaso yezemigodi",
+        "Ukufumana izixhobo",
+        "Ukubekwa kwabasebenzi",
         "Ubudlelwane",
-        "Ulungelelaniso"
+        "Ulungelelaniso lweempahla"
       ]
     },
     {
@@ -117,9 +119,9 @@ export const xh: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Inzuzo yoRhwebo",
-    "title": "Indlela yoMzantsi Afrika (SADC) – DRC",
+    "title": "Indlela yoRhwebo yase-DRC–Mazantsi e-Afrika",
     "lead": "Iqabane Elinye Elithembekileyo KwiiMarike Ezimbini Ezomeleleyo",
-    "desc": "Ukwandisa amashishini phakathi koMzantsi Afrika (SADC) ne-DRC kufuna ulwazi olunzulu lwasekhaya, imimiselo engqongqo kunye nothutho oluthembekileyo. I-ARSSA isusa imiqobo ngokudibanisa yonke into phantsi kophahla olunye.",
+    "desc": "Ukwandisa amashishini phakathi kwe-DRC noMzantsi Afrika kufuna ulwazi olunzulu lwasekhaya, imimiselo engqongqo kunye nothutho oluthembekileyo. I-ARSSA isusa imiqobo ngokudibanisa yonke into phantsi kophahla olunye.",
     "point1Title": "Ulwazi lwaseKhaya",
     "point1Desc": "Ubukho bokusebenza eLubumbashi, Kinshasa, Kolwezi naseRhawutini.",
     "point2Title": "Ukunqongophala kweZiphazamiso",
@@ -129,16 +131,16 @@ export const xh: TranslationDictionary = {
   },
   "cta": {
     "headline": "Ukulungele ukungena kwimarike yase-DRC?",
-    "text": "I-ARSSA ibonelela ngenkxaso edityanisiweyo kumashishini afuna ukuzinza nokukhula kwindlela yoMzantsi Afrika (SADC)–DRC.",
+    "text": "I-ARSSA ibonelela ngenkxaso edityanisiweyo kumashishini afuna ukuzinza nokukhula kwindlela yoRhwebo yase-DRC–Mazantsi e-Afrika.",
     "primary": "Qala Isicelo",
     "secondary": "Qhagamshelana ne-ARSSA"
   },
   "footer": {
-    "desc": "I-ARSSA yinkampani yoququzelelo loshishino norhwebo ezinze eMzantsi Afrika (SADC), exhasa amashishini asebenza phakathi koMzantsi Afrika (SADC) neDemocratic Republic of Congo.",
+    "desc": "Ikomkhulu layo liseDemocratic Republic of Congo kanti inobukho obuqinileyo eMzantsi Afrika, i-ARSSA idibanisa amashishini, ababoneleli kunye namathuba phakathi kwe-DRC noMzantsi Afrika wonke.",
     "quickLinks": "Amakhonkco aKhawulezayo",
     "services": "Iinkonzo",
     "contact": "Qhagamshelana",
-    "location": "UMzantsi Afrika (SADC) — sikhonza indlela yoMzantsi Afrika (SADC)–DRC",
+    "location": "Ubukho Obumisiweyo eMzantsi Afrika — sikhonza indlela yoRhwebo yase-DRC–Mazantsi e-Afrika",
     "terms": "Imigaqo Nemimiselo",
     "privacy": "Umgaqo-nkqubo waBucala",
     "cookies": "Umgaqo-nkqubo weeKhukhi",

@@ -41,7 +41,7 @@ export const en: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Our Specialized Divisions",
     "title": "Five Pillars of Integrated Trade",
-    "subtitle": "Connecting South Africa (SADC) and the DRC with end-to-end operational, regulatory, and field capabilities."
+    "subtitle": "Connecting the DRC and Southern Africa with end-to-end operational, regulatory, and field capabilities."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const en: TranslationDictionary = {
       "title": "Import & Export",
       "shortTitle": "Import & Export",
       "subtitle": "Trade Facilitation, Compliance, Logistics & Cross-Border Movement",
-      "description": "Trade facilitation, compliance, logistics and cross-border movement for goods across the South Africa (SADC)–DRC corridor.",
+      "description": "Trade facilitation, compliance, logistics and cross-border movement for goods across the DRC–Southern Africa trade corridor.",
       "preview": [
         "Customs",
         "Logistics",
@@ -92,10 +92,12 @@ export const en: TranslationDictionary = {
       "title": "Mining & Resources",
       "shortTitle": "Mining",
       "subtitle": "Mining Support, Sourcing & Cross-Border Commercial Coordination",
-      "description": "Practical support for mining-related sourcing, partnerships, supplies and commercial coordination across the South Africa (SADC)–DRC corridor.",
+      "description": "Practical support for mining-related sourcing, workforce placement, partnerships, supplies and commercial coordination across the DRC–Southern Africa trade corridor.",
       "preview": [
+        
         "Mining support",
         "Sourcing",
+        "Workforce placement",
         "Partnerships",
         "Supply coordination"
       ]
@@ -117,9 +119,9 @@ export const en: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Corridor Advantage",
-    "title": "The South Africa (SADC) – DRC Corridor",
+    "title": "The DRC–Southern Africa Trade Corridor",
     "lead": "One Accountability Partner Across Two Dynamic Markets",
-    "desc": "Expanding between South Africa (SADC) and the DRC requires deep local intelligence, robust compliance frameworks and grounded logistics. ARSSA removes cross-border friction by uniting market entry, commercial distribution, regulatory handling and operational support under a single roof.",
+    "desc": "Expanding across the DRC and Southern Africa requires deep local intelligence, robust compliance frameworks and grounded logistics. ARSSA removes cross-border friction by uniting market entry, commercial distribution, regulatory handling and operational support under a single roof.",
     "point1Title": "Ground Intelligence",
     "point1Desc": "Operating presence across Lubumbashi, Kinshasa, Kolwezi and Johannesburg.",
     "point2Title": "Zero Regulatory Friction",
@@ -129,16 +131,16 @@ export const en: TranslationDictionary = {
   },
   "cta": {
     "headline": "Ready to explore the DRC market?",
-    "text": "ARSSA provides practical, integrated support for businesses seeking to establish, operate and grow across the South Africa (SADC)–DRC corridor.",
+    "text": "ARSSA provides practical, integrated support for businesses seeking to establish, operate and grow across the DRC–Southern Africa trade corridor.",
     "primary": "Start an Enquiry",
     "secondary": "Contact ARSSA"
   },
   "footer": {
-    "desc": "ARSSA is a South African (SADC)-based business facilitation, market-growth and trade services company supporting enterprises operating between South Africa (SADC) and the Democratic Republic of Congo.",
+    "desc": "Headquartered in the Democratic Republic of Congo with an established South African presence, ARSSA connects businesses, suppliers and opportunities between the DRC and Southern Africa, with South Africa serving as a key regional sourcing and commercial hub.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "contact": "Contact",
-    "location": "South Africa (SADC) — serving the South Africa (SADC)–DRC corridor",
+    "location": "Established South African Presence — serving the DRC–Southern Africa trade corridor",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "cookies": "Cookie Policy",

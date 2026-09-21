@@ -182,7 +182,7 @@ export default function About() {
                     color: "#ffffff",
                   }}
                 >
-                  &ldquo;{tr("To be the leading partner that simplifies and strengthens cross-border business between the DRC and Southern Africa, empowering pharmaceutical, cosmetic, and agri-food companies to expand with confidence.")}&rdquo;
+                  &ldquo;{tr("To be the leading partner that simplifies and strengthens cross-border business between the DRC and Southern Africa, empowering pharmaceutical, cosmetic, agri-food, and mining companies to expand with confidence.")}&rdquo;
                 </p>
               </div>
             </ScrollReveal>
@@ -206,7 +206,7 @@ export default function About() {
                     color: "#ffffff",
                   }}
                 >
-                  &ldquo;{tr("To provide structured, ethical, practical, and results-driven solutions helping businesses establish, operate, and grow in the DRC through compliant facilitation, strategic market development, and integrated trade support across Southern Africa.")}&rdquo;
+                  &ldquo;{tr("To enable businesses to establish, operate and grow in the DRC through structured, compliant and results-driven facilitation, while strengthening trade and commercial connections between the DRC and regional and international markets.")}&rdquo;
                 </p>
               </div>
             </ScrollReveal>

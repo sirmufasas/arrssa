@@ -41,7 +41,7 @@ export const nl: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Gespecialiseerde Divisies",
     "title": "Vijf Pijlers van Geïntegreerde Handel",
-    "subtitle": "Zuid-Afrika (SADC) en de DRC verbinden met hoogwaardige operationele, wettelijke en logistieke capaciteiten."
+    "subtitle": "Het verbinden van de DRC en Zuidelijk Afrika met end-to-end operationele, regelgevende en veldcapaciteiten."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const nl: TranslationDictionary = {
       "title": "Import & Export",
       "shortTitle": "Import & Export",
       "subtitle": "Handelsfacilitering, Douanecompliance, Logistiek & Grensoverschrijdend Vervoer",
-      "description": "Handelsfacilitering, douane-afhandeling, logistiek en grensoverschrijdend goederenvervoer over de corridor Zuid-Afrika (SADC)–DRC.",
+      "description": "Handelsfacilitering, douane-naleving, logistiek en grensoverschrijdend goederenvervoer over de handelscorridor DRC–Zuidelijk Afrika.",
       "preview": [
         "Douane",
         "Logistiek",
@@ -92,12 +92,14 @@ export const nl: TranslationDictionary = {
       "title": "Mijnbouw & Grondstoffen",
       "shortTitle": "Mijnbouw",
       "subtitle": "Mijnbouwondersteuning, Inkoop & Grensoverschrijdende Commerciële Coördinatie",
-      "description": "Praktische ondersteuning voor mijnbouwgerelateerde inkoop, industriële partnerschappen, leveringen en commerciële coördinatie over de corridor Zuid-Afrika (SADC)–DRC.",
+      "description": "Praktische ondersteuning voor mijnbouwgerelateerde inkoop, personeelsplaatsing, partnerschappen, leveringen en commerciële coördinatie over de handelscorridor DRC–Zuidelijk Afrika.",
       "preview": [
-        "Mijnbouwsupport",
+        
+        "Mijnbouwondersteuning",
         "Inkoop",
+        "Personeelsplaatsing",
         "Partnerschappen",
-        "Logistieke coördinatie"
+        "Leveringscoördinatie"
       ]
     },
     {
@@ -117,9 +119,9 @@ export const nl: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Corridorvoordeel",
-    "title": "De Zuid-Afrika (SADC) – DRC Corridor",
+    "title": "De Handelscorridor DRC–Zuidelijk Afrika",
     "lead": "Eén Betrouwbare Partner in Twee Dynamische Markten",
-    "desc": "Uitbreiden tussen Zuid-Afrika (SADC) en de DRC vereist diepgaande lokale kennis, sterke naleving van wetgeving en betrouwbare logistiek. ARSSA neemt alle grensoverschrijdende obstakels weg.",
+    "desc": "Uitbreiden tussen de DRC en Zuidelijk Afrika vereist diepgaande lokale kennis, sterke naleving van wetgeving en betrouwbare logistiek. ARSSA neemt alle grensoverschrijdende obstakels weg door markttoetreding, distributie en naleving onder één dak te verenigen.",
     "point1Title": "Lokale Aanwezigheid",
     "point1Desc": "Actieve operationele aanwezigheid in Lubumbashi, Kinshasa, Kolwezi en Johannesburg.",
     "point2Title": "Geen Bureaucratische Vertraging",
@@ -129,16 +131,16 @@ export const nl: TranslationDictionary = {
   },
   "cta": {
     "headline": "Klaar om de markt in de DRC te betreden?",
-    "text": "ARSSA biedt praktische, integrale ondersteuning voor bedrijven die willen starten en groeien over de Zuid-Afrika (SADC)–DRC corridor.",
+    "text": "ARSSA biedt praktische, integrale ondersteuning voor bedrijven die willen starten en groeien over de handelscorridor DRC–Zuidelijk Afrika.",
     "primary": "Start een Aanvraag",
     "secondary": "Contact met ARSSA"
   },
   "footer": {
-    "desc": "ARSSA is een in Zuid-Afrika (SADC) gevestigd advies- en handelsbedrijf dat ondernemingen ondersteunt die zakendoen tussen Zuid-Afrika (SADC) en de Democratische Republiek Congo.",
+    "desc": "Met het hoofdkantoor in de Democratische Republiek Congo en een gevestigde aanwezigheid in Zuid-Afrika, verbindt ARSSA bedrijven, leveranciers en kansen tussen de DRC en Zuidelijk Afrika, waarbij Zuid-Afrika fungeert als een belangrijke regionale inkoop- en commerciële hub.",
     "quickLinks": "Snelle Links",
     "services": "Diensten",
     "contact": "Contact",
-    "location": "Zuid-Afrika (SADC) — ten dienste van de Zuid-Afrika (SADC)–DRC corridor",
+    "location": "Gevestigde Aanwezigheid in Zuid-Afrika — ten dienste van de handelscorridor DRC–Zuidelijk Afrika",
     "terms": "Algemene Voorwaarden",
     "privacy": "Privacybeleid",
     "cookies": "Cookiebeleid",

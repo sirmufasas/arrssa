@@ -41,7 +41,7 @@ export const de: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Spezialisierte Geschäftsbereiche",
     "title": "Fünf Säulen Integrierten Handels",
-    "subtitle": "Verbindung von Südafrika (SADC) und der DR Kongo durch operative Exzellenz, Rechtssicherheit und Vor-Ort-Kompetenz."
+    "subtitle": "Verbindung der DR Kongo und des südlichen Afrikas durch operative Exzellenz, Rechtssicherheit und Vor-Ort-Kompetenz."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const de: TranslationDictionary = {
       "title": "Import & Export",
       "shortTitle": "Import & Export",
       "subtitle": "Handelserleichterung, Zoll-Compliance, Logistik & Grenzüberschreitender Transport",
-      "description": "Handelsabwicklung, Zoll-Compliance, Logistik und grenzüberschreitender Güterverkehr entlang des Korridors Südafrika (SADC)–DR Kongo.",
+      "description": "Handelsabwicklung, Zoll-Compliance, Logistik und grenzüberschreitender Güterverkehr entlang des Handelskorridors DR Kongo–Südliches Afrika.",
       "preview": [
         "Zollabwicklung",
         "Logistik",
@@ -92,12 +92,14 @@ export const de: TranslationDictionary = {
       "title": "Bergbau & Rohstoffe",
       "shortTitle": "Bergbau",
       "subtitle": "Bergbau-Support, Beschaffung & Grenzüberschreitende Koordination",
-      "description": "Praktische Unterstützung bei bergbaubezogener Beschaffung, Partnerschaften, Industriegütern und kommerzieller Koordination im Korridor Südafrika (SADC)–DR Kongo.",
+      "description": "Praktische Unterstützung bei bergbaubezogener Beschaffung, Fachkräftevermittlung, Partnerschaften, Industriegütern und kommerzieller Koordination im Handelskorridor DR Kongo–Südliches Afrika.",
       "preview": [
-        "Bergbau-Support",
+        
+        "Bergbauliche Unterstützung",
         "Beschaffung",
+        "Fachkräftevermittlung",
         "Partnerschaften",
-        "Logistik"
+        "Lieferkoordination"
       ]
     },
     {
@@ -117,9 +119,9 @@ export const de: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Korridor-Vorteil",
-    "title": "Der Handelskorridor Südafrika (SADC) – DR Kongo",
+    "title": "Der Handelskorridor DR Kongo–Südliches Afrika",
     "lead": "Ein Verantwortlicher Partner für Zwei Wachstumsstarke Märkte",
-    "desc": "Die Expansion zwischen Südafrika (SADC) und der DR Kongo erfordert profunde lokale Kenntnisse, präzise Einhaltung von Vorschriften und zuverlässige Logistikketten. ARSSA eliminiert grenzüberschreitende Reibungsverluste durch die Bündelung aller Dienstleistungen.",
+    "desc": "Die Expansion zwischen der DR Kongo und dem südlichen Afrika erfordert profunde lokale Kenntnisse, präzise Einhaltung von Vorschriften und zuverlässige Logistikketten. ARSSA eliminiert grenzüberschreitende Reibungsverluste durch die Bündelung aller Dienstleistungen.",
     "point1Title": "Vor-Ort-Kompetenz",
     "point1Desc": "Feste operative Präsenz in Lubumbashi, Kinshasa, Kolwezi und Johannesburg.",
     "point2Title": "Reibungslose Behördenwege",
@@ -129,16 +131,16 @@ export const de: TranslationDictionary = {
   },
   "cta": {
     "headline": "Bereit für den Markteintritt in der DR Kongo?",
-    "text": "ARSSA bietet ganzheitliche, praxiserprobte Unterstützung für Unternehmen, die im Korridor Südafrika (SADC)–DR Kongo wachsen wollen.",
+    "text": "ARSSA bietet ganzheitliche, praxiserprobte Unterstützung für Unternehmen, die im Handelskorridor DR Kongo–Südliches Afrika wachsen wollen.",
     "primary": "Anfrage starten",
     "secondary": "ARSSA kontaktieren"
   },
   "footer": {
-    "desc": "ARSSA ist ein in Südafrika (SADC) ansässiges Dienstleistungsunternehmen für Markterweiterung, Handelsförderung und operative Abwicklung zwischen Südafrika (SADC) und der Demokratischen Republik Kongo.",
+    "desc": "Mit Hauptsitz in der Demokratischen Republik Kongo und einer etablierten Präsenz in Südafrika verbindet ARSSA Unternehmen, Lieferanten und Geschäftsmöglichkeiten zwischen der DR Kongo und dem südlichen Afrika, wobei Südafrika als zentraler regionaler Beschaffungs- und Handelsknotenpunkt dient.",
     "quickLinks": "Direktlinks",
     "services": "Dienstleistungen",
     "contact": "Kontakt",
-    "location": "Südafrika (SADC) — im Einsatz für den Korridor Südafrika (SADC)–DR Kongo",
+    "location": "Etablierte Präsenz in Südafrika — im Einsatz für den Handelskorridor DR Kongo–Südliches Afrika",
     "terms": "AGB",
     "privacy": "Datenschutzerklärung",
     "cookies": "Cookie-Richtlinie",

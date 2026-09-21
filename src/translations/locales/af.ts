@@ -41,7 +41,7 @@ export const af: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Ons Gespesialiseerde Afdelings",
     "title": "Vyf Pilare van Geïntegreerde Handel",
-    "subtitle": "Verbind Suid-Afrika (SADC) en die DRK met omvattende operasionele, regulatoriese en veldvermoëns."
+    "subtitle": "Verbind die DRK en Suider-Afrika met omvattende operasionele, regulatoriese en veldvermoëns."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const af: TranslationDictionary = {
       "title": "In- en Uitvoer",
       "shortTitle": "In- en Uitvoer",
       "subtitle": "Handelsfasilitering, Nakoming, Logistiek & Oorgrensbeweging",
-      "description": "Handelsfasilitering, doeane-nakoming, logistiek en oorgrensvervoer van goedere oor die Suid-Afrika (SADC)–DRK-korridor.",
+      "description": "Handelsfasilitering, doeane-nakoming, logistiek en oorgrensvervoer van goedere oor die DRK–Suider-Afrika-handelskorridor.",
       "preview": [
         "Doeane",
         "Logistiek",
@@ -92,12 +92,14 @@ export const af: TranslationDictionary = {
       "title": "Mynbou en Hulpbronne",
       "shortTitle": "Mynbou",
       "subtitle": "Mynbou-ondersteuning, Verkryging & Oorgrens Kommersiële Koördinering",
-      "description": "Praktiese ondersteuning vir mynbouverwante verkryging, vennootskappe, voorrade en kommersiële koördinering oor die Suid-Afrika (SADC)–DRK-korridor.",
+      "description": "Praktiese ondersteuning vir mynbouverwante verkryging, werksmagplasing, vennootskappe, voorrade en kommersiële koördinering oor die DRK–Suider-Afrika-handelskorridor.",
       "preview": [
-        "Mynboubystand",
+        
+        "Mynbou-ondersteuning",
         "Verkryging",
+        "Werksmagplasing",
         "Vennootskappe",
-        "Koördinering"
+        "Voorrade-koördinering"
       ]
     },
     {
@@ -117,9 +119,9 @@ export const af: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Korridorvoordeel",
-    "title": "Die Suid-Afrika (SADC) – DRK Korridor",
+    "title": "Die DRK–Suider-Afrika Handelskorridor",
     "lead": "Een Betroubare Vennoot Oor Twee Dinamiese Marke",
-    "desc": "Uitbreiding tussen Suid-Afrika (SADC) en die DRK verg diepgaande plaaslike kennis, sterk regulatoriese raamwerke en gevestigde logistiek. ARSSA verwyder oorgrenswrywing deur fasilitering, verkope, logistiek en nakoming onder een dak te verenig.",
+    "desc": "Uitbreiding tussen die DRK en Suider-Afrika verg diepgaande plaaslike kennis, sterk regulatoriese raamwerke en gevestigde logistiek. ARSSA verwyder oorgrenswrywing deur fasilitering, verkope, logistiek en nakoming onder een dak te verenig.",
     "point1Title": "Plaaslike Kennis",
     "point1Desc": "Operasionele teenwoordigheid in Lubumbashi, Kinshasa, Kolwezi en Johannesburg.",
     "point2Title": "Geen Reguleringswrywing",
@@ -129,16 +131,16 @@ export const af: TranslationDictionary = {
   },
   "cta": {
     "headline": "Gereed om die DRK-mark te betree?",
-    "text": "ARSSA bied praktiese, geïntegreerde ondersteuning vir ondernemings wat wil vestig, bedryf en groei oor die Suid-Afrika (SADC)–DRK-korridor.",
+    "text": "ARSSA bied praktiese, geïntegreerde ondersteuning vir ondernemings wat wil vestig, bedryf en groei oor die DRK–Suider-Afrika-handelskorridor.",
     "primary": "Begin 'n Navraag",
     "secondary": "Kontak ARSSA"
   },
   "footer": {
-    "desc": "ARSSA is 'n Suid-Afrikaanse (SADC) besigheidsfasilitering-, markgroei- en handelsdiensmaatskappy wat ondernemings ondersteun wat tussen Suid-Afrika (SADC) en die Demokratiese Republiek van die Kongo sake doen.",
+    "desc": "Met sy hoofkantoor in die Demokratiese Republiek van die Kongo en 'n gevestigde Suid-Afrikaanse teenwoordigheid, verbind ARSSA besighede, verskaffers en geleenthede tussen die DRK en Suider-Afrika, met Suid-Afrika as 'n sleutelstreeks- en verkrygingsentrum.",
     "quickLinks": "Vinnige Skakels",
     "services": "Dienste",
     "contact": "Kontak",
-    "location": "Suid-Afrika (SADC) — bedien die Suid-Afrika (SADC)–DRK-korridor",
+    "location": "Gevestigde Suid-Afrikaanse Teenwoordigheid — bedien die DRK–Suider-Afrika-handelskorridor",
     "terms": "Bepalings en Voorwaardes",
     "privacy": "Privaatheidsbeleid",
     "cookies": "Koekiebeleid",

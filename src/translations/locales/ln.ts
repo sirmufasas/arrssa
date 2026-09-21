@@ -41,7 +41,7 @@ export const ln: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Biteni na Biso ya Sikisiki",
     "title": "Makonzi Mitano ya Mombongo ya Kokoka",
-    "subtitle": "Kosangisa Afrika ya Sudi (SADC) mpe RDC na bokasi ya mibeko, ya mosala mpe ya kobimisa biloko na mabele."
+    "subtitle": "Kokangisa RDC mpe Afríka ya Súdi na makoki ya mosala, mibeko mpe bopanzani ya biloko."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const ln: TranslationDictionary = {
       "title": "Bokotisi mpe Bobimisi Biloko",
       "shortTitle": "Bokotisi mpe Bobimisi",
       "subtitle": "Lisalisi ya Douane, Logistique & Kotambola ya Biloko na Ndelo",
-      "description": "Kosala makambo ya douane, logistique mpe kotinda biloko na bokengi nyonso na nzela ya mombongo Afrika ya Sudi (SADC)–RDC.",
+      "description": "Kosalisa mombo, kofuta mpako ya douane, kotambwisa biloko malamu na nzela ya mombo RDC–Afríka ya Súdi na zoni mobimba.",
       "preview": [
         "Douane",
         "Logistique",
@@ -92,12 +92,14 @@ export const ln: TranslationDictionary = {
       "title": "Mabanga ya Talo mpe Mabele",
       "shortTitle": "Mabanga ya Talo",
       "subtitle": "Lisalisi ya Misala ya Mabanga, Bozwi Biloko & Boyokani ya Mombongo",
-      "description": "Lisalisi ya solosolo mpo na biloko ya misala ya mabanga ya talo, boyokani ya bakompani mpe botamboli ya biloko na nzela ya Afrika ya Sudi (SADC)–RDC.",
+      "description": "Lisalisi ya solo mpo na kozwa biloko ya mabele ya talo, kozwa basali, boyokani, biloko ya misala mpe kokamba mombo na nzela ya DRC–Afríka ya Súdi.",
       "preview": [
+        
         "Lisalisi ya mabanga",
-        "Bozwi biloko",
+        "Kozwa biloko",
+        "Kopesa basali misala",
         "Boyokani",
-        "Bokengeli biloko"
+        "Bokambi biloko"
       ]
     },
     {
@@ -117,9 +119,9 @@ export const ln: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Litomba ya Nzela",
-    "title": "Nzela ya Afrika ya Sudi (SADC) – RDC",
+    "title": "Nzela ya Mombo RDC–Afríka ya Súdi na Zoni",
     "lead": "Mobateli Moko ya Talo Kati na Zando Mibale ya Makasi",
-    "desc": "Kokola kati na Afrika ya Sudi (SADC) mpe RDC esengaka boyebi ya solosolo ya mabele, botosi mibeko ya makasi mpe logistique ya kolonga. ARSSA elongoli mikakatano nyonso ya ndelo na kokangisa misala nyonso esika moko.",
+    "desc": "Kopanisa mombo na RDC mpe Afríka ya Súdi esengaka boyebi ya mozindo ya mboka, kotosa mibeko mpe nzela ya kotinda biloko ya solosolo. ARSSA elongolaka mikakatano nyonso na kokangisa makambo nyonso esika moko.",
     "point1Title": "Boyebi ya Mabele",
     "point1Desc": "Kozala na bisika ya misala na Lubumbashi, Kinshasa, Kolwezi mpe Johannesburg.",
     "point2Title": "Mikakatano ya Mibeko Te",
@@ -129,16 +131,16 @@ export const ln: TranslationDictionary = {
   },
   "cta": {
     "headline": "Olingi kokota na zando ya RDC?",
-    "text": "ARSSA epesaka lisalisi ya solo mpe ya kokoka mpo na bakompani oyo elingi kofungola, kosala mpe kokola na nzela ya Afrika ya Sudi (SADC)–RDC.",
+    "text": "ARSSA epesaka lisalisi ya solosolo mpo na bakompani oyo balingi kotonga, kosala mpe kokola na nzela ya mombo RDC–Afríka ya Súdi.",
     "primary": "Senga Lisalisi",
     "secondary": "Solola na ARSSA"
   },
   "footer": {
-    "desc": "ARSSA ezali kompani ya bofungoli mombongo mpe bokoli ya zando oyo efandi na Afrika ya Sudi (SADC), kosalisa bakompani oyo ezali kosala kati na Afrika ya Sudi (SADC) mpe Republíki ya Kongó.",
+    "desc": "Kitelemisi monene na République Démocratique du Congo mpe esika ya mosala na Afríka ya Súdi, ARSSA ekangisaka bakompani, bapesil biloko mpe mabaku ya mombo kati ya RDC mpe Afríka ya Súdi.",
     "quickLinks": "Ba Liens ya Lombangu",
     "services": "Misala",
     "contact": "Boyokani",
-    "location": "Afrika ya Sudi (SADC) — kosala na nzela ya Afrika ya Sudi (SADC)–RDC",
+    "location": "Kozala na Afríka ya Súdi — kosalela nzela ya mombo RDC–Afríka ya Súdi na zoni",
     "terms": "Mibeko ya Mosala",
     "privacy": "Bokengi ya Ba Données",
     "cookies": "Mibeko ya Ba Cookies",

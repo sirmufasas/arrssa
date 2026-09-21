@@ -41,7 +41,7 @@ export const it: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Le Nostre Divisioni",
     "title": "Cinque Pilastri di Commercio Integrato",
-    "subtitle": "Connettere Sudafrica (SADC) e la RDC con elevate competenze operative, regolatorie e logistiche sul campo."
+    "subtitle": "Collegare la RDC e l'Africa australe con capacità operative, normative e sul campo complete."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const it: TranslationDictionary = {
       "title": "Importazione ed Esportazione",
       "shortTitle": "Importazione ed Esportazione",
       "subtitle": "Facilitazione Commerciale, Dogana, Logistica e Trasporto Transfrontaliero",
-      "description": "Facilitazione del commercio, sdoganamento, logistica e trasporto merci transfrontaliero nel corridoio Sudafrica (SADC)–RDC.",
+      "description": "Facilitazione del commercio, sdoganamento, logistica e movimento transfrontaliero di merci lungo il corridoio commerciale RDC–Africa australe.",
       "preview": [
         "Operazioni doganali",
         "Logistica",
@@ -92,12 +92,14 @@ export const it: TranslationDictionary = {
       "title": "Miniere e Risorse",
       "shortTitle": "Settore Minerario",
       "subtitle": "Supporto al Settore Minerario, Approvvigionamento e Coordinamento Commerciale",
-      "description": "Supporto operativo per approvvigionamenti nel settore minerario, partnership industriali e coordinamento commerciale nel corridoio Sudafrica (SADC)–RDC.",
+      "description": "Supporto pratico per l'approvvigionamento minerario, collocamento della manodopera, partnership, forniture industriali e coordinamento commerciale nel corridoio RDC–Africa australe.",
       "preview": [
+        
         "Supporto minerario",
         "Approvvigionamento",
+        "Collocamento del personale",
         "Partnership",
-        "Coordinamento"
+        "Coordinamento delle forniture"
       ]
     },
     {
@@ -117,9 +119,9 @@ export const it: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Vantaggio del Corridoio",
-    "title": "Il Corridoio Sudafrica (SADC) – RDC",
+    "title": "Il Corridoio Commerciale RDC–Africa Australe",
     "lead": "Un Unico Partner di Fiducia su Due Mercati Dinamici",
-    "desc": "Espandersi tra il Sudafrica (SADC) e la RDC richiede una solida conoscenza locale, rigore normativo e logistica affidabile. ARSSA elimina ogni ostacolo coordinando tutto sotto una sola regia.",
+    "desc": "L'espansione tra la RDC e l'Africa australe richiede una profonda conoscenza locale, conformità rigorosa e logistica affidabile. ARSSA elimina gli attriti transfrontalieri integrando tutti i servizi sotto un unico tetto.",
     "point1Title": "Presenza sul Campo",
     "point1Desc": "Sedi operative consolidate a Lubumbashi, Kinshasa, Kolwezi e Johannesburg.",
     "point2Title": "Zero Frizioni Burocratiche",
@@ -129,16 +131,16 @@ export const it: TranslationDictionary = {
   },
   "cta": {
     "headline": "Pronto a conquistare il mercato della RDC?",
-    "text": "ARSSA offre un supporto completo e pratico per le aziende che desiderano insediarsi e prosperare lungo il corridoio Sudafrica (SADC)–RDC.",
+    "text": "ARSSA offre un supporto integrato e pratico per le aziende che desiderano insediarsi, operare e crescere lungo il corridoio commerciale RDC–Africa australe.",
     "primary": "Richiedi un Preventivo",
     "secondary": "Contatta ARSSA"
   },
   "footer": {
-    "desc": "ARSSA è una società con sede in Sudafrica (SADC) specializzata in facilitazione aziendale, sviluppo commerciale e scambi tra il Sudafrica (SADC) e la Repubblica Democratica del Congo.",
+    "desc": "Con sede nella Repubblica Democratica del Congo e una presenza consolidata in Sudafrica, ARSSA collega aziende, fornitori e opportunità tra la RDC e l'Africa australe, con il Sudafrica come snodo commerciale e di approvvigionamento regionale chiave.",
     "quickLinks": "Link Rapidi",
     "services": "Servizi",
     "contact": "Contatti",
-    "location": "Sudafrica (SADC) — a supporto del corridoio Sudafrica (SADC)–RDC",
+    "location": "Presenza Consolidata in Sudafrica — al servizio del corridoio commerciale RDC–Africa australe",
     "terms": "Termini e Condizioni",
     "privacy": "Informativa sulla Privacy",
     "cookies": "Informativa sui Cookie",

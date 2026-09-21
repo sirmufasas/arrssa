@@ -41,7 +41,7 @@ export const zu: TranslationDictionary = {
   "divisionsSection": {
     "badge": "Izingxenye Zethu Ezikhethekile",
     "title": "Izinsika Ezinhlanu Zohwebo Oludidiyelwe",
-    "subtitle": "Ukuxhumanisa iNingizimu Afrika (SADC) ne-DRC ngamakhono aqinile okusebenza, ezomthetho nezokuthutha."
+    "subtitle": "Ukuxhumanisa i-DRC neNingizimu Afrika yonkana ngamakhono aqinile okusebenza, ezomthetho nezokuthutha."
   },
   "divisions": [
     {
@@ -78,7 +78,7 @@ export const zu: TranslationDictionary = {
       "title": "Ukungenisa Nokuthumela Ngaphandle",
       "shortTitle": "Ukungenisa Nokuthumela",
       "subtitle": "Ukuxhasa Ezohwebo, Imigomo Yentela, Ezokuthutha Nemingcele",
-      "description": "Ukuxhasa ukuhweba, ukuthobela imithetho yempahla, ezokuthutha nokuhamba kwempahla emngceleni weNingizimu Afrika (SADC)–DRC.",
+      "description": "Ukuxhasa ukuhweba, ukuthobela imithetho yempahla, ezokuthutha nokuhamba kwempahla emngceleni we-DRC–Ningizimu Afrika.",
       "preview": [
         "Intela yempahla",
         "Ezokuthutha",
@@ -92,12 +92,14 @@ export const zu: TranslationDictionary = {
       "title": "Ezimbiwa Phansi Nemithombo",
       "shortTitle": "Ezimayini",
       "subtitle": "Ukwesekwa Kwezimayini, Ukuhlinzekwa & Ukudidiyelwa Kwezohwebo",
-      "description": "Ukwesekwa okubambekayo kokuthola izinsiza zezimayini, ubambiswano, impahla nokuxhumana kwezohwebo phakathi kweNingizimu Afrika (SADC) ne-DRC.",
+      "description": "Ukwesekwa okubambekayo kokuthola izinsiza zezimayini, ukubekwa kwabasebenzi, ubambiswano nempahla ephasishini lokuhweba le-DRC–Ningizimu Afrika.",
       "preview": [
-        "Ukwesekwa kwezimayini",
-        "Ukuthola izinsiza",
+        
+        "Ukuxhaswa kwezimayini",
+        "Ukuthola impahla",
+        "Ukubekwa kwabasebenzi",
         "Ubambiswano",
-        "Ukuhlelwa kwempahla"
+        "Ukuxhumanisa impahla"
       ]
     },
     {
@@ -117,9 +119,9 @@ export const zu: TranslationDictionary = {
   ],
   "corridor": {
     "eyebrow": "Inzuzo Yephasishi",
-    "title": "Iphasishi laseNingizimu Afrika (SADC) – DRC",
+    "title": "Iphasishi Lokuhweba lase-DRC–Ningizimu Afrika",
     "lead": "Uzakwethu Oyedwa Onokwethenjelwa Ezimakethe Ezimbili Ezinamandla",
-    "desc": "Ukwandisa amabhizinisi phakathi kweNingizimu Afrika (SADC) ne-DRC kudinga ulwazi olunzulu lwendawo, imithetho eqinile kanye nezokuthutha eziphephile. I-ARSSA isusa ubunzima ngokuhlanganisa yonke into ngaphansi kophahla olulodwa.",
+    "desc": "Ukwandisa amabhizinisi phakathi kwe-DRC neNingizimu Afrika kudinga ulwazi olunzulu lwendawo, imithetho eqinile kanye nezokuthutha eziphephile. I-ARSSA isusa ubunzima ngokuhlanganisa yonke into ngaphansi kophahla olulodwa.",
     "point1Title": "Ulwazi Lwendawo",
     "point1Desc": "Ukuba khona eLubumbashi, Kinshasa, Kolwezi naseGoli.",
     "point2Title": "Ukungabi Nazinkinga Zomthetho",
@@ -129,16 +131,16 @@ export const zu: TranslationDictionary = {
   },
   "cta": {
     "headline": "Ingabe usukulungele ukungena emakethe yase-DRC?",
-    "text": "I-ARSSA inikeza ukwesekwa okudidiyelwe kwamabhizinisi afisa ukusungula nokukhula ephasishini laseNingizimu Afrika (SADC)–DRC.",
+    "text": "I-ARSSA inikeza ukwesekwa okudidiyelwe kwamabhizinisi afisa ukusungula nokukhula ephasishini lokuhweba le-DRC–Ningizimu Afrika.",
     "primary": "Faka Isicelo",
     "secondary": "Xhumana ne-ARSSA"
   },
   "footer": {
-    "desc": "I-ARSSA yinkampani eseNingizimu Afrika (SADC) exhumanisa amabhizinisi nokuhweba, esekela amabhizinisi asebenza phakathi kweNingizimu Afrika (SADC) neDemocratic Republic of Congo.",
+    "desc": "Ikomkhulu layo liseDemocratic Republic of Congo kanti inobukhona obuqinile eNingizimu Afrika, i-ARSSA ixhumanisa amabhizinisi, abahlinzeki kanye namathuba phakathi kwe-DRC neNingizimu Afrika yonkana.",
     "quickLinks": "Izixhumanisi Ezisheshayo",
     "services": "Izinsizakalo",
     "contact": "Ukuxhumana",
-    "location": "INingizimu Afrika (SADC) — sikhonza iphasishi laseNingizimu Afrika (SADC)–DRC",
+    "location": "Ubukhona Obumisiwe eNingizimu Afrika — sikhonza iphasishi lokuhweba le-DRC–Ningizimu Afrika",
     "terms": "Imigomo Nemibandela",
     "privacy": "Inqubomgomo Yobumfihlo",
     "cookies": "Inqubomgomo Yamakhukhi",
