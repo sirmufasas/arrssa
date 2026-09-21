@@ -157,25 +157,25 @@ export default function Services() {
                   <li>
                     <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
                     <div>
-                      <strong>Pharmaceutical &amp; Medical:</strong> {tr("Import authorizations, sanitary registrations, temperature-controlled distribution, and medical-grade facility maintenance.")}
+                      <strong>{tr("Pharmaceutical & Medical")}:</strong> {tr("Import authorizations, sanitary registrations, temperature-controlled distribution, and medical-grade facility maintenance.")}
                     </div>
                   </li>
                   <li>
                     <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
                     <div>
-                      <strong>Cosmetic &amp; Personal Care:</strong> {tr("Retailer network placement, promotional campaigns, local brand registration, and consumer demand generation.")}
+                      <strong>{tr("Cosmetic & Personal Care")}:</strong> {tr("Retailer network placement, promotional campaigns, local brand registration, and consumer demand generation.")}
                     </div>
                   </li>
                   <li>
                     <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
                     <div>
-                      <strong>Agri-Food &amp; Agricultural Inputs:</strong> {tr("Sanitary import clearances, cold chain logistics, bulk supply contracts, and wholesale grocery placement.")}
+                      <strong>{tr("Agri-Food & Agricultural Inputs")}:</strong> {tr("Sanitary import clearances, cold chain logistics, bulk supply contracts, and wholesale grocery placement.")}
                     </div>
                   </li>
                   <li>
                     <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
                     <div>
-                      <strong>Corporate &amp; Industrial Supply:</strong> {tr("Document management, workforce mobility, and regional representative support.")}
+                      <strong>{tr("Corporate & Industrial Supply")}:</strong> {tr("Document management, workforce mobility, and regional representative support.")}
                     </div>
                   </li>
                 </ul>

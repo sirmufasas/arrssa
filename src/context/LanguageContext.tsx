@@ -232,7 +232,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
           UNIVERSAL_PHRASES[norm]?.[language];
 
         if (match) {
-          node.nodeValue = original.replace(trimmed, match);
+          node.nodeValue = match;
           return;
         }
 
@@ -243,7 +243,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
           const replacement = trimmed.startsWith("“") || trimmed.startsWith('"')
             ? `“${unquotedMatch}”`
             : unquotedMatch;
-          node.nodeValue = original.replace(trimmed, replacement);
+          node.nodeValue = replacement;
           return;
         }
 
