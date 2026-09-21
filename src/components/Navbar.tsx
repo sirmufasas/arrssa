@@ -27,9 +27,19 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
   const reduced = useReducedMotion();
-  const { language, setLanguage } = useLanguage();
+  const { currentLanguageMeta, setShowLanguageModal } = useLanguage();
   const t = useT();
-  const navLabels: Record<string, string> = { Home: t.home, About: t.about, Services: t.services, Markets: t.markets, "Why ARSSA": t.why, Legacy: t.legacy };
+
+  const navLabels: Record<string, string> = {
+    Home: t.home,
+    About: t.about,
+    Services: t.services,
+    Markets: t.markets,
+    "Why ARSSA": t.why,
+    Legacy: t.legacy,
+    Enquiry: t.enquiry,
+    Contact: t.contact,
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 15);
@@ -76,10 +86,14 @@ export default function Navbar() {
                   </NavLink>
                   <div className="nav-dropdown__menu" role="menu" aria-label="Services Menu">
                     <div className="nav-dropdown__header">
-                      <span>Our Divisions</span>
+                      <span>{t.divisions}</span>
                     </div>
                     {SERVICES.map((svc) => {
                       const Icon = ICONS[svc.icon];
+                      const divTrans = t.divisions?.find((d) => d.slug === svc.slug);
+                      const title = divTrans?.title || svc.title;
+                      const subtitle = divTrans?.subtitle || svc.subtitle;
+
                       return (
                         <Link
                           key={svc.slug}
@@ -94,8 +108,8 @@ export default function Navbar() {
                             <Icon size={16} />
                           </span>
                           <span className="nav-dropdown__text">
-                            <span className="nav-dropdown__label">{svc.title}</span>
-                            <span className="nav-dropdown__sub">{svc.subtitle}</span>
+                            <span className="nav-dropdown__label">{title}</span>
+                            <span className="nav-dropdown__sub">{subtitle}</span>
                           </span>
                         </Link>
                       );
@@ -116,14 +130,20 @@ export default function Navbar() {
           </nav>
 
           <div className="navbar__actions">
-            {/* Hidden for now — language toggle needs fixing. Restore by uncommenting. */}
-            {false && (
-              <div className="language-toggle" role="group" aria-label="Language">
-                <button type="button" className={language === "en" ? "active" : ""} onClick={() => setLanguage("en")} aria-pressed={language === "en"}>EN</button>
-                <span>/</span>
-                <button type="button" className={language === "fr" ? "active" : ""} onClick={() => setLanguage("fr")} aria-pressed={language === "fr"}>FR</button>
-              </div>
-            )}
+            {/* Native Multilingual Selector */}
+            <button
+              type="button"
+              className="navbar__lang-btn"
+              onClick={() => setShowLanguageModal(true)}
+              aria-label={`${t.nav.selectLanguage}: ${currentLanguageMeta.nativeName}`}
+              title={t.nav.selectLanguage}
+            >
+              <Globe size={15} className="navbar__lang-icon" aria-hidden="true" />
+              <span className="navbar__lang-flag">{currentLanguageMeta.flag}</span>
+              <span className="navbar__lang-code">{currentLanguageMeta.code.toUpperCase()}</span>
+              <ChevronDown size={12} className="navbar__lang-chevron" aria-hidden="true" />
+            </button>
+
             <ThemeToggle />
             <Link to="/enquiry" className="btn btn--accent btn--sm navbar__cta-desktop">
               {t.enquiry}
@@ -133,7 +153,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen((v) => !v)}
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
-              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-label={mobileOpen ? t.close : t.open}
             >
               <span />
               <span />
@@ -155,8 +175,29 @@ export default function Navbar() {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="mobile-menu__header">
-              <span className="mobile-menu__theme-label">Appearance</span>
+              <span className="mobile-menu__theme-label">{t.appearance}</span>
               <ThemeToggle showLabel />
+            </div>
+
+            {/* Mobile Language Switcher */}
+            <div className="mobile-menu__lang-box">
+              <button
+                type="button"
+                className="mobile-menu__lang-btn"
+                onClick={() => {
+                  setMobileOpen(false);
+                  setShowLanguageModal(true);
+                }}
+              >
+                <div className="mobile-menu__lang-current">
+                  <span className="mobile-menu__lang-flag">{currentLanguageMeta.flag}</span>
+                  <div>
+                    <div className="mobile-menu__lang-native">{currentLanguageMeta.nativeName}</div>
+                    <div className="mobile-menu__lang-name">{currentLanguageMeta.name} ({currentLanguageMeta.code.toUpperCase()})</div>
+                  </div>
+                </div>
+                <span className="mobile-menu__lang-badge">{t.footer.changeLang || "Change"} &rarr;</span>
+              </button>
             </div>
 
             <ul className="mobile-menu__list">
@@ -190,14 +231,18 @@ export default function Navbar() {
                           transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
                         >
                           <Link to={link.path} className="mobile-menu__sublink mobile-menu__sublink--all">
-                            All Services Overview
+                            {t.allServices}
                           </Link>
-                          {SERVICES.map((svc) => (
-                            <Link key={svc.slug} to={svc.path} className="mobile-menu__sublink">
-                              <span className="mobile-menu__sub-num">{svc.number}</span>
-                              <span>{svc.title}</span>
-                            </Link>
-                          ))}
+                          {SERVICES.map((svc) => {
+                            const divTrans = t.divisions?.find((d) => d.slug === svc.slug);
+                            const title = divTrans?.title || svc.title;
+                            return (
+                              <Link key={svc.slug} to={svc.path} className="mobile-menu__sublink">
+                                <span className="mobile-menu__sub-num">{svc.number}</span>
+                                <span>{title}</span>
+                              </Link>
+                            );
+                          })}
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -221,10 +266,10 @@ export default function Navbar() {
 
             <div className="mobile-menu__cta">
               <Link to="/enquiry" className="btn btn--accent btn--lg" onClick={() => setMobileOpen(false)}>
-                Request an Enquiry
+                {t.enquiry}
               </Link>
               <Link to="/contact" className="btn btn--ghost" onClick={() => setMobileOpen(false)}>
-                Contact ARSSA
+                {t.contact}
               </Link>
             </div>
           </motion.nav>

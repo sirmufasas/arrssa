@@ -3,15 +3,18 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FloatingContact from "../components/FloatingContact";
 import CookieConsent from "../components/CookieConsent";
+import LanguageModal from "../components/LanguageModal";
 import { useEmbed } from "../hooks/useEmbed";
+import { useT } from "../context/LanguageContext";
 
 export default function MainLayout() {
   const embed = useEmbed();
+  const t = useT();
 
   return (
     <>
       <a href="#main" className="skip-link">
-        Skip to main content
+        {t.skip}
       </a>
       <Navbar />
       <div id="main">
@@ -20,6 +23,7 @@ export default function MainLayout() {
       <Footer />
       {!embed && <FloatingContact />}
       {!embed && <CookieConsent />}
+      {!embed && <LanguageModal />}
     </>
   );
 }

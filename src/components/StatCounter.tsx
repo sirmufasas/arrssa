@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { useInView, useReducedMotion } from "framer-motion";
 
 interface StatCounterProps {
   value: number;
@@ -18,8 +17,6 @@ export default function StatCounter({
   displayText,
 }: StatCounterProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  const reduced = useReducedMotion();
   // Keep the real value visible immediately. This prevents the language translator
   // or a delayed viewport observer from leaving a misleading zero on screen.
   const [display, setDisplay] = useState(value);

@@ -13,32 +13,43 @@ interface LogoProps {
  * A — Navy (#1a3160) in Light Mode / Crisp White (#ffffff) in Dark Mode
  * R — Gold (#f2c200 / #f7ce26)
  * S — Green (#009639 / #22c55e)
+ *
+ * translate="no" ensures brand name and mark are never translated.
  */
 export default function Logo({ size = "md", light = false, asAnchor = true }: LogoProps) {
-  const fontSizes = {
-    sm: { mark: 20, sub: 9 },
-    md: { mark: 24, sub: 9.5 },
-    lg: { mark: 30, sub: 10.5 },
-  }[size];
-
   const content = (
-    <span translate="no" className={`brand-logo brand-logo--pdf ${light ? "brand-logo--light" : ""}`}>
+    <span
+      translate="no"
+      data-no-translate="true"
+      className={`brand-logo brand-logo--${size} ${light ? "brand-logo--light" : ""}`}
+    >
       <img
         src="/arssa-logo.png"
         className="brand-logo__image"
         alt="ARSSA"
         draggable="false"
+        translate="no"
       />
     </span>
   );
 
   if (asAnchor) {
     return (
-      <Link to="/" aria-label={`${SITE.name} — Home`} className="navbar__brand">
+      <Link
+        to="/"
+        aria-label={`${SITE.name} — Home`}
+        className="navbar__brand"
+        translate="no"
+        data-no-translate="true"
+      >
         {content}
       </Link>
     );
   }
 
-  return <span className="navbar__brand">{content}</span>;
+  return (
+    <span className="navbar__brand" translate="no" data-no-translate="true">
+      {content}
+    </span>
+  );
 }

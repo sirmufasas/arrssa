@@ -1,52 +1,231 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-export type Language = "en" | "fr";
-const STORAGE_KEY = "arssa_language";
-const LanguageContext = createContext<{ language: Language; setLanguage: (language: Language) => void }>({ language: "en", setLanguage: () => {} });
-export const translations = {
-  en: { home: "Home", about: "About", services: "Services", markets: "Markets", why: "Why ARSSA", legacy: "Legacy", enquiry: "Request an Enquiry", contact: "Contact ARSSA", appearance: "Appearance", divisions: "Our Divisions", allServices: "All Services Overview", open: "Open menu", close: "Close menu", loading: "Loading", skip: "Skip to main content", crossBorder: "Cross-Border", businessSupport: "Business Support", integrated: "Integrated", marketSolutions: "Market Solutions", coreDivisions: "Core Divisions", countriesBridged: "Countries Bridged" },
-  fr: { home: "Accueil", about: "À propos", services: "Services", markets: "Marchés", why: "Pourquoi ARSSA", legacy: "Héritage", enquiry: "Demander un devis", contact: "Contacter ARSSA", appearance: "Apparence", divisions: "Nos divisions", allServices: "Vue d'ensemble des services", open: "Ouvrir le menu", close: "Fermer le menu", loading: "Chargement", skip: "Aller au contenu principal", crossBorder: "Transfrontalier", businessSupport: "Soutien aux entreprises", integrated: "Intégré", marketSolutions: "Solutions de marché", coreDivisions: "Divisions principales", countriesBridged: "Pays reliés" },
-} as const;
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+  type ReactNode,
+} from "react";
+import {
+  LANGUAGES,
+  UNIVERSAL_PHRASES,
+  getDictionary,
+  type Language,
+  type LanguageMeta,
+  type TranslationDictionary,
+} from "../translations";
 
-declare global { interface Window { google?: any; arssaGoogleTranslateInit?: () => void; } }
-function setTranslationCookie(language: Language) {
-  if (language === "fr") {
-    document.cookie = "googtrans=/en/fr; path=/; max-age=31536000";
-    return;
-  }
-  // Clear both the host and parent-domain variants Google Translate may create.
-  document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-  document.cookie = "googtrans=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-  document.cookie = "googtrans=; path=/; domain=." + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-}
-function loadTranslator() {
-  if (document.getElementById("google-translate-script")) return;
-  window.arssaGoogleTranslateInit = () => {
-    if (window.google?.translate?.TranslateElement && !document.getElementById("google_translate_element")?.children.length) {
-      new window.google.translate.TranslateElement({ pageLanguage: "en", includedLanguages: "fr", autoDisplay: false }, "google_translate_element");
+const STORAGE_LANG_KEY = "arssa_language";
+const STORAGE_SELECTED_KEY = "arssa_language_selected";
+
+const VALID_LANGS: Language[] = LANGUAGES.map((l) => l.code);
+
+function getInitialLanguage(): Language {
+  try {
+    const saved = localStorage.getItem(STORAGE_LANG_KEY) as Language;
+    if (saved && VALID_LANGS.includes(saved)) {
+      return saved;
     }
-  };
-  const script = document.createElement("script");
-  script.id = "google-translate-script";
-  script.src = "https://translate.google.com/translate_a/element.js?cb=arssaGoogleTranslateInit";
-  script.async = true;
-  document.head.appendChild(script);
+  } catch {
+    /* ignore */
+  }
+  return "en";
 }
+
+function getInitialFirstVisit(): boolean {
+  try {
+    const selected = localStorage.getItem(STORAGE_SELECTED_KEY);
+    return selected !== "true";
+  } catch {
+    return false;
+  }
+}
+
+// Flat legacy compatibility mapping + full structured dictionary
+export type AugmentedTranslation = TranslationDictionary & {
+  home: string;
+  about: string;
+  services: string;
+  markets: string;
+  why: string;
+  legacy: string;
+  enquiry: string;
+  contact: string;
+  appearance: string;
+  divisions: string;
+  allServices: string;
+  open: string;
+  close: string;
+  loading: string;
+  skip: string;
+  coreDivisions: string;
+  countriesBridged: string;
+  operatingPresence: string;
+  sectorsSupported: string;
+};
+
+interface LanguageContextType {
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  showLanguageModal: boolean;
+  setShowLanguageModal: (open: boolean) => void;
+  languages: LanguageMeta[];
+  currentLanguageMeta: LanguageMeta;
+  t: AugmentedTranslation;
+}
+
+const LanguageContext = createContext<LanguageContextType | null>(null);
+
+function augmentDictionary(dict: TranslationDictionary): AugmentedTranslation {
+  return {
+    ...dict,
+    home: dict.nav.home,
+    about: dict.nav.about,
+    services: dict.nav.services,
+    markets: dict.nav.markets,
+    why: dict.nav.why,
+    legacy: dict.nav.legacy,
+    enquiry: dict.nav.enquiry,
+    contact: dict.nav.contact,
+    appearance: dict.nav.appearance,
+    divisions: dict.nav.divisions,
+    allServices: dict.nav.allServices,
+    open: dict.nav.open,
+    close: dict.nav.close,
+    loading: dict.nav.loading,
+    skip: dict.nav.skip,
+    coreDivisions: dict.stats.coreDivisions,
+    countriesBridged: dict.stats.countriesBridged,
+    operatingPresence: dict.stats.operatingPresence,
+    sectorsSupported: dict.stats.sectorsSupported,
+  };
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => { try { return localStorage.getItem(STORAGE_KEY) === "fr" ? "fr" : "en"; } catch { return "en"; } });
-  useEffect(() => {
-    document.documentElement.lang = language;
-    try { localStorage.setItem(STORAGE_KEY, language); } catch {}
-    setTranslationCookie(language);
-    if (language === "fr") loadTranslator();
-  }, [language]);
-  const setLanguage = (next: Language) => {
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+  const [showLanguageModal, setShowLanguageModal] = useState<boolean>(() => {
+    // Check if running inside iframe or embed presentation
+    try {
+      if (window.self !== window.top) return false;
+      if (window.location.pathname.startsWith("/presentation")) return false;
+    } catch {
+      /* ignore */
+    }
+    return getInitialFirstVisit();
+  });
+
+  const currentLanguageMeta =
+    LANGUAGES.find((l) => l.code === language) || LANGUAGES[0];
+
+  const setLanguage = useCallback((next: Language) => {
+    if (!VALID_LANGS.includes(next)) return;
     setLanguageState(next);
-    setTranslationCookie(next);
-    // Google Translate applies to the complete document on a fresh page, while React
-    // state remains untouched. This avoids mutating React DOM nodes and preserves data.
-    window.setTimeout(() => window.location.reload(), 50);
-  };
-  return <LanguageContext.Provider value={{ language, setLanguage }}>{children}<div id="google_translate_element" aria-hidden="true" /></LanguageContext.Provider>;
+    try {
+      localStorage.setItem(STORAGE_LANG_KEY, next);
+      localStorage.setItem(STORAGE_SELECTED_KEY, "true");
+    } catch {
+      /* ignore */
+    }
+    setShowLanguageModal(false);
+  }, []);
+
+  // Sync document lang, dir, and class
+  useEffect(() => {
+    const isRtl = currentLanguageMeta.dir === "rtl";
+    document.documentElement.lang = language;
+    document.documentElement.dir = isRtl ? "rtl" : "ltr";
+    if (isRtl) {
+      document.documentElement.classList.add("rtl");
+    } else {
+      document.documentElement.classList.remove("rtl");
+    }
+  }, [language, currentLanguageMeta]);
+
+  // Universal native DOM translation safety net for static content
+  useEffect(() => {
+    if (language === "en") return;
+
+    const translateNode = (node: Node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        const raw = node.nodeValue?.trim();
+        if (!raw || raw.length < 2) return;
+
+        // Strictly preserve brand identifiers and codes
+        if (
+          raw === "ARSSA" ||
+          raw === "ARS S.A.R.L." ||
+          raw.startsWith("ARSSA ·") ||
+          raw.endsWith("· ARSSA")
+        ) {
+          return;
+        }
+
+        const match = UNIVERSAL_PHRASES[raw];
+        if (match && match[language]) {
+          node.nodeValue = node.nodeValue!.replace(raw, match[language]!);
+        }
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        const el = node as HTMLElement;
+        // Never translate protected brand elements, inputs, codes, or SVGs
+        if (
+          el.getAttribute("translate") === "no" ||
+          el.getAttribute("data-no-translate") === "true" ||
+          el.classList.contains("brand-logo") ||
+          el.classList.contains("navbar__brand") ||
+          el.classList.contains("no-translate") ||
+          ["INPUT", "TEXTAREA", "SELECT", "SCRIPT", "STYLE", "CODE", "PRE", "SVG"].includes(
+            el.tagName
+          )
+        ) {
+          return;
+        }
+
+        el.childNodes.forEach(translateNode);
+      }
+    };
+
+    const container = document.getElementById("main") || document.body;
+    translateNode(container);
+
+    const observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        m.addedNodes.forEach(translateNode);
+      }
+    });
+
+    observer.observe(container, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, [language]);
+
+  const dict = getDictionary(language);
+  const augmentedT = augmentDictionary(dict);
+
+  return (
+    <LanguageContext.Provider
+      value={{
+        language,
+        setLanguage,
+        showLanguageModal,
+        setShowLanguageModal,
+        languages: LANGUAGES,
+        currentLanguageMeta,
+        t: augmentedT,
+      }}
+    >
+      {children}
+    </LanguageContext.Provider>
+  );
 }
-export function useLanguage() { return useContext(LanguageContext); }
-export function useT() { const { language } = useLanguage(); return translations[language]; }
+
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error("useLanguage must be used within a LanguageProvider");
+  }
+  return context;
+}
+
+export function useT(): AugmentedTranslation {
+  const { t } = useLanguage();
+  return t;
+}

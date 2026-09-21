@@ -1,73 +1,99 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Globe, Mail, MapPin, Phone } from "lucide-react";
 import Logo from "./Logo";
 import { NAV_LINKS, SERVICES, SITE } from "../data/site";
+import { useLanguage, useT } from "../context/LanguageContext";
 
 export default function Footer() {
+  const { currentLanguageMeta, setShowLanguageModal } = useLanguage();
+  const t = useT();
+
+  const navLabels: Record<string, string> = {
+    Home: t.home,
+    About: t.about,
+    Services: t.services,
+    Markets: t.markets,
+    "Why ARSSA": t.why,
+    Legacy: t.legacy,
+    Enquiry: t.enquiry,
+    Contact: t.contact,
+  };
+
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer__top">
           <div className="footer__brand">
             <Logo light asAnchor={false} />
-            <p>
-              ARSSA is a South African (SADAC)-based business facilitation, market-growth and trade
-              services company supporting enterprises operating between South Africa (SADAC) and the
-              Democratic Republic of Congo.
-            </p>
-            <p className="footer__tagline">“{SITE.tagline}”</p>
+            <p>{t.footer.desc}</p>
+            <p className="footer__tagline" translate="no">&ldquo;{SITE.tagline}&rdquo;</p>
+
+            <button
+              type="button"
+              className="footer__lang-btn"
+              onClick={() => setShowLanguageModal(true)}
+              aria-label={t.footer.changeLang}
+            >
+              <Globe size={15} aria-hidden="true" />
+              <span>{currentLanguageMeta.flag} {currentLanguageMeta.nativeName} ({currentLanguageMeta.code.toUpperCase()})</span>
+              <span className="footer__lang-badge">{t.footer.changeLang}</span>
+            </button>
           </div>
 
           <nav aria-label="Quick links">
-            <h4>Quick Links</h4>
+            <h4>{t.footer.quickLinks}</h4>
             <ul className="footer__links">
               {NAV_LINKS.map((l) => (
                 <li key={l.path}>
-                  <Link to={l.path}>{l.label}</Link>
+                  <Link to={l.path}>{navLabels[l.label] ?? l.label}</Link>
                 </li>
               ))}
             </ul>
           </nav>
 
           <nav aria-label="Services">
-            <h4>Services</h4>
+            <h4>{t.footer.services}</h4>
             <ul className="footer__links">
-              {SERVICES.map((s) => (
-                <li key={s.slug}>
-                  <Link to={s.path}>{s.title}</Link>
-                </li>
-              ))}
+              {SERVICES.map((s) => {
+                const divTrans = t.divisions?.find((d) => d.slug === s.slug);
+                const title = divTrans?.title || s.title;
+                return (
+                  <li key={s.slug}>
+                    <Link to={s.path}>{title}</Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 
           <div>
-            <h4>Contact</h4>
+            <h4>{t.footer.contact}</h4>
             <ul className="footer__contact">
               <li>
                 <Phone size={16} aria-hidden="true" />
-                <a href={SITE.phoneHref}>{SITE.phoneDisplay}</a>
+                <a href={SITE.phoneHref} translate="no">{SITE.phoneDisplay}</a>
               </li>
               <li>
                 <Mail size={16} aria-hidden="true" />
-                <a href={SITE.emailHref}>{SITE.email}</a>
+                <a href={SITE.emailHref} translate="no">{SITE.email}</a>
               </li>
               <li>
                 <MapPin size={16} aria-hidden="true" />
-                <span>South Africa (SADAC) — serving the South Africa (SADAC)–DRC corridor</span>
+                <span>{t.footer.location}</span>
               </li>
             </ul>
             <Link to="/enquiry" className="btn btn--accent btn--sm" style={{ marginTop: 8 }}>
-              Request an Enquiry
+              {t.enquiry}
             </Link>
           </div>
         </div>
 
         <div className="footer__bottom">
-          <span>{SITE.copyright}</span>
+          <span>{t.footer.rights || SITE.copyright}</span>
           <nav className="footer__legal-links" aria-label="Legal">
-            <Link to="/terms">Terms &amp; Conditions</Link>
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/cookies">Cookie Policy</Link>
+            <Link to="/terms">{t.footer.terms}</Link>
+            <Link to="/privacy">{t.footer.privacy}</Link>
+            <Link to="/cookies">{t.footer.cookies}</Link>
           </nav>
         </div>
       </div>

@@ -24,26 +24,40 @@ import { useT } from "../context/LanguageContext";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-function CorridorVisual() {
+function CorridorVisual({ caption }: { caption: string }) {
   return (
     <div className="corridor corridor--planet" role="img" aria-label="Africa globe with ARSSA branding">
       <div className="planet-glow" aria-hidden="true" />
-      <img className="planet-photo planet-photo--unity" src="/arssa-unity-globe.jpg" alt="Hands from many nations holding a map of Africa bearing the ARSSA logo" />
-      <div className="planet-caption"><strong>ARSSA</strong><small>Africa in motion</small></div>
+      <img
+        className="planet-photo planet-photo--unity"
+        src="/arssa-unity-globe.jpg"
+        alt="Hands from many nations holding a map of Africa bearing the ARSSA logo"
+      />
+      <div className="planet-caption">
+        <strong translate="no">ARSSA</strong>
+        <small>{caption}</small>
+      </div>
     </div>
   );
 }
 
 export default function Home() {
   const [selectedDivision, setSelectedDivision] = useState(SERVICES[0].slug);
-  const currentSvc = SERVICES.find((s) => s.slug === selectedDivision) || SERVICES[0];
   const t = useT();
+
+  const currentSvc = SERVICES.find((s) => s.slug === selectedDivision) || SERVICES[0];
+  const currentDivTrans = t.divisions?.find((d) => d.slug === selectedDivision);
+
+  const displayTitle = currentDivTrans?.title || currentSvc.title;
+  const displaySubtitle = currentDivTrans?.subtitle || currentSvc.subtitle;
+  const displayDesc = currentDivTrans?.description || currentSvc.description;
+  const displayPreview = currentDivTrans?.preview || currentSvc.preview;
 
   return (
     <>
       <SEO
         title="ARSSA | Business Facilitation & Trade Services South Africa (SADAC)–DRC"
-        description="One partner for market entry, compliance, distribution and trade between South Africa (SADAC) and the DRC."
+        description={t.hero.sub}
         path="/"
       />
 
@@ -60,43 +74,38 @@ export default function Home() {
           >
             <div className="home-hero__tagline-badge">
               <span className="dot" />
-              <span>South Africa (SADAC) ↔ DRC Commercial Corridor</span>
+              <span>{t.hero.badge}</span>
             </div>
 
             <h1>
-              Your solution, <br />
-              <span className="highlight-gold">right at your finger tips</span>
+              {t.hero.headline1} <br />
+              <span className="highlight-gold">{t.hero.headlineGold}</span>
             </h1>
 
-            <p className="home-hero__sub">
-              ARSSA is your fast track into the DRC market — one accountable partner
-              for facilitation, compliance, marketing, distribution and trade, built
-              for pharmaceutical, cosmetic, agri-food and mining sectors. No fragmented
-              agencies, no guesswork — just structured execution from day one.
-            </p>
+            <p className="home-hero__sub">{t.hero.sub}</p>
 
             <div className="home-hero__actions">
               <Link to="/services" className="btn btn--accent btn--lg">
-                Explore Our Services
+                {t.hero.exploreServices}
                 <ArrowRight size={18} aria-hidden="true" />
               </Link>
               <Link to="/enquiry" className="btn btn--outline-light btn--lg">
-                Start an Enquiry
+                {t.hero.startEnquiry}
               </Link>
             </div>
 
             <div className="home-hero__trust-strip">
               <div className="home-hero__trust-item">
                 <ShieldCheck size={18} aria-hidden="true" />
-                <span>Structured Compliance</span>
+                <span>{t.hero.compliance}</span>
               </div>
               <div className="home-hero__trust-item">
                 <Globe2 size={18} aria-hidden="true" />
-                <span>Cross-Border Execution</span>
+                <span>{t.hero.execution}</span>
               </div>
               <div className="home-hero__trust-item">
                 <Zap size={18} aria-hidden="true" />
-                <span>Integrated Support</span>
+                <span>{t.hero.support}</span>
               </div>
             </div>
           </motion.div>
@@ -106,7 +115,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.15, ease: EASE }}
           >
-            <CorridorVisual />
+            <CorridorVisual caption={t.hero.planetCaption} />
           </motion.div>
         </div>
       </section>
@@ -125,19 +134,19 @@ export default function Home() {
               <div role="listitem">
                 <StatCounter
                   value={1}
-                  suffix={t.crossBorder}
-                  label={t.businessSupport}
+                  suffix="SADAC–DRC"
+                  label={t.operatingPresence}
                   variant="green"
-                  displayText={t.crossBorder}
+                  displayText="SADAC–DRC"
                 />
               </div>
               <div role="listitem">
                 <StatCounter
-                  value={1}
-                  suffix={t.integrated}
-                  label={t.marketSolutions}
+                  value={4}
+                  suffix="+"
+                  label={t.sectorsSupported}
                   variant="red"
-                  displayText={t.integrated}
+                  displayText="Pharma / Mining"
                 />
               </div>
             </div>
@@ -156,11 +165,9 @@ export default function Home() {
                 loading="lazy"
               />
               <div className="showcase-media__overlay">
-                <span className="showcase-media__tag">ARS S.A.R.L. South African (SADAC) Extension</span>
-                <h3 className="showcase-media__title">Bridging Capital &amp; Opportunity</h3>
-                <p className="showcase-media__desc">
-                  Providing South African (SADAC) enterprises with deep local understanding and structured execution in the DRC.
-                </p>
+                <span className="showcase-media__tag" translate="no">ARS S.A.R.L. South African (SADAC) Extension</span>
+                <h3 className="showcase-media__title">{t.corridor.lead}</h3>
+                <p className="showcase-media__desc">{t.corridor.desc}</p>
               </div>
             </div>
           </ScrollReveal>
@@ -168,17 +175,14 @@ export default function Home() {
           <div>
             <ScrollReveal>
               <SectionHeading
-                eyebrow="About ARSSA"
-                title="A structured partner for cross-border expansion"
+                eyebrow={t.nav.about}
+                title={t.corridor.lead}
                 description="ARSSA is the South African (SADAC) extension of ARS S.A.R.L. in the DRC — one partner for marketing, facilitation, compliance, distribution and trade."
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <p className="lead" style={{ fontSize: 16, marginBottom: 24 }}>
-                With particular experience and focus across:
-              </p>
-              <div className="badge-row" style={{ marginBottom: 32 }}>
+              <div className="badge-row" style={{ marginTop: 20, marginBottom: 32 }}>
                 {[
                   "Pharmaceutical",
                   "Medical",
@@ -196,11 +200,11 @@ export default function Home() {
               </div>
               <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
                 <Link to="/about" className="btn btn--primary">
-                  Discover ARSSA
+                  {t.nav.about}
                   <ArrowRight size={16} aria-hidden="true" />
                 </Link>
                 <Link to="/why-arssa" className="btn btn--ghost">
-                  Why Choose Us
+                  {t.nav.why}
                 </Link>
               </div>
             </ScrollReveal>
@@ -214,13 +218,20 @@ export default function Home() {
           <ScrollReveal>
             <SectionHeading
               center
-              eyebrow="Our Divisions"
-              title="Five Core Divisions. One Integrated Partner."
-              description="Market entry, marketing and distribution, cross-border trade, mining support, and regulatory compliance — five specialised divisions coordinated under one accountable partner, so nothing falls through the cracks between agencies."
+              eyebrow={t.divisionsSection.badge}
+              title={t.divisionsSection.title}
+              description={t.divisionsSection.subtitle}
             />
           </ScrollReveal>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 28 }} className="divisions-grid">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: 28,
+            }}
+            className="divisions-grid"
+          >
             {SERVICES.map((svc, i) => (
               <ScrollReveal key={svc.slug} delay={i * 0.08}>
                 <ServiceCard service={svc} />
@@ -235,27 +246,31 @@ export default function Home() {
         <div className="container">
           <ScrollReveal>
             <SectionHeading
-              eyebrow="Interactive Capability Explorer"
-              title="See what each division delivers"
-              description="Tap a division below to see exactly how ARSSA handles that phase of your cross-border journey — from first market entry through to ongoing operations."
+              eyebrow={t.divisionsSection.badge}
+              title={t.divisionsSection.title}
+              description={t.divisionsSection.subtitle}
             />
           </ScrollReveal>
 
           <ScrollReveal delay={0.08}>
             <div className="capability-tabs">
               <div className="tab-nav" role="tablist" aria-label="Division tabs">
-                {SERVICES.map((s) => (
-                  <button
-                    key={s.slug}
-                    type="button"
-                    role="tab"
-                    aria-selected={selectedDivision === s.slug}
-                    className={`tab-btn ${selectedDivision === s.slug ? "active" : ""}`}
-                    onClick={() => setSelectedDivision(s.slug)}
-                  >
-                    {s.number} — {s.shortTitle}
-                  </button>
-                ))}
+                {SERVICES.map((s) => {
+                  const divT = t.divisions?.find((d) => d.slug === s.slug);
+                  const short = divT?.shortTitle || s.shortTitle;
+                  return (
+                    <button
+                      key={s.slug}
+                      type="button"
+                      role="tab"
+                      aria-selected={selectedDivision === s.slug}
+                      className={`tab-btn ${selectedDivision === s.slug ? "active" : ""}`}
+                      onClick={() => setSelectedDivision(s.slug)}
+                    >
+                      {s.number} — {short}
+                    </button>
+                  );
+                })}
               </div>
 
               <AnimatePresence mode="wait">
@@ -280,17 +295,17 @@ export default function Home() {
                         marginBottom: 10,
                       }}
                     >
-                      Division {currentSvc.number} Overview
+                      {currentSvc.number} · {displayTitle}
                     </span>
-                    <h3 style={{ fontSize: 26, marginBottom: 12 }}>{currentSvc.title}</h3>
+                    <h3 style={{ fontSize: 26, marginBottom: 12 }}>{displayTitle}</h3>
                     <p style={{ color: "var(--ink-soft)", fontSize: 16, lineHeight: 1.6, marginBottom: 24 }}>
-                      {currentSvc.subtitle}
+                      {displaySubtitle}
                     </p>
                     <p style={{ color: "var(--ink)", fontSize: 15.5, lineHeight: 1.6, marginBottom: 28 }}>
-                      {currentSvc.description}
+                      {displayDesc}
                     </p>
                     <Link to={currentSvc.path} className="btn btn--primary">
-                      Explore Division Details
+                      {t.hero.exploreServices}
                       <ArrowRight size={16} aria-hidden="true" />
                     </Link>
                   </div>
@@ -303,12 +318,20 @@ export default function Home() {
                       border: "1px solid var(--line)",
                     }}
                   >
-                    <h4 style={{ fontSize: 16, marginBottom: 16, display: "flex", alignItems: "center", gap: 8 }}>
+                    <h4
+                      style={{
+                        fontSize: 16,
+                        marginBottom: 16,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 8,
+                      }}
+                    >
                       <Sparkles size={16} color="var(--brand-gold)" aria-hidden="true" />
                       Key Capabilities &amp; Focus Areas
                     </h4>
                     <ul className="check-list">
-                      {currentSvc.preview.map((p) => (
+                      {displayPreview.map((p) => (
                         <li key={p}>
                           <CheckCircle2 size={16} color="var(--green)" aria-hidden="true" />
                           <span style={{ fontWeight: 500 }}>{p}</span>
@@ -326,16 +349,30 @@ export default function Home() {
       {/* ---------- SECTORS HIGHLIGHT STRIP ---------- */}
       <section className="section--navy-deep section">
         <div className="container">
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 28, flexWrap: "wrap" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: 28,
+              flexWrap: "wrap",
+            }}
+          >
             <ScrollReveal>
               <div>
-                <p className="eyebrow eyebrow--light">Regulated Sector Focus</p>
-                <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(24px, 3.2vw, 36px)", fontWeight: 600, maxWidth: 540 }}>
-                  Built for sectors where getting it wrong isn't an option
+                <p className="eyebrow eyebrow--light">{t.corridor.eyebrow}</p>
+                <h2
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "clamp(24px, 3.2vw, 36px)",
+                    fontWeight: 600,
+                    maxWidth: 540,
+                  }}
+                >
+                  {t.corridor.title}
                 </h2>
                 <p style={{ color: "rgba(255,255,255,0.75)", maxWidth: 480, marginTop: 12 }}>
-                  Heavily regulated industries need a partner who understands compliance
-                  as well as commerce. That's where ARSSA operates.
+                  {t.corridor.desc}
                 </p>
               </div>
             </ScrollReveal>
@@ -367,10 +404,10 @@ export default function Home() {
 
       {/* ---------- FINAL CTA ---------- */}
       <CTASection
-        headline="Ready to move into the DRC?"
-        text="Whether you're exploring the market for the first time or ready to scale distribution, ARSSA gives you one accountable partner for the whole journey — compliant, coordinated, and built for the South Africa (SADAC)–DRC corridor."
-        primaryLabel="Start an Enquiry"
-        secondaryLabel="Contact ARSSA"
+        headline={t.cta.headline}
+        text={t.cta.text}
+        primaryLabel={t.cta.primary}
+        secondaryLabel={t.cta.secondary}
       />
     </>
   );
