@@ -1873,6 +1873,7 @@ h4 {
 }
 
 /* ---------- Bridge Visual (SA → ARSSA → DRC) ---------- */
+/* ---------- Interactive Corridor Bridge (Legacy & Base) ---------- */
 .bridge {
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr;
@@ -1936,6 +1937,326 @@ h4 {
   align-items: center;
   justify-content: center;
   color: var(--gold);
+}
+
+/* ---------- Cross-Border Bridge V2 (image-2.jpeg Showcase) ---------- */
+.section--bridge {
+  background: radial-gradient(circle at 50% 10%, #111d38 0%, #080d1a 100%);
+  color: #ffffff;
+  padding: 84px 0 96px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bridge-v2__header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 48px;
+}
+
+.bridge-v2__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--brand-gold, #eab308);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.bridge-v2__title {
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.bridge-v2__title-arrow {
+  color: var(--brand-gold, #eab308);
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.bridge-v2__description {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #94a3b8;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.bridge-v2__container {
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.bridge-v2__card {
+  background: rgba(15, 24, 43, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+  padding: 30px 36px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bridge-v2__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.45);
+}
+
+.bridge-v2__card-head {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.bridge-v2__card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.bridge-v2__card-info h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.bridge-v2__card-info p {
+  font-size: 14.5px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.bridge-v2__icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(30, 58, 138, 0.4) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
+}
+
+.bridge-v2__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bridge-v2__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  padding: 6px 18px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #f1f5f9;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.bridge-v2__pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.bridge-v2__arrow-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0;
+  color: var(--brand-gold, #eab308);
+  filter: drop-shadow(0 0 8px rgba(234, 179, 8, 0.6));
+}
+
+.bridge-v2__card--center {
+  background: #0d172c;
+  border: 2px solid var(--brand-gold, #eab308);
+  box-shadow: 0 0 35px rgba(234, 179, 8, 0.18), 0 16px 44px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 34px 38px 24px 38px;
+}
+
+.bridge-v2__center-head {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.bridge-v2__center-logo-wrap {
+  width: 130px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bridge-v2__center-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.bridge-v2__center-info {
+  flex: 1;
+}
+
+.bridge-v2__center-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.02em;
+}
+
+.bridge-v2__center-sub {
+  font-size: 15px;
+  color: #fef08a;
+  font-weight: 500;
+  margin: 0;
+}
+
+.bridge-v2__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 26px;
+  margin-bottom: 24px;
+}
+
+.bridge-v2__grid-item {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(234, 179, 8, 0.22);
+  border-radius: 12px;
+  padding: 18px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.bridge-v2__grid-item:hover {
+  background: rgba(234, 179, 8, 0.08);
+  border-color: rgba(234, 179, 8, 0.5);
+  transform: translateY(-2px);
+}
+
+.bridge-v2__grid-icon {
+  color: var(--brand-gold, #eab308);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bridge-v2__grid-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f8fafc;
+  line-height: 1.35;
+}
+
+.bridge-v2__badge-strip {
+  border-top: 1px solid rgba(234, 179, 8, 0.22);
+  padding-top: 18px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  color: #fbbf24;
+  text-transform: uppercase;
+}
+
+.bridge-v2__footer-tagline {
+  margin-top: 42px;
+  text-align: center;
+}
+
+.bridge-v2__rule-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--brand-gold, #eab308);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.bridge-v2__rule-dash {
+  height: 1px;
+  width: 56px;
+  background: var(--brand-gold, #eab308);
+  opacity: 0.7;
+}
+
+.bridge-v2__motto {
+  font-size: 16px;
+  color: #cbd5e1;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+@media (max-width: 860px) {
+  .bridge-v2__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bridge-v2__card,
+  .bridge-v2__card--center {
+    padding: 22px 18px;
+  }
+
+  .bridge-v2__card-head,
+  .bridge-v2__center-head {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .bridge-v2__pills {
+    justify-content: center;
+  }
+
+  .bridge-v2__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bridge-v2__title-arrow {
+    margin: 0 4px;
+  }
 }
 
 /* ---------- Forms ---------- */

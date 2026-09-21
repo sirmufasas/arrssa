@@ -1,5 +1,17 @@
 import { useState } from "react";
-import { ArrowRight, Briefcase, Building2, CheckCircle2, Handshake, Users, Sparkles } from "lucide-react";
+import {
+  ArrowDown,
+  Briefcase,
+  Building2,
+  CheckCircle2,
+  FileText,
+  Globe,
+  Handshake,
+  Sparkles,
+  TrendingUp,
+  Truck,
+  Users,
+} from "lucide-react";
 import PageHero from "../components/PageHero";
 import SEO from "../components/SEO";
 import ScrollReveal from "../components/ScrollReveal";
@@ -7,6 +19,51 @@ import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
 import { FeatureItem } from "../components/AboutSections";
 import { useT, useTranslate } from "../context/LanguageContext";
+
+function DRCFlagBadge({ size = 48 }: { size?: number }) {
+  return (
+    <div
+      style={{
+        width: size,
+        height: size,
+        borderRadius: "50%",
+        overflow: "hidden",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        border: "1px solid rgba(255, 255, 255, 0.25)",
+        boxShadow: "0 0 16px rgba(0, 127, 255, 0.35)",
+        flexShrink: 0,
+      }}
+      aria-label="Democratic Republic of Congo Flag"
+    >
+      <svg
+        viewBox="0 0 800 600"
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+      >
+        <rect width="800" height="600" fill="#007fff" />
+        <polygon points="0,520 0,600 80,600 800,80 800,0 720,0" fill="#f7d618" />
+        <polygon points="0,550 0,600 50,600 800,50 800,0 750,0" fill="#ce1021" />
+        <polygon
+          points="130,50 148,105 206,105 159,139 177,194 130,160 83,194 101,139 54,105 112,105"
+          fill="#f7d618"
+        />
+      </svg>
+    </div>
+  );
+}
+
+function GlobeBadge({ size = 48 }: { size?: number }) {
+  return (
+    <div
+      className="bridge-v2__icon-badge"
+      style={{ width: size, height: size }}
+      aria-hidden="true"
+    >
+      <Globe size={24} color="#38bdf8" />
+    </div>
+  );
+}
 
 const TARGETS = [
   {
@@ -105,85 +162,196 @@ export default function Markets() {
         </div>
       </section>
 
-      {/* Interactive Corridor Bridge Visual */}
-      <section className="section section--paper">
+      {/* Interactive Corridor Bridge Visual (Redesigned per image-2.jpeg) */}
+      <section className="section section--bridge">
         <div className="container">
           <ScrollReveal>
-            <SectionHeading
-              center
-              eyebrow={tr("The Cross-Border Bridge")}
-              title={tr("South Africa (SADAC) → ARSSA → DRC")}
-              description={tr("ARSSA acts as the single accountable bridge between where your business originates and where it creates commercial impact.")}
-            />
-          </ScrollReveal>
-
-          <ScrollReveal>
-            <div className="bridge">
-              <div className="bridge__node">
-                <div className="bridge__flag" aria-hidden="true">🇿🇦</div>
-                <h3>{tr("South Africa (SADAC)")}</h3>
-                <p>{tr("Enterprise base — where capital, manufacturing, executive strategy, and product supply originate.")}</p>
+            <div className="bridge-v2__header">
+              <div className="bridge-v2__eyebrow">
+                <span aria-hidden="true">—</span>
+                <span>{tr("The Cross-Border Bridge")}</span>
               </div>
-
-              <div className="bridge__flow" aria-hidden="true">
-                <ArrowRight size={32} />
-              </div>
-
-              <div className="bridge__node bridge__node--center">
-                <div className="bridge__flag" aria-hidden="true">
-                  <span
-                    style={{
-                      fontFamily: "var(--font-serif)",
-                      fontSize: 34,
-                      fontWeight: 700,
-                    }}
-                    translate="no"
-                  >
-                    <span style={{ color: "#ffffff" }}>A</span>
-                    <span style={{ color: "var(--brand-gold)" }}>R</span>
-                    <span style={{ color: "#3ecf6f" }}>S</span>
-                  </span>
-                </div>
-                <h3 translate="no">ARSSA</h3>
-                <p>{tr("Your integrated cross-border operational partner")}</p>
-              </div>
-
-              <div className="bridge__flow" aria-hidden="true">
-                <ArrowRight size={32} />
-              </div>
-
-              <div className="bridge__node">
-                <div className="bridge__flag" aria-hidden="true">🇨🇩</div>
-                <h3>{tr("DRC")}</h3>
-                <p>{tr("Growth market — Lubumbashi, Kinshasa and beyond, where local execution and distribution matter.")}</p>
-              </div>
+              <h2 className="bridge-v2__title">
+                <span>{tr("Regional & International Markets")}</span>
+                <span className="bridge-v2__title-arrow" aria-hidden="true"> → </span>
+                <span translate="no" data-no-translate="true">ARSSA</span>
+                <span className="bridge-v2__title-arrow" aria-hidden="true"> → </span>
+                <span>{tr("DRC")}</span>
+              </h2>
+              <p className="bridge-v2__description">
+                {tr(
+                  "ARSSA acts as an integrated bridge connecting businesses, suppliers, investors and commercial opportunities with the DRC, while facilitating trade and market access across regional and international markets."
+                )}
+              </p>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
+          <div className="bridge-v2__container">
+            {/* Card 1: Regional & International Markets */}
+            <ScrollReveal>
+              <div className="bridge-v2__card">
+                <div className="bridge-v2__card-head">
+                  <GlobeBadge size={52} />
+                  <div className="bridge-v2__card-info">
+                    <h3>{tr("Regional & International Markets")}</h3>
+                    <p>
+                      {tr(
+                        "Businesses, investors, manufacturers, suppliers and strategic partners seeking access to the DRC market."
+                      )}
+                    </p>
+                  </div>
+                </div>
+                <div className="bridge-v2__pills">
+                  {["AFRICA", "EUROPE", "ASIA", "MIDDLE EAST", "AMERICAS"].map((reg) => (
+                    <span key={reg} className="bridge-v2__pill">
+                      {tr(reg)}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Down Connector 1 */}
+            <div className="bridge-v2__arrow-divider" aria-hidden="true">
+              <ArrowDown size={30} />
+            </div>
+
+            {/* Card 2: ARSSA Featured Centerpiece */}
+            <ScrollReveal>
+              <div className="bridge-v2__card bridge-v2__card--center">
+                <div className="bridge-v2__center-head">
+                  <div className="bridge-v2__center-logo-wrap" translate="no" data-no-translate="true">
+                    <img
+                      src="/arssa-logo.png"
+                      alt="ARSSA"
+                      className="bridge-v2__center-logo"
+                      draggable="false"
+                      translate="no"
+                    />
+                  </div>
+                  <div className="bridge-v2__center-info">
+                    <h3 translate="no" data-no-translate="true" className="bridge-v2__center-title">
+                      ARSSA
+                    </h3>
+                    <p className="bridge-v2__center-sub">
+                      {tr("Your integrated cross-border facilitation partner.")}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bridge-v2__grid">
+                  {[
+                    { icon: TrendingUp, label: "Market Access" },
+                    { icon: FileText, label: "Regulatory Coordination" },
+                    { icon: Truck, label: "Trade & Logistics" },
+                    { icon: Users, label: "Workforce Solutions" },
+                    { icon: Handshake, label: "Local Execution" },
+                  ].map(({ icon: Icon, label }) => (
+                    <div key={label} className="bridge-v2__grid-item">
+                      <div className="bridge-v2__grid-icon" aria-hidden="true">
+                        <Icon size={24} />
+                      </div>
+                      <span className="bridge-v2__grid-label">{tr(label)}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bridge-v2__badge-strip">
+                  {tr(
+                    "DRC-HEADQUARTERED • ESTABLISHED SOUTH AFRICAN PRESENCE • REGIONAL & INTERNATIONAL REACH"
+                  )}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Down Connector 2 */}
+            <div className="bridge-v2__arrow-divider" aria-hidden="true">
+              <ArrowDown size={30} />
+            </div>
+
+            {/* Card 3: Democratic Republic of Congo */}
+            <ScrollReveal>
+              <div className="bridge-v2__card">
+                <div className="bridge-v2__card-head">
+                  <DRCFlagBadge size={52} />
+                  <div className="bridge-v2__card-info">
+                    <h3>{tr("Democratic Republic of Congo")}</h3>
+                    <p>
+                      {tr(
+                        "Local market access, commercial opportunities, regulatory navigation and on-the-ground coordination."
+                      )}
+                    </p>
+                  </div>
+                </div>
+                <div className="bridge-v2__pills">
+                  {["INVEST", "TRADE", "PARTNER", "GROW"].map((action) => (
+                    <span key={action} className="bridge-v2__pill">
+                      {tr(action)}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Bottom Footer Tagline */}
+            <ScrollReveal delay={0.08}>
+              <div className="bridge-v2__footer-tagline">
+                <div className="bridge-v2__rule-line">
+                  <span className="bridge-v2__rule-dash" aria-hidden="true" />
+                  <span>{tr("SOUTH AFRICA TO A WIDER TOMORROW")}</span>
+                  <span className="bridge-v2__rule-dash" aria-hidden="true" />
+                </div>
+                <p className="bridge-v2__motto">
+                  {tr("A South African base. A regional perspective. A stronger DRC.")}
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.12}>
             <div
               className="card"
               style={{
-                marginTop: 48,
+                marginTop: 56,
                 padding: "36px 40px",
                 display: "flex",
                 gap: 32,
                 flexWrap: "wrap",
                 alignItems: "center",
                 justifyContent: "space-between",
-                background: "var(--card-bg)",
+                background: "rgba(15, 23, 42, 0.85)",
+                border: "1px solid rgba(255, 255, 255, 0.12)",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
               }}
             >
               <div style={{ maxWidth: 480 }}>
-                <h3 style={{ fontSize: 21, marginBottom: 10 }}>{tr("What ARSSA Coordinates for You")}</h3>
-                <p style={{ color: "var(--ink-soft)", fontSize: 15.5, lineHeight: 1.6 }}>
-                  {tr("From market validation and regulatory licensing to customs clearance and retailer shelf presence, one partner handles the full workflow.")}
+                <h3 style={{ fontSize: 21, marginBottom: 10, color: "#ffffff" }}>
+                  {tr("What ARSSA Coordinates for You")}
+                </h3>
+                <p style={{ color: "#94a3b8", fontSize: 15.5, lineHeight: 1.6 }}>
+                  {tr(
+                    "From market validation and regulatory licensing to customs clearance and retailer shelf presence, one partner handles the full workflow."
+                  )}
                 </p>
               </div>
               <ul style={{ display: "grid", gap: 12, flex: 1, minWidth: 280 }}>
                 {BRIDGE_ROLE.map((item) => (
-                  <li key={item} style={{ display: "flex", gap: 12, alignItems: "center", fontSize: 15, color: "var(--ink)" }}>
-                    <CheckCircle2 size={16} color="var(--green)" style={{ flexShrink: 0 }} aria-hidden="true" />
+                  <li
+                    key={item}
+                    style={{
+                      display: "flex",
+                      gap: 12,
+                      alignItems: "center",
+                      fontSize: 15,
+                      color: "#f1f5f9",
+                    }}
+                  >
+                    <CheckCircle2
+                      size={16}
+                      color="var(--green, #22c55e)"
+                      style={{ flexShrink: 0 }}
+                      aria-hidden="true"
+                    />
                     <span>{tr(item)}</span>
                   </li>
                 ))}
