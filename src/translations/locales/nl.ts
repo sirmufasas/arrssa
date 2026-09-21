@@ -167,7 +167,7 @@ export const nl: TranslationDictionary = {
     "email": "E-mailadres",
     "emailPlaceholder": "bijv. jan@bedrijf.nl",
     "phone": "Telefoonnummer",
-    "phonePlaceholder": "bijv. +27 67 279 4750",
+    "phonePlaceholder": "bijv. +27 76 582 2221",
     "message": "Bericht",
     "messagePlaceholder": "Vertel ons over uw project of vraag...",
     "company": "Bedrijfsnaam",

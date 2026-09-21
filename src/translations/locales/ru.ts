@@ -167,7 +167,7 @@ export const ru: TranslationDictionary = {
     "email": "Электронная почта",
     "emailPlaceholder": "напр., alex@company.com",
     "phone": "Номер телефона",
-    "phonePlaceholder": "напр., +27 67 279 4750",
+    "phonePlaceholder": "напр., +27 76 582 2221",
     "message": "Сообщение",
     "messagePlaceholder": "Опишите ваш проект или вопрос...",
     "company": "Название компании",

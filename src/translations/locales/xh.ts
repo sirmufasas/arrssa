@@ -167,7 +167,7 @@ export const xh: TranslationDictionary = {
     "email": "Idilesi ye-imeyile",
     "emailPlaceholder": "umz. lwazi@inkampani.co.za",
     "phone": "Inombolo yoFowuni",
-    "phonePlaceholder": "umz. +27 67 279 4750",
+    "phonePlaceholder": "umz. +27 76 582 2221",
     "message": "Umyalezo",
     "messagePlaceholder": "Sixelele ngeprojekthi okanye isicelo sakho...",
     "company": "Igama leNkampani",

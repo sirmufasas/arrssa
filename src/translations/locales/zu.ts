@@ -167,7 +167,7 @@ export const zu: TranslationDictionary = {
     "email": "Ikheli Le-imeyili",
     "emailPlaceholder": "isib. sipho@inkampani.co.za",
     "phone": "Inombolo Yocingo",
-    "phonePlaceholder": "isib. +27 67 279 4750",
+    "phonePlaceholder": "isib. +27 76 582 2221",
     "message": "Umyalezo",
     "messagePlaceholder": "Sitshele ngephrojekthi noma ngesicelo sakho...",
     "company": "Igama Lenkampani",

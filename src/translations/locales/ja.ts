@@ -167,7 +167,7 @@ export const ja: TranslationDictionary = {
     "email": "メールアドレス",
     "emailPlaceholder": "例：yamada@company.co.jp",
     "phone": "電話番号",
-    "phonePlaceholder": "例：+27 67 279 4750",
+    "phonePlaceholder": "例：+27 76 582 2221",
     "message": "お問い合わせ内容",
     "messagePlaceholder": "プロジェクトの概要やご相談内容をご記入ください...",
     "company": "会社名・組織名",

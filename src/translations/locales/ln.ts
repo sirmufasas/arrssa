@@ -167,7 +167,7 @@ export const ln: TranslationDictionary = {
     "email": "Adresse E-mail",
     "emailPlaceholder": "ndakisa: patrice@kompani.com",
     "phone": "Nimero ya Telefoni",
-    "phonePlaceholder": "ndakisa: +27 67 279 4750",
+    "phonePlaceholder": "ndakisa: +27 76 582 2221",
     "message": "Nsango",
     "messagePlaceholder": "Yebisa biso likambo to mosala na yo...",
     "company": "Kombo ya Kompani",

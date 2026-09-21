@@ -167,7 +167,7 @@ export const ko: TranslationDictionary = {
     "email": "이메일 주소",
     "emailPlaceholder": "예: gildong@company.com",
     "phone": "연락처",
-    "phonePlaceholder": "예: +27 67 279 4750",
+    "phonePlaceholder": "예: +27 76 582 2221",
     "message": "문의 내용",
     "messagePlaceholder": "프로젝트 내용이나 문의 사항을 입력해 주세요...",
     "company": "회사명",

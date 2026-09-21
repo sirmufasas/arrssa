@@ -167,7 +167,7 @@ export const hi: TranslationDictionary = {
     "email": "ईमेल पता",
     "emailPlaceholder": "उदा. rahul@company.com",
     "phone": "फ़ोन नंबर",
-    "phonePlaceholder": "उदा. +27 67 279 4750",
+    "phonePlaceholder": "उदा. +27 76 582 2221",
     "message": "संदेश",
     "messagePlaceholder": "अपनी परियोजना या पूछताछ के बारे में बताएं...",
     "company": "कंपनी का नाम",

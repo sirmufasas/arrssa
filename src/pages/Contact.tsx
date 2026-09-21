@@ -15,7 +15,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact ARSSA | Phone, WhatsApp & Email"
-        description="Get in touch with ARSSA — call or WhatsApp +27 672 794 750, or email info@agencerebiservicesa.co.za. We respond to all business enquiries."
+        description="Get in touch with ARSSA — call or WhatsApp +27 76 582 2221, or email info@agencerebiservicesa.co.za. We respond to all business enquiries."
         path="/contact"
       />
 

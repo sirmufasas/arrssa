@@ -11,7 +11,7 @@
  *        TWILIO_ACCOUNT_SID    (from twilio.com console)
  *        TWILIO_AUTH_TOKEN
  *        TWILIO_WHATSAPP_FROM  e.g. whatsapp:+14155238886  (Twilio's sandbox or your approved number)
- *        NOTIFY_WHATSAPP_TO    e.g. whatsapp:+27672794750
+ *        NOTIFY_WHATSAPP_TO    e.g. whatsapp:+27765822221
  *   2. Site settings -> Forms -> Form notifications -> Add notification
  *        -> Outgoing webhook -> Event: "New form submission"
  *        -> URL: https://<your-site>.netlify.app/.netlify/functions/notify-enquiry

@@ -167,7 +167,7 @@ export const zh: TranslationDictionary = {
     "email": "电子邮箱",
     "emailPlaceholder": "例如：zhang@company.com",
     "phone": "联系电话",
-    "phonePlaceholder": "例如：+27 67 279 4750",
+    "phonePlaceholder": "例如：+27 76 582 2221",
     "message": "需求描述",
     "messagePlaceholder": "请简述您的项目目标或具体咨询内容...",
     "company": "企业名称",

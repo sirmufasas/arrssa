@@ -167,7 +167,7 @@ export const fr: TranslationDictionary = {
     "email": "Adresse e-mail",
     "emailPlaceholder": "ex. jean@entreprise.com",
     "phone": "Numéro de téléphone",
-    "phonePlaceholder": "ex. +27 67 279 4750",
+    "phonePlaceholder": "ex. +27 76 582 2221",
     "message": "Message",
     "messagePlaceholder": "Décrivez votre projet ou votre demande...",
     "company": "Nom de l'entreprise",

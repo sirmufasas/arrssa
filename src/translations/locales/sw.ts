@@ -167,7 +167,7 @@ export const sw: TranslationDictionary = {
     "email": "Barua Pepe",
     "emailPlaceholder": "mfano: juma@kampuni.com",
     "phone": "Nambari ya Simu",
-    "phonePlaceholder": "mfano: +27 67 279 4750",
+    "phonePlaceholder": "mfano: +27 76 582 2221",
     "message": "Ujumbe",
     "messagePlaceholder": "Tueleze kuhusu mradi au ombi lako...",
     "company": "Jina la Kampuni",

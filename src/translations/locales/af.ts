@@ -167,7 +167,7 @@ export const af: TranslationDictionary = {
     "email": "E-posadres",
     "emailPlaceholder": "bv. johan@maatskappy.co.za",
     "phone": "Telefoonnommer",
-    "phonePlaceholder": "bv. +27 67 279 4750",
+    "phonePlaceholder": "bv. +27 76 582 2221",
     "message": "Boodskap",
     "messagePlaceholder": "Vertel ons van u projek of navraag...",
     "company": "Maatskappynaam",
