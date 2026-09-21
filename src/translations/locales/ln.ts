@@ -21,7 +21,7 @@ export const ln: TranslationDictionary = {
     "language": "Lokota"
   },
   "hero": {
-    "badge": "Nzela ya Mombongo Afrika ya Sudi (SADAC) ↔ RDC",
+    "badge": "Nzela ya Mombo RDC–Afríka ya Súdi na Zoni",
     "headline1": "Esaleli na yo,",
     "headlineGold": "pene na yo mpenza",
     "sub": "ARSSA ezali nzela na yo ya lombangu mpo na kokota na zando ya DRC — mobateli moko mpo na kosalisa mombongo, botosi mibeko ya leta, bopanzi sango, bokaboli biloko mpe mombongo ya mikili misusu mpo na biloko ya nkisi, kitoko, bilei mpe mabanga ya talo. Bakompani ebele te, kosala mikakatano te — mosala ya solosolo banda mokolo ya liboso.",

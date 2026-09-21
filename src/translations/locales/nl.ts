@@ -21,7 +21,7 @@ export const nl: TranslationDictionary = {
     "language": "Taal"
   },
   "hero": {
-    "badge": "Handelscorridor Zuid-Afrika (SADAC) ↔ DRC",
+    "badge": "Handelscorridor DRC–Zuidelijk Afrika",
     "headline1": "Uw oplossing,",
     "headlineGold": "binnen handbereik",
     "sub": "ARSSA is uw directe route naar de markt van de DRC — één aanspreekpunt voor markttoegang, naleving van wet- en regelgeving, marketing, distributie en handel in de farmaceutische, cosmetische, agri-food en mijnbouwsector.",

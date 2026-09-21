@@ -24,7 +24,7 @@ export default function CTASection({
   const tr = useTranslate();
 
   const finalHeadline = headline || t.cta?.headline || "Ready to explore the DRC market?";
-  const finalText = text || t.cta?.text || "ARSSA provides practical, integrated support for businesses seeking to establish, operate and grow across the South Africa (SADAC)–DRC corridor.";
+  const finalText = text || t.cta?.text || "ARSSA provides practical, integrated support for businesses seeking to establish, operate and grow across the DRC–Southern Africa trade corridor.";
   const finalPrimary = primaryLabel || t.cta?.primary || "Start an Enquiry";
   const finalSecondary = secondaryLabel || t.cta?.secondary || "Contact ARSSA";
 

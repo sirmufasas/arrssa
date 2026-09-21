@@ -21,7 +21,7 @@ export const it: TranslationDictionary = {
     "language": "Lingua"
   },
   "hero": {
-    "badge": "Corridoio Commerciale Sudafrica (SADAC) ↔ RDC",
+    "badge": "Corridoio Commerciale RDC–Africa Australe",
     "headline1": "La tua soluzione,",
     "headlineGold": "a portata di mano",
     "sub": "ARSSA è la corsia preferenziale per il mercato della RDC: un partner unico e affidabile per facilitazione aziendale, conformità legale, marketing, distribuzione e commercio transfrontaliero nei settori farmaceutico, cosmetico, agroalimentare e minerario.",

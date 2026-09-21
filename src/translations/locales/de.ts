@@ -21,7 +21,7 @@ export const de: TranslationDictionary = {
     "language": "Sprache"
   },
   "hero": {
-    "badge": "Handelskorridor Südafrika (SADAC) ↔ DR Kongo",
+    "badge": "Handelskorridor DR Kongo–Südliches Afrika",
     "headline1": "Ihre Lösung,",
     "headlineGold": "direkt greifbar",
     "sub": "ARSSA ist Ihr direkter Zugang zum Markt der DR Kongo — ein verlässlicher Komplettpartner für Markteintritt, behördliche Compliance, Marketing, Vertrieb und Handel in den Sektoren Pharma, Kosmetik, Agrar- & Lebensmittel sowie Bergbau. Keine fragmentierten Agenturen, sondern strukturierte Umsetzung von Tag eins an.",

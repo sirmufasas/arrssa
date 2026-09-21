@@ -21,7 +21,7 @@ export const sw: TranslationDictionary = {
     "language": "Lugha"
   },
   "hero": {
-    "badge": "Ukanda wa Biashara Afrika Kusini (SADAC) ↔ DRC",
+    "badge": "Ukanda wa Biashara DRC–Kusini mwa Afrika",
     "headline1": "Suluhisho lako,",
     "headlineGold": "kiganjani mwako",
     "sub": "ARSSA ni njia yako ya haraka ya kuingia katika soko la DRC — mshirika mmoja wa kuaminika anayesimamia uratibu wa biashara, uzingatiaji wa sheria, masoko, usambazaji na biashara ya mipakani kwa sekta za dawa, vipodozi, vyakula na madini. Hakuna makampuni mengi yanayogongana — ni utekelezaji uliopangwa kuanzia siku ya kwanza.",

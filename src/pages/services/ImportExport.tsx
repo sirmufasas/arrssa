@@ -37,8 +37,8 @@ const BLOCKS: ServiceBlock[] = [
     icon: Network,
     title: "Supplier & Buyer Network Development",
     items: [
-      "Connecting South African (SADAC) producers with DRC buyers",
-      "Connecting DRC producers with South African (SADAC) buyers",
+      "Connecting Southern African producers with DRC buyers",
+      "Connecting DRC producers with Southern African buyers",
       "Structured commercial introductions & vetting",
       "Supply contract facilitation & escrow coordination",
     ],
@@ -63,7 +63,7 @@ export default function ImportExport() {
     <>
       <SEO
         title="Import & Export | ARSSA"
-        description="Trade facilitation, compliance, logistics and cross-border movement. ARSSA ensures goods move efficiently and legally across the South Africa (SADAC)–DRC corridor."
+        description="Trade facilitation, compliance, logistics and cross-border movement. ARSSA ensures goods move efficiently and legally across the DRC–Southern Africa trade corridor."
         path="/services/import-export"
       />
 
@@ -105,7 +105,7 @@ export default function ImportExport() {
                   {tr("End-to-End Trade Execution Across Borders")}
                 </h2>
                 <p className="lead" style={{ fontSize: 16, marginBottom: 20 }}>
-                  {tr("Moving goods between South Africa (SADAC) and the DRC involves complex customs regulations, multi-modal transport handoffs, import certifications, and strict documentary checks.")}
+                  {tr("Moving goods between the DRC and Southern Africa involves complex customs regulations, multi-modal transport handoffs, import certifications, and strict documentary checks.")}
                 </p>
                 <p style={{ color: "var(--ink-soft)", fontSize: 15, lineHeight: 1.65 }}>
                   {tr("ARSSA oversees the entire supply chain — managing tariff classifications, freight forwarding, customs clearance, and local receiving to ensure your shipments arrive on schedule, fully compliant, and within budget.")}

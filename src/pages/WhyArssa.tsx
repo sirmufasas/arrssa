@@ -91,14 +91,14 @@ export default function WhyArssa() {
     <>
       <SEO
         title="Why ARSSA | One Integrated Partner for the DRC"
-        description="Discover why businesses choose ARSSA: one accountable partner, reduced risk, faster setup, vetted local networks, and permanent ground presence across the South Africa (SADAC)–DRC corridor."
+        description="Discover why businesses choose ARSSA: one accountable partner, reduced risk, faster setup, vetted local networks, and permanent ground presence across the DRC–Southern Africa trade corridor."
         path="/why-arssa"
       />
 
       <PageHero
         eyebrow="The ARSSA Value Proposition"
         title="Why ARSSA"
-        subtitle="One integrated partner instead of a chain of disconnected service providers — built specifically for the South Africa (SADAC)–DRC corridor."
+        subtitle="One integrated partner instead of a chain of disconnected service providers — built specifically for the DRC–Southern Africa trade corridor."
         crumbs={[{ label: "Home", path: "/" }, { label: "Why ARSSA" }]}
       />
 

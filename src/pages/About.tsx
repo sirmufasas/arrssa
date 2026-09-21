@@ -77,15 +77,15 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About ARSSA | South Africa (SADAC)–DRC Business Facilitation"
-        description="Learn about ARSSA — the South African (SADAC) extension of ARS S.A.R.L. Our approach, vision, mission and core values for cross-border business between South Africa (SADAC) and the DRC."
+        title="About ARSSA | Cross-Border Business Facilitation DRC & Southern Africa"
+        description="Learn about ARSSA — the Southern African extension of ARS S.A.R.L. Headquartered in the DRC with an established South African presence, connecting businesses across Southern Africa."
         path="/about"
       />
 
       <PageHero
         eyebrow="Who We Are"
         title="About ARSSA"
-        subtitle="Agence Rebi Service South Africa — the South African (SADAC) extension of ARS S.A.R.L. in the DRC, built to simplify and strengthen cross-border business."
+        subtitle="Headquartered in the Democratic Republic of Congo with an established South African presence, ARSSA connects businesses, suppliers and opportunities between the DRC and Southern Africa."
         crumbs={[{ label: "Home", path: "/" }, { label: "About" }]}
       />
 
@@ -113,8 +113,8 @@ export default function About() {
             <ScrollReveal>
               <SectionHeading
                 eyebrow={tr("Who We Are")}
-                title={tr("The South African (SADAC) extension of ARS S.A.R.L.")}
-                description={tr("ARSSA is the South African (SADAC) extension of ARS S.A.R.L. in the Democratic Republic of Congo. We exist to give South African (SADAC) businesses a structured, experienced, and accountable partner for operating across the corridor.")}
+                title={tr("The Southern African extension of ARS S.A.R.L.")}
+                description={tr("ARSSA is the Southern African extension of ARS S.A.R.L., headquartered in the Democratic Republic of Congo, with an established operational presence in South Africa. We connect businesses across Southern Africa with opportunities in the DRC, providing a structured and accountable partner for navigating cross-border operations and market entry.")}
               />
             </ScrollReveal>
 
@@ -182,7 +182,7 @@ export default function About() {
                     color: "#ffffff",
                   }}
                 >
-                  &ldquo;{tr("To be the leading partner that simplifies and strengthens cross-border business between South Africa (SADAC) and the DRC, empowering pharmaceutical, cosmetic, and agri-food companies to expand with confidence.")}&rdquo;
+                  &ldquo;{tr("To be the leading partner that simplifies and strengthens cross-border business between the DRC and Southern Africa, empowering pharmaceutical, cosmetic, and agri-food companies to expand with confidence.")}&rdquo;
                 </p>
               </div>
             </ScrollReveal>
@@ -206,7 +206,7 @@ export default function About() {
                     color: "#ffffff",
                   }}
                 >
-                  &ldquo;{tr("To provide structured, ethical, practical, and results-driven solutions helping SA companies establish, operate, and grow in the DRC through compliant facilitation, strategic market development, and integrated trade support.")}&rdquo;
+                  &ldquo;{tr("To provide structured, ethical, practical, and results-driven solutions helping businesses establish, operate, and grow in the DRC through compliant facilitation, strategic market development, and integrated trade support across Southern Africa.")}&rdquo;
                 </p>
               </div>
             </ScrollReveal>

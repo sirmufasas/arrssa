@@ -70,7 +70,7 @@ export default function Legacy() {
                 <h3>{tr("Important Context Regarding This Track Record")}</h3>
                 <p>
                   {tr(
-                    "The historical projects showcased below reflect the ARS Group legacy and partnership experience in the DRC — rather than claiming every historical project was directly undertaken by ARSSA as a South African (SADAC) entity. This track record underpins the operational capability, sector knowledge, and corporate relationships that ARSSA brings to South African (SADAC) clients today."
+                    "The historical projects showcased below reflect the ARS Group legacy and partnership experience in the DRC — rather than claiming every historical project was directly undertaken by ARSSA as a South African entity. This track record underpins the operational capability, sector knowledge, and corporate relationships that ARSSA brings to clients across Southern Africa today."
                   )}
                 </p>
               </div>

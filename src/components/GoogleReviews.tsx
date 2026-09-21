@@ -125,7 +125,7 @@ export default function GoogleReviews() {
               <h3>{tr("Have you worked with ARSSA?")}</h3>
               <p>
                 {tr(
-                  "We're building our public track record on Google. If ARSSA has supported your business across the South Africa (SADAC)–DRC corridor, we'd genuinely value a review — it helps other businesses make confident decisions."
+                  "We're building our public track record on Google. If ARSSA has supported your business across the DRC–Southern Africa trade corridor, we'd genuinely value a review — it helps other businesses make confident decisions."
                 )}
               </p>
               <div className="greviews__invite-stars" aria-hidden="true">

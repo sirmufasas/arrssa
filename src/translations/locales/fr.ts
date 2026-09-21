@@ -21,7 +21,7 @@ export const fr: TranslationDictionary = {
     "language": "Langue"
   },
   "hero": {
-    "badge": "Corridor Commercial Afrique du Sud (SADAC) ↔ RDC",
+    "badge": "Corridor Commercial RDC–Afrique Australe",
     "headline1": "Votre solution,",
     "headlineGold": "à portée de main",
     "sub": "ARSSA est votre passerelle stratégique vers le marché de la RDC — un partenaire unique et responsable pour la facilitation, la conformité, le marketing, la distribution et le commerce, conçu pour les secteurs pharmaceutique, cosmétique, agroalimentaire et minier. Aucune agence dispersée, aucune incertitude — une exécution structurée dès le premier jour.",

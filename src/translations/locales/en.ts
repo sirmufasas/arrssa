@@ -21,7 +21,7 @@ export const en: TranslationDictionary = {
     "language": "Language"
   },
   "hero": {
-    "badge": "South Africa (SADAC) ↔ DRC Commercial Corridor",
+    "badge": "DRC–Southern Africa Commercial Corridor",
     "headline1": "Your solution,",
     "headlineGold": "right at your finger tips",
     "sub": "ARSSA is your fast track into the DRC market — one accountable partner for facilitation, compliance, marketing, distribution and trade, built for pharmaceutical, cosmetic, agri-food and mining sectors. No fragmented agencies, no guesswork — just structured execution from day one.",

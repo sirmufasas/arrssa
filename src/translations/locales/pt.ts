@@ -21,7 +21,7 @@ export const pt: TranslationDictionary = {
     "language": "Idioma"
   },
   "hero": {
-    "badge": "Corredor Comercial África do Sul (SADAC) ↔ RDC",
+    "badge": "Corredor Comercial RDC–África Austral",
     "headline1": "A sua solução,",
     "headlineGold": "ao alcance das suas mãos",
     "sub": "A ARSSA é o seu canal direto para o mercado da RDC — um parceiro único e responsável para facilitação, conformidade, marketing, distribuição e comércio transfronteiriço, estruturado para os setores farmacêutico, cosmético, agroalimentar e mineiro. Sem intermediários fragmentados, com execução rigorosa desde o primeiro dia.",

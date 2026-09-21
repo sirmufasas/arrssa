@@ -94,7 +94,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <iframe
-                    title="ARSSA — South Africa (SADAC) operations map"
+                    title="ARSSA — South African operations map"
                     src="https://maps.google.com/maps?q=Johannesburg,+South+Africa&z=6&output=embed"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"

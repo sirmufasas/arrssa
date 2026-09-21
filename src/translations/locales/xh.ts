@@ -21,7 +21,7 @@ export const xh: TranslationDictionary = {
     "language": "Ulwimi"
   },
   "hero": {
-    "badge": "Indlela yoRhwebo yoMzantsi Afrika (SADAC) ↔ DRC",
+    "badge": "Indlela yoRhwebo yase-DRC–Mazantsi e-Afrika",
     "headline1": "Isicombululo sakho,",
     "headlineGold": "sisezandleni zakho",
     "sub": "I-ARSSA yindlela yakho ekhawulezayo yokungena kwimarike yase-DRC — iqabane elinye elinoxanduva lokulungelelanisa, ukuthotyelwa komthetho, ukuthengisa, ukusasaza kunye norhwebo lwemida yemithi, izinto zokuthambisa, ukutya nezimbiwa. Akukho kuqagela — luphunyezo olucwangcisiweyo ukusuka kusuku lokuqala.",

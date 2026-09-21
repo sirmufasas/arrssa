@@ -88,7 +88,7 @@ export default function MarketGrowth() {
                   {tr("Gaining shelf presence is only half the battle. In competitive and fast-evolving markets like Lubumbashi and Kinshasa, products need continuous brand resonance, strong distributor alignment, and active demand generation.")}
                 </p>
                 <p style={{ color: "var(--ink-soft)", fontSize: 15, lineHeight: 1.65 }}>
-                  {tr("ARSSA connects South African (SADAC) brands directly with vetted wholesalers, retailers, and commercial buyers, orchestrating promotions and distribution channels that deliver repeatable revenue.")}
+                  {tr("ARSSA connects Southern African brands directly with vetted wholesalers, retailers, and commercial buyers, orchestrating promotions and distribution channels that deliver repeatable revenue.")}
                 </p>
               </ScrollReveal>
             </div>

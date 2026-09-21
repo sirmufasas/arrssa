@@ -21,7 +21,7 @@ export const es: TranslationDictionary = {
     "language": "Idioma"
   },
   "hero": {
-    "badge": "Corredor Comercial Sudáfrica (SADAC) ↔ RDC",
+    "badge": "Corredor Comercial RDC–África Austral",
     "headline1": "Su solución comercial,",
     "headlineGold": "al alcance de sus manos",
     "sub": "ARSSA es su vía rápida hacia el mercado de la RDC: un socio único y responsable para facilitación, cumplimiento normativo, marketing, distribución y comercio, diseñado para los sectores farmacéutico, cosmético, agroalimentario y minero. Sin agencias fragmentadas, con ejecución estructurada desde el primer día.",

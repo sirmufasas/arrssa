@@ -21,7 +21,7 @@ export const zu: TranslationDictionary = {
     "language": "Ulimi"
   },
   "hero": {
-    "badge": "Iphasishi Lokuhweba laseNingizimu Afrika (SADAC) ↔ DRC",
+    "badge": "Iphasishi Lokuhweba lase-DRC–Ningizimu Afrika",
     "headline1": "Isixazululo sakho,",
     "headlineGold": "sisezandleni zakho",
     "sub": "I-ARSSA iyindlela yakho esheshayo yokungena emakethe yase-DRC — uzakwethu oyedwa onokwethenjelwa wokuxhumanisa, ukuthobela imithetho, ukukhangisa, ukusabalalisa nokuhweba emikhakheni yezemithi, izimonyo, ukudla nezimayini. Akukho ukuqagela — ukusebenza okuhleliwe kusukela osukwini lokuqala.",

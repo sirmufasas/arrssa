@@ -21,7 +21,7 @@ export const ko: TranslationDictionary = {
     "language": "언어"
   },
   "hero": {
-    "badge": "남아프리카 공화국 (SADAC) ↔ 콩고민주공화국 통상 회랑",
+    "badge": "콩고민주공화국–남부 아프리카 무역 비즈니스 회랑",
     "headline1": "손끝에서 시작되는",
     "headlineGold": "비즈니스 솔루션",
     "sub": "ARSSA는 콩고민주공화국 시장 진출의 가장 확실한 관문입니다. 제약, 화장품, 농식품, 광업 분야에 특화되어 시장 진입, 규제 준수, 마케팅, 유통, 크로스보더 무역을 원스톱으로 책임집니다.",

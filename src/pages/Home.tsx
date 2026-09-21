@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="ARSSA | Business Facilitation & Trade Services South Africa (SADAC)–DRC"
+        title="ARSSA | Business Facilitation & Trade Services DRC–Southern Africa"
         description={t.hero.sub}
         path="/"
       />
@@ -137,10 +137,10 @@ export default function Home() {
               <div role="listitem">
                 <StatCounter
                   value={1}
-                  suffix="SADAC–DRC"
+                  suffix="DRC–Southern Africa"
                   label={t.operatingPresence}
                   variant="green"
-                  displayText="SADAC–DRC"
+                  displayText="DRC–Southern Africa"
                 />
               </div>
               <div role="listitem">
@@ -168,7 +168,7 @@ export default function Home() {
                 loading="lazy"
               />
               <div className="showcase-media__overlay">
-                <span className="showcase-media__tag"><strong translate="no">ARS S.A.R.L.</strong> {tr("South African (SADAC) Extension")}</span>
+                <span className="showcase-media__tag"><strong translate="no">ARS S.A.R.L.</strong> {tr("Southern African Extension")}</span>
                 <h3 className="showcase-media__title">{t.corridor.lead}</h3>
                 <p className="showcase-media__desc">{t.corridor.desc}</p>
               </div>
@@ -180,7 +180,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow={t.nav.about}
                 title={t.corridor.lead}
-                description="ARSSA is the South African (SADAC) extension of ARS S.A.R.L. in the DRC — one partner for marketing, facilitation, compliance, distribution and trade."
+                description="Headquartered in the Democratic Republic of Congo with an established South African presence, ARSSA connects businesses, suppliers and opportunities between the DRC and Southern Africa, with South Africa serving as a key regional sourcing and commercial hub."
               />
             </ScrollReveal>
 

@@ -68,8 +68,8 @@ function GlobeBadge({ size = 48 }: { size?: number }) {
 const TARGETS = [
   {
     icon: Building2,
-    title: "South African (SADAC) Companies",
-    text: "Businesses seeking to expand into the DRC — with structured support from initial market assessment through to day-to-day operations.",
+    title: "Southern African & Regional Companies",
+    text: "Businesses across South Africa and the wider Southern African region seeking to expand into the DRC — with structured support from initial market assessment through to day-to-day operations.",
     accent: "#1a3160",
   },
   {
@@ -128,14 +128,14 @@ export default function Markets() {
     <>
       <SEO
         title="Target Markets | ARSSA"
-        description="Who we serve: South African (SADAC) companies, manufacturers, investors and businesses requiring local support — with ARSSA as the bridge between South Africa and the DRC."
+        description="Who we serve: Southern African businesses, manufacturers, investors and companies requiring local support — with ARSSA as the bridge connecting Southern Africa and the DRC."
         path="/markets"
       />
 
       <PageHero
         eyebrow="Who We Serve"
         title="Target Markets"
-        subtitle="ARSSA is built for organisations that need more than reports — they need dependable, on-the-ground execution across the South Africa (SADAC)–DRC corridor."
+        subtitle="ARSSA is built for organisations that need more than reports — they need dependable, on-the-ground execution across the DRC–Southern Africa trade corridor."
         crumbs={[{ label: "Home", path: "/" }, { label: "Markets" }]}
       />
 

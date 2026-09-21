@@ -21,7 +21,7 @@ export const af: TranslationDictionary = {
     "language": "Taal"
   },
   "hero": {
-    "badge": "Suid-Afrika (SADAC) ↔ DRK Handelskorridor",
+    "badge": "DRK–Suider-Afrika Handelskorridor",
     "headline1": "U oplossing,",
     "headlineGold": "binne u bereik",
     "sub": "ARSSA is u snellaan na die DRK-mark — een verantwoordbare vennoot vir fasilitering, nakoming, bemarking, verspreiding en handel, gebou vir farmaseutiese, kosmetiese, landbou-voedsel en mynbousektore. Geen versplinterde agentskappe nie, net gestruktureerde uitvoering van dag een af.",
