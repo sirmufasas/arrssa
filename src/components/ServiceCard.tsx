@@ -14,7 +14,9 @@ export default function ServiceCard({ service }: { service: ServiceDef }) {
   const Icon = ICONS[service.icon];
   const t = useT();
 
-  const divTrans = t.divisions?.find((d) => d.slug === service.slug);
+  const divTrans = Array.isArray(t.divisions)
+    ? t.divisions.find((d) => d.slug === service.slug)
+    : undefined;
   const title = divTrans?.title || service.title;
   const description = divTrans?.description || service.description;
   const preview = divTrans?.preview || service.preview;

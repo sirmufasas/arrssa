@@ -86,11 +86,13 @@ export default function Navbar() {
                   </NavLink>
                   <div className="nav-dropdown__menu" role="menu" aria-label="Services Menu">
                     <div className="nav-dropdown__header">
-                      <span>{t.divisions}</span>
+                      <span>{t.divisionsLabel || t.nav.divisions}</span>
                     </div>
                     {SERVICES.map((svc) => {
                       const Icon = ICONS[svc.icon];
-                      const divTrans = t.divisions?.find((d) => d.slug === svc.slug);
+                      const divTrans = Array.isArray(t.divisions)
+                        ? t.divisions.find((d) => d.slug === svc.slug)
+                        : undefined;
                       const title = divTrans?.title || svc.title;
                       const subtitle = divTrans?.subtitle || svc.subtitle;
 
@@ -234,7 +236,9 @@ export default function Navbar() {
                             {t.allServices}
                           </Link>
                           {SERVICES.map((svc) => {
-                            const divTrans = t.divisions?.find((d) => d.slug === svc.slug);
+                            const divTrans = Array.isArray(t.divisions)
+                              ? t.divisions.find((d) => d.slug === svc.slug)
+                              : undefined;
                             const title = divTrans?.title || svc.title;
                             return (
                               <Link key={svc.slug} to={svc.path} className="mobile-menu__sublink">

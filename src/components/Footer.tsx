@@ -55,7 +55,9 @@ export default function Footer() {
             <h4>{t.footer.services}</h4>
             <ul className="footer__links">
               {SERVICES.map((s) => {
-                const divTrans = t.divisions?.find((d) => d.slug === s.slug);
+                const divTrans = Array.isArray(t.divisions)
+                  ? t.divisions.find((d) => d.slug === s.slug)
+                  : undefined;
                 const title = divTrans?.title || s.title;
                 return (
                   <li key={s.slug}>

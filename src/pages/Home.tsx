@@ -46,7 +46,9 @@ export default function Home() {
   const t = useT();
 
   const currentSvc = SERVICES.find((s) => s.slug === selectedDivision) || SERVICES[0];
-  const currentDivTrans = t.divisions?.find((d) => d.slug === selectedDivision);
+  const currentDivTrans = Array.isArray(t.divisions)
+    ? t.divisions.find((d) => d.slug === selectedDivision)
+    : undefined;
 
   const displayTitle = currentDivTrans?.title || currentSvc.title;
   const displaySubtitle = currentDivTrans?.subtitle || currentSvc.subtitle;
@@ -256,7 +258,9 @@ export default function Home() {
             <div className="capability-tabs">
               <div className="tab-nav" role="tablist" aria-label="Division tabs">
                 {SERVICES.map((s) => {
-                  const divT = t.divisions?.find((d) => d.slug === s.slug);
+                  const divT = Array.isArray(t.divisions)
+                    ? t.divisions.find((d) => d.slug === s.slug)
+                    : undefined;
                   const short = divT?.shortTitle || s.shortTitle;
                   return (
                     <button

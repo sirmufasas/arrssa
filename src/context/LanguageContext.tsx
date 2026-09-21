@@ -52,7 +52,7 @@ export type AugmentedTranslation = TranslationDictionary & {
   enquiry: string;
   contact: string;
   appearance: string;
-  divisions: string;
+  divisionsLabel: string;
   allServices: string;
   open: string;
   close: string;
@@ -62,6 +62,10 @@ export type AugmentedTranslation = TranslationDictionary & {
   countriesBridged: string;
   operatingPresence: string;
   sectorsSupported: string;
+  crossBorder: string;
+  businessSupport: string;
+  integrated: string;
+  marketSolutions: string;
 };
 
 interface LanguageContextType {
@@ -79,25 +83,30 @@ const LanguageContext = createContext<LanguageContextType | null>(null);
 function augmentDictionary(dict: TranslationDictionary): AugmentedTranslation {
   return {
     ...dict,
-    home: dict.nav.home,
-    about: dict.nav.about,
-    services: dict.nav.services,
-    markets: dict.nav.markets,
-    why: dict.nav.why,
-    legacy: dict.nav.legacy,
-    enquiry: dict.nav.enquiry,
-    contact: dict.nav.contact,
-    appearance: dict.nav.appearance,
-    divisions: dict.nav.divisions,
-    allServices: dict.nav.allServices,
-    open: dict.nav.open,
-    close: dict.nav.close,
-    loading: dict.nav.loading,
-    skip: dict.nav.skip,
-    coreDivisions: dict.stats.coreDivisions,
-    countriesBridged: dict.stats.countriesBridged,
-    operatingPresence: dict.stats.operatingPresence,
-    sectorsSupported: dict.stats.sectorsSupported,
+    divisions: Array.isArray(dict.divisions) ? dict.divisions : [],
+    divisionsLabel: dict.nav?.divisions || "Our Divisions",
+    home: dict.nav?.home || "Home",
+    about: dict.nav?.about || "About",
+    services: dict.nav?.services || "Services",
+    markets: dict.nav?.markets || "Markets",
+    why: dict.nav?.why || "Why ARSSA",
+    legacy: dict.nav?.legacy || "Legacy",
+    enquiry: dict.nav?.enquiry || "Request an Enquiry",
+    contact: dict.nav?.contact || "Contact ARSSA",
+    appearance: dict.nav?.appearance || "Appearance",
+    allServices: dict.nav?.allServices || "All Services Overview",
+    open: dict.nav?.open || "Open menu",
+    close: dict.nav?.close || "Close menu",
+    loading: dict.nav?.loading || "Loading",
+    skip: dict.nav?.skip || "Skip to main content",
+    coreDivisions: dict.stats?.coreDivisions || "Core Divisions",
+    countriesBridged: dict.stats?.countriesBridged || "Countries Bridged",
+    operatingPresence: dict.stats?.operatingPresence || "Operating Presence",
+    sectorsSupported: dict.stats?.sectorsSupported || "Sectors Supported",
+    crossBorder: dict.stats?.operatingPresence || "Cross-Border",
+    businessSupport: dict.stats?.sectorsSupported || "Business Support",
+    integrated: dict.stats?.coreDivisions || "Integrated",
+    marketSolutions: dict.stats?.countriesBridged || "Market Solutions",
   };
 }
 
