@@ -5,8 +5,12 @@ import ScrollReveal from "../components/ScrollReveal";
 import ContactForm from "../components/form/ContactForm";
 import BusinessHours from "../components/BusinessHours";
 import { SITE } from "../data/site";
+import { useT, useTranslate } from "../context/LanguageContext";
 
 export default function Contact() {
+  const t = useT();
+  const tr = useTranslate();
+
   return (
     <>
       <SEO
@@ -28,7 +32,7 @@ export default function Contact() {
             <div className="contact-grid__aside">
               <ScrollReveal>
                 <h2 style={{ fontFamily: "var(--font-serif)", fontSize: 30, marginBottom: 24 }}>
-                  Connect Directly
+                  {tr("Connect Directly")}
                 </h2>
               </ScrollReveal>
 
@@ -39,8 +43,8 @@ export default function Contact() {
                       <Phone size={22} aria-hidden="true" />
                     </span>
                     <span>
-                      <h4>Direct Telephone</h4>
-                      <p>{SITE.phoneDisplay}</p>
+                      <h4>{tr("Direct Telephone")}</h4>
+                      <p translate="no">{SITE.phoneDisplay}</p>
                     </span>
                   </a>
                 </ScrollReveal>
@@ -56,8 +60,8 @@ export default function Contact() {
                       <MessageCircle size={22} aria-hidden="true" />
                     </span>
                     <span>
-                      <h4>WhatsApp Corporate Desk</h4>
-                      <p>{SITE.phoneDisplay}</p>
+                      <h4>{tr("WhatsApp Corporate Desk")}</h4>
+                      <p translate="no">{SITE.phoneDisplay}</p>
                     </span>
                   </a>
                 </ScrollReveal>
@@ -68,8 +72,8 @@ export default function Contact() {
                       <Mail size={22} aria-hidden="true" />
                     </span>
                     <span>
-                      <h4>Email Correspondence</h4>
-                      <p style={{ fontSize: 14.5, wordBreak: "break-all" }}>{SITE.email}</p>
+                      <h4>{tr("Email Correspondence")}</h4>
+                      <p style={{ fontSize: 14.5, wordBreak: "break-all" }} translate="no">{SITE.email}</p>
                     </span>
                   </a>
                 </ScrollReveal>
@@ -85,8 +89,8 @@ export default function Contact() {
                   <div className="map-embed__header">
                     <MapPin size={18} aria-hidden="true" />
                     <div>
-                      <h4>Where We Operate</h4>
-                      <p>Based in South Africa (SADAC) — serving the South Africa (SADAC)–DRC corridor</p>
+                      <h4>{tr("Where We Operate")}</h4>
+                      <p>{t.footer.location}</p>
                     </div>
                   </div>
                   <iframe

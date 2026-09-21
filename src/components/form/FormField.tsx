@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { AlertCircle } from "lucide-react";
+import { useTranslate } from "../../context/LanguageContext";
 
 interface FieldProps {
   id: string;
@@ -12,18 +13,20 @@ interface FieldProps {
 }
 
 export function Field({ id, label, required, error, children, full, hint }: FieldProps) {
+  const tr = useTranslate();
+
   return (
     <div className={`form-field ${full ? "form-field--full" : ""}`}>
       <label htmlFor={id}>
-        {label} {required && <span className="req" aria-hidden="true">*</span>}
+        {tr(label)} {required && <span className="req" aria-hidden="true">*</span>}
       </label>
       {children}
       {hint && !error && (
-        <span style={{ fontSize: 12.5, color: "var(--ink-mute)" }}>{hint}</span>
+        <span style={{ fontSize: 12.5, color: "var(--ink-mute)" }}>{tr(hint)}</span>
       )}
       {error && (
         <span className="field-error" role="alert">
-          {error}
+          {tr(error)}
         </span>
       )}
     </div>
@@ -37,11 +40,13 @@ export function FormStatusBanner({
   status: "idle" | "loading" | "success" | "error";
   error?: string | null;
 }) {
+  const tr = useTranslate();
+
   if (status === "success") {
     return (
       <div className="form-status form-status--success" role="status">
         <AlertCircle size={18} aria-hidden="true" />
-        <span>Thank you — your message has been received. Our team will respond shortly.</span>
+        <span>{tr("Thank you — your message has been received. Our team will respond shortly.")}</span>
       </div>
     );
   }
@@ -49,7 +54,7 @@ export function FormStatusBanner({
     return (
       <div className="form-status form-status--error" role="alert">
         <AlertCircle size={18} aria-hidden="true" />
-        <span>{error ?? "Something went wrong. Please try again."}</span>
+        <span>{error ?? tr("Something went wrong. Please try again.")}</span>
       </div>
     );
   }

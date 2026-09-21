@@ -14,6 +14,7 @@ import ScrollReveal from "../components/ScrollReveal";
 import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
 import { FeatureItem } from "../components/AboutSections";
+import { useT, useTranslate } from "../context/LanguageContext";
 
 const REASONS = [
   {
@@ -48,18 +49,49 @@ const REASONS = [
   },
   {
     icon: Landmark,
-    title: "Practical Market Understanding",
-    text: "Decisions grounded in real commercial realities and pricing structures — not textbook assumptions.",
+    title: "Long-Term Ground Commitment",
+    text: "We are not remote advisors — we operate on the ground in Lubumbashi, Kinshasa, Kolwezi and Johannesburg.",
     accent: "#d40000",
   },
 ];
 
+const COMPARISON = [
+  {
+    factor: "Accountability",
+    typical: "Fragmented across multiple independent agencies and consultants",
+    arssa: "Single point of accountability across all five core disciplines",
+  },
+  {
+    factor: "Local Ground Presence",
+    typical: "Often remote or reliant on ad-hoc third-party local agents",
+    arssa: "Permanent operational presence in Lubumbashi, Kinshasa, Kolwezi and Johannesburg",
+  },
+  {
+    factor: "Regulatory Navigation",
+    typical: "Theoretical advice without active on-the-ground administrative processing",
+    arssa: "Active filing, license management, tax compliance, and regulatory liaison",
+  },
+  {
+    factor: "Distribution Channels",
+    typical: "Client left to find, vet, and manage distributors independently",
+    arssa: "Direct access to vetted distributor networks and active field placement",
+  },
+  {
+    factor: "Cost Predictability",
+    typical: "Unpredictable costs from managing multiple uncoordinated fee structures",
+    arssa: "Transparent, scoped project milestones and coordinated cost management",
+  },
+];
+
 export default function WhyArssa() {
+  const t = useT();
+  const tr = useTranslate();
+
   return (
     <>
       <SEO
         title="Why ARSSA | One Integrated Partner for the DRC"
-        description="Why businesses choose ARSSA: an integrated model, reduced market-entry risk, faster operational setup, reliable local networks and practical market understanding."
+        description="Discover why businesses choose ARSSA: one accountable partner, reduced risk, faster setup, vetted local networks, and permanent ground presence across the South Africa (SADAC)–DRC corridor."
         path="/why-arssa"
       />
 
@@ -75,93 +107,78 @@ export default function WhyArssa() {
         <div className="container">
           <ScrollReveal>
             <SectionHeading
-              eyebrow="Core Advantages"
-              title="Six Reasons Enterprises Choose ARSSA"
-              description="Every advantage below addresses a critical point of failure that cross-border businesses encounter — providing a reliable, structured path to success."
+              center
+              eyebrow={tr("Core Advantages")}
+              title={tr("Six Reasons Enterprises Choose ARSSA")}
+              description={tr("Our model eliminates the friction, delays, and risk of managing multiple independent vendors across two countries.")}
             />
           </ScrollReveal>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }} className="divisions-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 28 }} className="divisions-grid">
             {REASONS.map((r, i) => (
               <ScrollReveal key={r.title} delay={i * 0.05}>
-                <div className="card" style={{ padding: 34, height: "100%" }}>
-                  <FeatureItem icon={r.icon} title={r.title} text={r.text} accent={r.accent} />
+                <div className="card" style={{ padding: 36, height: "100%" }}>
+                  <FeatureItem icon={r.icon} title={tr(r.title)} text={tr(r.text)} accent={r.accent} />
                 </div>
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Comparison Matrix: Fragmented Model vs ARSSA Integrated Model */}
-          <ScrollReveal delay={0.15}>
-            <div
-              className="card"
-              style={{
-                marginTop: 56,
-                padding: "44px 40px",
-                background: "var(--card-bg)",
-              }}
-            >
-              <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto 36px" }}>
-                <p className="eyebrow eyebrow--navy" style={{ justifyContent: "center" }}>Comparison</p>
-                <h3 style={{ fontSize: 24, marginBottom: 10 }}>The Fragmented Approach vs. ARSSA</h3>
-                <p style={{ color: "var(--ink-soft)", fontSize: 15 }}>
-                  See how an integrated partner protects your time, capital, and compliance posture.
-                </p>
-              </div>
+      {/* Comparison Table */}
+      <section className="section section--paper">
+        <div className="container">
+          <ScrollReveal>
+            <SectionHeading
+              center
+              eyebrow={tr("Clear Comparison")}
+              title={tr("ARSSA vs. Traditional Approaches")}
+              description={tr("See the difference between integrated corridor coordination and fragmented vendor management.")}
+            />
+          </ScrollReveal>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }} className="divisions-grid">
-                <div
-                  style={{
-                    padding: 28,
-                    borderRadius: "var(--radius)",
-                    background: "var(--bg-paper-subtle)",
-                    border: "1px solid var(--line)",
-                  }}
-                >
-                  <h4 style={{ fontSize: 17, marginBottom: 16, color: "var(--brand-red)", display: "flex", alignItems: "center", gap: 8 }}>
-                    <XCircle size={18} aria-hidden="true" />
-                    Traditional Fragmented Model
-                  </h4>
-                  <ul style={{ display: "grid", gap: 12, fontSize: 14.5, color: "var(--ink-soft)" }}>
-                    <li>• Managing 4–6 separate legal, freight, and marketing vendors</li>
-                    <li>• Finger-pointing when customs or regulatory delays occur</li>
-                    <li>• Uncoordinated timelines leading to demurrage &amp; missed sales</li>
-                    <li>• Multiple markup fees and opaque cost structures</li>
-                  </ul>
-                </div>
-
-                <div
-                  style={{
-                    padding: 28,
-                    borderRadius: "var(--radius)",
-                    background: "var(--bg-paper-2)",
-                    border: "1.5px solid var(--gold)",
-                  }}
-                >
-                  <h4 style={{ fontSize: 17, marginBottom: 16, color: "var(--green)", display: "flex", alignItems: "center", gap: 8 }}>
-                    <CheckCircle2 size={18} aria-hidden="true" />
-                    The ARSSA Integrated Model
-                  </h4>
-                  <ul style={{ display: "grid", gap: 12, fontSize: 14.5, color: "var(--ink)" }}>
-                    <li>• Single accountable partner from market entry to distribution</li>
-                    <li>• Harmonised documentation preventing clearing hold-ups</li>
-                    <li>• Direct alignment between marketing campaigns &amp; stock placement</li>
-                    <li>• Transparent, structured scoping with predictable milestones</li>
-                  </ul>
-                </div>
-              </div>
+          <ScrollReveal delay={0.1}>
+            <div className="comparison-table-wrap">
+              <table className="comparison-table">
+                <thead>
+                  <tr>
+                    <th>{tr("Capability / Approach")}</th>
+                    <th>{tr("Fragmented Agencies / Consultants")}</th>
+                    <th className="highlight-col">{tr("The ARSSA Integrated Solution")}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {COMPARISON.map((c) => (
+                    <tr key={c.factor}>
+                      <td style={{ fontWeight: 600 }}>{tr(c.factor)}</td>
+                      <td>
+                        <span style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
+                          <XCircle size={16} color="var(--brand-red)" style={{ flexShrink: 0, marginTop: 3 }} aria-hidden="true" />
+                          <span>{tr(c.typical)}</span>
+                        </span>
+                      </td>
+                      <td className="highlight-col">
+                        <span style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
+                          <CheckCircle2 size={16} color="var(--green)" style={{ flexShrink: 0, marginTop: 3 }} aria-hidden="true" />
+                          <span style={{ fontWeight: 500 }}>{tr(c.arssa)}</span>
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
       <CTASection
-        headline="Let's discuss your market strategy"
-        text="A brief scoping session is the fastest way to evaluate whether ARSSA is the right strategic partner for your DRC expansion."
-        primaryLabel="Let's Discuss Your Market Strategy"
-        primaryPath="/enquiry"
-        secondaryLabel="View Our Services"
-        secondaryPath="/services"
+        headline={tr("Let's discuss your market strategy")}
+        text={tr("Schedule an introductory consultation to discuss your expansion timeline, compliance requirements, and commercial goals.")}
+        primaryLabel={t.cta.primary}
+        secondaryLabel={t.nav.contact}
+        secondaryPath="/contact"
       />
     </>
   );

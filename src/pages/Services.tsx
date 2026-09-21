@@ -8,6 +8,7 @@ import ServiceCard from "../components/ServiceCard";
 import CTASection from "../components/CTASection";
 import { FeatureItem } from "../components/AboutSections";
 import { SERVICES } from "../data/site";
+import { useT, useTranslate } from "../context/LanguageContext";
 
 const MODEL = [
   {
@@ -31,6 +32,9 @@ const MODEL = [
 ];
 
 export default function Services() {
+  const t = useT();
+  const tr = useTranslate();
+
   return (
     <>
       <SEO
@@ -51,9 +55,9 @@ export default function Services() {
         <div className="container">
           <ScrollReveal>
             <SectionHeading
-              eyebrow="The Integrated Model"
-              title="Why One Partner Outperforms Fragmented Agencies"
-              description="Cross-border expansion commonly stalls when disconnected service providers drop the ball. ARSSA integrates the full value chain to protect your capital and accelerate your timeline."
+              eyebrow={tr("The Integrated Model")}
+              title={tr("Why One Partner Outperforms Fragmented Agencies")}
+              description={tr("Cross-border expansion commonly stalls when disconnected service providers drop the ball. ARSSA integrates the full value chain to protect your capital and accelerate your timeline.")}
             />
           </ScrollReveal>
 
@@ -61,7 +65,7 @@ export default function Services() {
             {MODEL.map((m, i) => (
               <ScrollReveal key={m.title} delay={i * 0.06}>
                 <div className="card" style={{ padding: 32, height: "100%" }}>
-                  <FeatureItem icon={m.icon} title={m.title} text={m.text} accent={m.accent} />
+                  <FeatureItem icon={m.icon} title={tr(m.title)} text={tr(m.text)} accent={m.accent} />
                 </div>
               </ScrollReveal>
             ))}
@@ -75,9 +79,9 @@ export default function Services() {
           <ScrollReveal>
             <SectionHeading
               center
-              eyebrow="Our Five Divisions"
-              title="Comprehensive Cross-Border Solutions"
-              description="Each division can be deployed individually or combined into an end-to-end operational roadmap."
+              eyebrow={tr("Our Five Divisions")}
+              title={tr("Comprehensive Cross-Border Solutions")}
+              description={tr("Each division can be deployed individually or combined into an end-to-end operational roadmap.")}
             />
           </ScrollReveal>
 
@@ -104,13 +108,13 @@ export default function Services() {
               }}
             >
               <div>
-                <h3 style={{ fontSize: 20, marginBottom: 8 }}>Need a tailored combination of divisions?</h3>
+                <h3 style={{ fontSize: 20, marginBottom: 8 }}>{tr("Need a tailored combination of divisions?")}</h3>
                 <p style={{ color: "var(--ink-soft)", fontSize: 15, maxWidth: 540 }}>
-                  We assess your exact project requirements and structure a scope that covers your specific regulatory, commercial, and trade needs.
+                  {tr("We assess your exact project requirements and structure a scope that covers your specific regulatory, commercial, and trade needs.")}
                 </p>
               </div>
               <Link to="/enquiry" className="btn btn--accent btn--lg">
-                Request a Custom Scope
+                {tr("Request a Custom Scope")}
                 <ArrowRight size={18} aria-hidden="true" />
               </Link>
             </div>
@@ -130,10 +134,10 @@ export default function Services() {
                   loading="lazy"
                 />
                 <div className="showcase-media__overlay">
-                  <span className="showcase-media__tag">Corridor Execution</span>
-                  <h3 className="showcase-media__title">From Port to Distribution</h3>
+                  <span className="showcase-media__tag">{tr("Corridor Execution")}</span>
+                  <h3 className="showcase-media__title">{tr("From Port to Distribution")}</h3>
                   <p className="showcase-media__desc">
-                    Comprehensive compliance, freight coordination, and last-mile placement in the DRC.
+                    {tr("Comprehensive compliance, freight coordination, and last-mile placement in the DRC.")}
                   </p>
                 </div>
               </div>
@@ -142,9 +146,9 @@ export default function Services() {
             <div>
               <ScrollReveal>
                 <SectionHeading
-                  eyebrow="Target Sectors"
-                  title="Sector Specialisation Across Key Industries"
-                  description="We tailor each division's execution to the regulatory frameworks, channel structures, and storage requirements of your specific product vertical."
+                  eyebrow={tr("Target Sectors")}
+                  title={tr("Sector Specialisation Across Key Industries")}
+                  description={tr("We tailor each division's execution to the regulatory frameworks, channel structures, and storage requirements of your specific product vertical.")}
                 />
               </ScrollReveal>
 
@@ -153,25 +157,25 @@ export default function Services() {
                   <li>
                     <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
                     <div>
-                      <strong>Pharmaceutical &amp; Medical:</strong> Regulatory filing, import permits, temperature-aware distribution, and sanitized storage compliance.
+                      <strong>Pharmaceutical &amp; Medical:</strong> {tr("Import authorizations, sanitary registrations, temperature-controlled distribution, and medical-grade facility maintenance.")}
                     </div>
                   </li>
                   <li>
                     <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
                     <div>
-                      <strong>Cosmetic &amp; Personal Care:</strong> Brand activation, retailer/wholesaler placement, and compliant market entry.
+                      <strong>Cosmetic &amp; Personal Care:</strong> {tr("Retailer network placement, promotional campaigns, local brand registration, and consumer demand generation.")}
                     </div>
                   </li>
                   <li>
                     <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
                     <div>
-                      <strong>Agri-Food &amp; Agricultural Inputs:</strong> Perishable and bulk logistics, sanitary documentation, and direct buyer linkage.
+                      <strong>Agri-Food &amp; Agricultural Inputs:</strong> {tr("Sanitary import clearances, cold chain logistics, bulk supply contracts, and wholesale grocery placement.")}
                     </div>
                   </li>
                   <li>
                     <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
                     <div>
-                      <strong>Corporate &amp; Industrial Supply:</strong> Document management, workforce mobility, and regional representative support.
+                      <strong>Corporate &amp; Industrial Supply:</strong> {tr("Document management, workforce mobility, and regional representative support.")}
                     </div>
                   </li>
                 </ul>
@@ -182,10 +186,10 @@ export default function Services() {
       </section>
 
       <CTASection
-        headline="Ready to discuss your expansion requirements?"
-        text="Tell us about your products or operational goals, and our team will prepare a structured scoping review."
-        primaryLabel="Start an Enquiry"
-        secondaryLabel="Contact ARSSA"
+        headline={tr("Ready to discuss your expansion requirements?")}
+        text={tr("Tell us about your products or operational goals, and our team will prepare a structured scoping review.")}
+        primaryLabel={t.cta.primary}
+        secondaryLabel={t.nav.contact}
         secondaryPath="/contact"
       />
     </>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Clock, MessageCircle, Moon } from "lucide-react";
 import { SITE } from "../data/site";
+import { useTranslate } from "../context/LanguageContext";
 
 /** Business hours: Monday–Friday 08:30–17:00 SAST (UTC+2) */
 const OPEN_MINUTES = 8 * 60 + 30; // 08:30
@@ -14,11 +15,9 @@ interface SastTime {
 
 function getSastTime(): SastTime {
   const now = new Date();
-  // SAST is UTC+2, no daylight saving
   const utcMinutes = now.getUTCHours() * 60 + now.getUTCMinutes();
   const totalMinutes = (utcMinutes + 120) % (24 * 60);
   const utcDay = now.getUTCDay();
-  // Handle day rollover when adding 2 hours pushes past midnight
   const day = utcMinutes + 120 >= 24 * 60 ? (utcDay + 1) % 7 : utcDay;
   const h = Math.floor(totalMinutes / 60);
   const m = totalMinutes % 60;
@@ -41,6 +40,7 @@ const SCHEDULE = [
 
 export default function BusinessHours() {
   const [time, setTime] = useState<SastTime>(getSastTime);
+  const tr = useTranslate();
 
   useEffect(() => {
     const interval = window.setInterval(() => setTime(getSastTime()), 30_000);
@@ -55,14 +55,14 @@ export default function BusinessHours() {
       <div className="hours-panel__head">
         <div className="hours-panel__title">
           <Clock size={17} aria-hidden="true" />
-          <span>Business Hours</span>
+          <span>{tr("Business Hours")}</span>
         </div>
         <span
           className={`hours-panel__status ${open ? "hours-panel__status--open" : "hours-panel__status--closed"}`}
           role="status"
         >
           <span className="hours-panel__status-dot" aria-hidden="true" />
-          {open ? "Open Now" : "Closed"}
+          {open ? tr("Open Now") : tr("Closed")}
         </span>
       </div>
 
@@ -82,15 +82,15 @@ export default function BusinessHours() {
               className={`hours-panel__row ${isToday ? "hours-panel__row--today" : ""}`}
             >
               <span className="hours-panel__row-label">
-                {row.label}
-                {isToday && <span className="hours-panel__today-badge">Today</span>}
+                {tr(row.label)}
+                {isToday && <span className="hours-panel__today-badge">{tr("Today")}</span>}
               </span>
               <span
                 className={`hours-panel__row-hours ${
                   row.hours === "Closed" ? "hours-panel__row-hours--closed" : ""
                 }`}
               >
-                {row.hours}
+                {row.hours === "Closed" ? tr("Closed") : row.hours}
               </span>
             </li>
           );
@@ -105,7 +105,7 @@ export default function BusinessHours() {
             <span>
               Our team is available now —{" "}
               <a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer">
-                WhatsApp us
+                {tr("WhatsApp us")}
               </a>{" "}
               for the fastest response.
             </span>

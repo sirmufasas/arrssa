@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import { Check, Target } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import { useTranslate } from "../context/LanguageContext";
 
 export interface ServiceBlock {
   icon: ComponentType<{ size?: number | string }>;
@@ -9,6 +10,8 @@ export interface ServiceBlock {
 }
 
 export function ServiceBlocks({ blocks, accent = "#1a3160" }: { blocks: ServiceBlock[]; accent?: string }) {
+  const tr = useTranslate();
+
   return (
     <div className="svc-grid">
       {blocks.map((block, i) => {
@@ -20,13 +23,13 @@ export function ServiceBlocks({ blocks, accent = "#1a3160" }: { blocks: ServiceB
                 <span className="svc-card__icon">
                   <Icon size={22} aria-hidden="true" />
                 </span>
-                <h3>{block.title}</h3>
+                <h3>{tr(block.title)}</h3>
               </div>
               <ul className="check-list">
                 {block.items.map((item) => (
                   <li key={item}>
                     <Check size={16} aria-hidden="true" />
-                    <span>{item}</span>
+                    <span>{tr(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -47,6 +50,8 @@ export function PurposeCallout({
   text: string;
   gold?: boolean;
 }) {
+  const tr = useTranslate();
+
   return (
     <ScrollReveal>
       <div className={`callout ${gold ? "callout--gold" : ""}`}>
@@ -54,8 +59,8 @@ export function PurposeCallout({
           <Target size={22} aria-hidden="true" />
         </span>
         <div>
-          <h3>{title}</h3>
-          <p>{text}</p>
+          <h3>{tr(title)}</h3>
+          <p>{tr(text)}</p>
         </div>
       </div>
     </ScrollReveal>
@@ -63,14 +68,16 @@ export function PurposeCallout({
 }
 
 export function SectorBadges({ title, items }: { title?: string; items: string[] }) {
+  const tr = useTranslate();
+
   return (
     <ScrollReveal>
       <div style={{ marginTop: 40 }}>
-        {title && <h3 style={{ fontSize: 18, marginBottom: 16 }}>{title}</h3>}
+        {title && <h3 style={{ fontSize: 18, marginBottom: 16 }}>{tr(title)}</h3>}
         <div className="badge-row">
           {items.map((item) => (
             <span key={item} className="badge">
-              {item}
+              {tr(item)}
             </span>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { CheckCircle2, X } from "lucide-react";
+import { useTranslate } from "../context/LanguageContext";
 
 interface ConfirmationModalProps {
   open: boolean;
@@ -14,6 +15,8 @@ interface ConfirmationModalProps {
  * Rendered via a portal so it always sits above the page content.
  */
 export default function ConfirmationModal({ open, title, message, onClose }: ConfirmationModalProps) {
+  const tr = useTranslate();
+
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -46,15 +49,15 @@ export default function ConfirmationModal({ open, title, message, onClose }: Con
           type="button"
           className="confirm-modal__close"
           onClick={onClose}
-          aria-label="Close"
+          aria-label={tr("Close")}
         >
           <X size={20} aria-hidden="true" />
         </button>
         <CheckCircle2 size={54} color="var(--green)" aria-hidden="true" />
-        <h2 id="confirm-modal-title">{title}</h2>
-        <p>{message}</p>
+        <h2 id="confirm-modal-title">{tr(title)}</h2>
+        <p>{tr(message)}</p>
         <button type="button" className="btn btn--primary" onClick={onClose}>
-          Close
+          {tr("Close")}
         </button>
       </div>
     </div>,

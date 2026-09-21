@@ -4,6 +4,7 @@ import SEO from "../components/SEO";
 import ScrollReveal from "../components/ScrollReveal";
 import EnquiryForm from "../components/form/EnquiryForm";
 import { SITE } from "../data/site";
+import { useTranslate } from "../context/LanguageContext";
 
 const STEPS = [
   {
@@ -24,6 +25,8 @@ const STEPS = [
 ];
 
 export default function Enquiry() {
+  const tr = useTranslate();
+
   return (
     <>
       <SEO
@@ -45,11 +48,12 @@ export default function Enquiry() {
             <div className="contact-grid__aside">
               <ScrollReveal>
                 <h2 style={{ fontFamily: "var(--font-serif)", fontSize: 30, marginBottom: 16 }}>
-                  How We Work Together
+                  {tr("How We Work Together")}
                 </h2>
                 <p className="lead" style={{ fontSize: 16, marginBottom: 32 }}>
-                  Every corporate enquiry is reviewed directly by our management team. We respond
-                  with an honest evaluation of how ARSSA can de-risk and accelerate your goals.
+                  {tr(
+                    "Every corporate enquiry is reviewed directly by our management team. We respond with an honest evaluation of how ARSSA can de-risk and accelerate your goals."
+                  )}
                 </p>
               </ScrollReveal>
 
@@ -77,10 +81,10 @@ export default function Enquiry() {
                         </span>
                         <div>
                           <h3 style={{ fontSize: 17, marginBottom: 6 }}>
-                            {i + 1}. {s.title}
+                            {i + 1}. {tr(s.title)}
                           </h3>
                           <p style={{ fontSize: 14.5, color: "var(--ink-soft)", lineHeight: 1.5 }}>
-                            {s.text}
+                            {tr(s.text)}
                           </p>
                         </div>
                       </div>
@@ -101,10 +105,12 @@ export default function Enquiry() {
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
                     <CheckCircle2 size={18} color="var(--green)" aria-hidden="true" />
-                    <h3 style={{ fontSize: 16 }}>Prefer Direct Communication?</h3>
+                    <h3 style={{ fontSize: 16 }}>{tr("Prefer Direct Communication?")}</h3>
                   </div>
                   <p style={{ fontSize: 14, color: "var(--ink-soft)", marginBottom: 16, lineHeight: 1.5 }}>
-                    You can contact our team directly via telephone, WhatsApp or email before submitting a formal scope.
+                    {tr(
+                      "You can contact our team directly via telephone, WhatsApp or email before submitting a formal scope."
+                    )}
                   </p>
                   <div style={{ display: "grid", gap: 8 }}>
                     <a
@@ -117,6 +123,7 @@ export default function Enquiry() {
                         fontWeight: 600,
                         color: "var(--brand-navy)",
                       }}
+                      translate="no"
                     >
                       <Mail size={16} color="var(--gold)" aria-hidden="true" />
                       {SITE.email}
@@ -131,6 +138,7 @@ export default function Enquiry() {
                         fontWeight: 600,
                         color: "var(--brand-navy)",
                       }}
+                      translate="no"
                     >
                       <Clock size={16} color="var(--green)" aria-hidden="true" />
                       {SITE.phoneDisplay}

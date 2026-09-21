@@ -2,6 +2,7 @@ import { ExternalLink, PenLine, Star } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import SectionHeading from "./SectionHeading";
 import { GOOGLE_REVIEWS_CONFIG, REVIEWS } from "../data/reviews";
+import { useTranslate } from "../context/LanguageContext";
 
 /** Official multi-colour Google "G" mark */
 function GoogleG({ size = 22 }: { size?: number }) {
@@ -47,6 +48,7 @@ function Stars({ rating, size = 16 }: { rating: number; size?: number }) {
 }
 
 export default function GoogleReviews() {
+  const tr = useTranslate();
   const hasReviews = REVIEWS.length > 0;
   const average = hasReviews
     ? Math.round((REVIEWS.reduce((sum, r) => sum + r.rating, 0) / REVIEWS.length) * 10) / 10
@@ -58,9 +60,9 @@ export default function GoogleReviews() {
         <ScrollReveal>
           <SectionHeading
             center
-            eyebrow="Client Feedback"
-            title="What Clients Say on Google"
-            description="Transparency matters to us — our reputation is built in public, review by review."
+            eyebrow={tr("Client Feedback")}
+            title={tr("What Clients Say on Google")}
+            description={tr("Transparency matters to us — our reputation is built in public, review by review.")}
           />
         </ScrollReveal>
 
@@ -76,7 +78,7 @@ export default function GoogleReviews() {
                     <Stars rating={Math.round(average ?? 0)} size={18} />
                   </div>
                   <p>
-                    Based on {REVIEWS.length} Google review{REVIEWS.length > 1 ? "s" : ""}
+                    {tr("Based on")} {REVIEWS.length} {tr("Google reviews")}
                   </p>
                 </div>
                 <a
@@ -85,7 +87,7 @@ export default function GoogleReviews() {
                   rel="noopener noreferrer"
                   className="btn btn--ghost btn--sm"
                 >
-                  View on Google
+                  {tr("View on Google")}
                   <ExternalLink size={14} aria-hidden="true" />
                 </a>
               </div>
@@ -120,11 +122,11 @@ export default function GoogleReviews() {
               <div className="greviews__invite-icon" aria-hidden="true">
                 <GoogleG size={34} />
               </div>
-              <h3>Have you worked with ARSSA?</h3>
+              <h3>{tr("Have you worked with ARSSA?")}</h3>
               <p>
-                We're building our public track record on Google. If ARSSA has supported
-                your business across the South Africa (SADAC)–DRC corridor, we'd genuinely value
-                a review — it helps other businesses make confident decisions.
+                {tr(
+                  "We're building our public track record on Google. If ARSSA has supported your business across the South Africa (SADAC)–DRC corridor, we'd genuinely value a review — it helps other businesses make confident decisions."
+                )}
               </p>
               <div className="greviews__invite-stars" aria-hidden="true">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -139,7 +141,7 @@ export default function GoogleReviews() {
                   className="btn btn--primary btn--lg"
                 >
                   <PenLine size={17} aria-hidden="true" />
-                  Write a Review on Google
+                  {tr("Write a Review on Google")}
                 </a>
                 <a
                   href={GOOGLE_REVIEWS_CONFIG.profileUrl}
@@ -147,7 +149,7 @@ export default function GoogleReviews() {
                   rel="noopener noreferrer"
                   className="btn btn--ghost btn--lg"
                 >
-                  Find Us on Google
+                  {tr("Find Us on Google")}
                   <ExternalLink size={16} aria-hidden="true" />
                 </a>
               </div>

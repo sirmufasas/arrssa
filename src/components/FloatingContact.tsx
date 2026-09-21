@@ -2,10 +2,12 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { MessageCircle, Phone } from "lucide-react";
 import { SITE } from "../data/site";
+import { useTranslate } from "../context/LanguageContext";
 
 export default function FloatingContact() {
   const [visible, setVisible] = useState(false);
   const reduced = useReducedMotion();
+  const tr = useTranslate();
 
   useEffect(() => {
     const t = window.setTimeout(() => setVisible(true), 900);
@@ -29,18 +31,18 @@ export default function FloatingContact() {
             href={SITE.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Chat with ARSSA on WhatsApp: ${SITE.phoneDisplay}`}
+            aria-label={`WhatsApp: ${SITE.phoneDisplay}`}
           >
             <MessageCircle size={24} aria-hidden="true" />
-            <span className="tooltip">WhatsApp us</span>
+            <span className="tooltip">{tr("WhatsApp us")}</span>
           </a>
           <a
             className="float-btn float-btn--phone"
             href={SITE.phoneHref}
-            aria-label={`Call ARSSA: ${SITE.phoneDisplay}`}
+            aria-label={`Call: ${SITE.phoneDisplay}`}
           >
             <Phone size={22} aria-hidden="true" />
-            <span className="tooltip">Call us</span>
+            <span className="tooltip">{tr("Call us")}</span>
           </a>
         </motion.div>
       )}

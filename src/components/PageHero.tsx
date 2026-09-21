@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslate } from "../context/LanguageContext";
 
 interface PageHeroProps {
   eyebrow?: string;
@@ -13,6 +14,7 @@ interface PageHeroProps {
 
 export default function PageHero({ eyebrow, title, subtitle, crumbs, children }: PageHeroProps) {
   const reduced = useReducedMotion();
+  const tr = useTranslate();
 
   return (
     <section className="page-hero">
@@ -24,21 +26,24 @@ export default function PageHero({ eyebrow, title, subtitle, crumbs, children }:
         >
           {crumbs && crumbs.length > 0 && (
             <nav className="page-hero__crumbs" aria-label="Breadcrumb">
-              {crumbs.map((c, i) => (
-                <span key={c.label} style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                  {i > 0 && <span className="sep">/</span>}
-                  {c.path ? (
-                    <Link to={c.path}>{c.label}</Link>
-                  ) : (
-                    <span aria-current="page">{c.label}</span>
-                  )}
-                </span>
-              ))}
+              {crumbs.map((c, i) => {
+                const label = tr(c.label);
+                return (
+                  <span key={c.label} style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+                    {i > 0 && <span className="sep">/</span>}
+                    {c.path ? (
+                      <Link to={c.path}>{label}</Link>
+                    ) : (
+                      <span aria-current="page">{label}</span>
+                    )}
+                  </span>
+                );
+              })}
             </nav>
           )}
-          {eyebrow && <p className="eyebrow eyebrow--light">{eyebrow}</p>}
-          <h1>{title}</h1>
-          {subtitle && <p className="page-hero__sub">{subtitle}</p>}
+          {eyebrow && <p className="eyebrow eyebrow--light">{tr(eyebrow)}</p>}
+          <h1>{tr(title)}</h1>
+          {subtitle && <p className="page-hero__sub">{tr(subtitle)}</p>}
           {children}
         </motion.div>
       </div>

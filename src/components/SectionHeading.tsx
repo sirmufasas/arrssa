@@ -1,3 +1,5 @@
+import { useTranslate } from "../context/LanguageContext";
+
 interface SectionHeadingProps {
   eyebrow?: string;
   title: string;
@@ -15,13 +17,14 @@ export default function SectionHeading({
   light = false,
   navy = false,
 }: SectionHeadingProps) {
+  const tr = useTranslate();
   const eyebrowClass = light ? "eyebrow eyebrow--light" : navy ? "eyebrow eyebrow--navy" : "eyebrow";
 
   return (
     <div className={`section-head ${center ? "section-head--center" : ""}`}>
-      {eyebrow && <p className={eyebrowClass}>{eyebrow}</p>}
-      <h2>{title}</h2>
-      {description && <p>{description}</p>}
+      {eyebrow && <p className={eyebrowClass}>{tr(eyebrow)}</p>}
+      <h2>{tr(title)}</h2>
+      {description && <p>{tr(description)}</p>}
     </div>
   );
 }

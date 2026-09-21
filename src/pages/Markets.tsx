@@ -6,6 +6,7 @@ import ScrollReveal from "../components/ScrollReveal";
 import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
 import { FeatureItem } from "../components/AboutSections";
+import { useT, useTranslate } from "../context/LanguageContext";
 
 const TARGETS = [
   {
@@ -63,6 +64,8 @@ const SECTORS_DETAILED = [
 
 export default function Markets() {
   const [selectedRole, setSelectedRole] = useState(0);
+  const t = useT();
+  const tr = useTranslate();
 
   return (
     <>
@@ -84,17 +87,17 @@ export default function Markets() {
         <div className="container">
           <ScrollReveal>
             <SectionHeading
-              eyebrow="Market Profiles"
-              title="Four Core Target Segments"
-              description="Each client segment faces unique regulatory, logistical, and commercial hurdles. Our five divisions coordinate to provide the exact solution needed."
+              eyebrow={tr("Market Profiles")}
+              title={tr("Four Core Target Segments")}
+              description={tr("Each client segment faces unique regulatory, logistical, and commercial hurdles. Our five divisions coordinate to provide the exact solution needed.")}
             />
           </ScrollReveal>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 28 }} className="divisions-grid">
-            {TARGETS.map((t, i) => (
-              <ScrollReveal key={t.title} delay={i * 0.06}>
+            {TARGETS.map((target, i) => (
+              <ScrollReveal key={target.title} delay={i * 0.06}>
                 <div className="card" style={{ padding: 36, height: "100%" }}>
-                  <FeatureItem icon={t.icon} title={t.title} text={t.text} accent={t.accent} />
+                  <FeatureItem icon={target.icon} title={tr(target.title)} text={tr(target.text)} accent={target.accent} />
                 </div>
               </ScrollReveal>
             ))}
@@ -108,9 +111,9 @@ export default function Markets() {
           <ScrollReveal>
             <SectionHeading
               center
-              eyebrow="The Cross-Border Bridge"
-              title="South Africa (SADAC) → ARSSA → DRC"
-              description="ARSSA acts as the single accountable bridge between where your business originates and where it creates commercial impact."
+              eyebrow={tr("The Cross-Border Bridge")}
+              title={tr("South Africa (SADAC) → ARSSA → DRC")}
+              description={tr("ARSSA acts as the single accountable bridge between where your business originates and where it creates commercial impact.")}
             />
           </ScrollReveal>
 
@@ -118,8 +121,8 @@ export default function Markets() {
             <div className="bridge">
               <div className="bridge__node">
                 <div className="bridge__flag" aria-hidden="true">🇿🇦</div>
-                <h3>South Africa (SADAC)</h3>
-                <p>Enterprise base — where capital, manufacturing, executive strategy, and product supply originate.</p>
+                <h3>{tr("South Africa (SADAC)")}</h3>
+                <p>{tr("Enterprise base — where capital, manufacturing, executive strategy, and product supply originate.")}</p>
               </div>
 
               <div className="bridge__flow" aria-hidden="true">
@@ -134,14 +137,15 @@ export default function Markets() {
                       fontSize: 34,
                       fontWeight: 700,
                     }}
+                    translate="no"
                   >
                     <span style={{ color: "#ffffff" }}>A</span>
                     <span style={{ color: "var(--brand-gold)" }}>R</span>
                     <span style={{ color: "#3ecf6f" }}>S</span>
                   </span>
                 </div>
-                <h3>ARSSA</h3>
-                <p>Your integrated cross-border operational partner</p>
+                <h3 translate="no">ARSSA</h3>
+                <p>{tr("Your integrated cross-border operational partner")}</p>
               </div>
 
               <div className="bridge__flow" aria-hidden="true">
@@ -150,8 +154,8 @@ export default function Markets() {
 
               <div className="bridge__node">
                 <div className="bridge__flag" aria-hidden="true">🇨🇩</div>
-                <h3>DRC</h3>
-                <p>Growth market — Lubumbashi, Kinshasa and beyond, where local execution and distribution matter.</p>
+                <h3>{tr("DRC")}</h3>
+                <p>{tr("Growth market — Lubumbashi, Kinshasa and beyond, where local execution and distribution matter.")}</p>
               </div>
             </div>
           </ScrollReveal>
@@ -171,16 +175,16 @@ export default function Markets() {
               }}
             >
               <div style={{ maxWidth: 480 }}>
-                <h3 style={{ fontSize: 21, marginBottom: 10 }}>What ARSSA Coordinates for You</h3>
+                <h3 style={{ fontSize: 21, marginBottom: 10 }}>{tr("What ARSSA Coordinates for You")}</h3>
                 <p style={{ color: "var(--ink-soft)", fontSize: 15.5, lineHeight: 1.6 }}>
-                  From market validation and regulatory licensing to customs clearance and retailer shelf presence, one partner handles the full workflow.
+                  {tr("From market validation and regulatory licensing to customs clearance and retailer shelf presence, one partner handles the full workflow.")}
                 </p>
               </div>
               <ul style={{ display: "grid", gap: 12, flex: 1, minWidth: 280 }}>
                 {BRIDGE_ROLE.map((item) => (
                   <li key={item} style={{ display: "flex", gap: 12, alignItems: "center", fontSize: 15, color: "var(--ink)" }}>
                     <CheckCircle2 size={16} color="var(--green)" style={{ flexShrink: 0 }} aria-hidden="true" />
-                    <span>{item}</span>
+                    <span>{tr(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -194,9 +198,9 @@ export default function Markets() {
         <div className="container">
           <ScrollReveal>
             <SectionHeading
-              eyebrow="Sector Focus"
-              title="Specialised Sector Profiles"
-              description="Explore how ARSSA addresses the specific commercial dynamics of each key industry."
+              eyebrow={tr("Sector Focus")}
+              title={tr("Specialised Sector Profiles")}
+              description={tr("Explore how ARSSA addresses the specific commercial dynamics of each key industry.")}
             />
           </ScrollReveal>
 
@@ -214,10 +218,10 @@ export default function Markets() {
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
                     <Sparkles size={18} color="var(--brand-gold)" aria-hidden="true" />
-                    <h3 style={{ fontSize: 19 }}>{s.name}</h3>
+                    <h3 style={{ fontSize: 19 }}>{tr(s.name)}</h3>
                   </div>
                   <p style={{ color: "var(--ink-soft)", fontSize: 15, lineHeight: 1.6 }}>
-                    {s.desc}
+                    {tr(s.desc)}
                   </p>
                 </div>
               </ScrollReveal>
@@ -227,10 +231,10 @@ export default function Markets() {
       </section>
 
       <CTASection
-        headline="Find out how ARSSA can support your market entry"
-        text="Contact our team to discuss your target sector, volume projections, and timeline for the DRC."
-        primaryLabel="Start an Enquiry"
-        secondaryLabel="Why ARSSA"
+        headline={tr("Find out how ARSSA can support your market entry")}
+        text={tr("Contact our team to discuss your target sector, volume projections, and timeline for the DRC.")}
+        primaryLabel={t.cta.primary}
+        secondaryLabel={t.nav.why}
         secondaryPath="/why-arssa"
       />
     </>

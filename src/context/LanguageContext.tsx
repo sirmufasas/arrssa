@@ -76,6 +76,7 @@ interface LanguageContextType {
   languages: LanguageMeta[];
   currentLanguageMeta: LanguageMeta;
   t: AugmentedTranslation;
+  translate: (text: string) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
@@ -110,6 +111,10 @@ function augmentDictionary(dict: TranslationDictionary): AugmentedTranslation {
   };
 }
 
+function normalize(s: string): string {
+  return s.replace(/\s+/g, " ").trim();
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(getInitialLanguage);
   const [showLanguageModal, setShowLanguageModal] = useState<boolean>(() => {
@@ -138,6 +143,36 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setShowLanguageModal(false);
   }, []);
 
+  const translate = useCallback(
+    (text: string): string => {
+      if (!text || language === "en") return text;
+
+      // 1. Exact match
+      if (UNIVERSAL_PHRASES[text]?.[language]) {
+        return UNIVERSAL_PHRASES[text]![language]!;
+      }
+
+      // 2. Normalized match (collapse whitespace)
+      const norm = normalize(text);
+      if (UNIVERSAL_PHRASES[norm]?.[language]) {
+        return UNIVERSAL_PHRASES[norm]![language]!;
+      }
+
+      // 3. Match without surrounding quotation marks
+      const unquoted = norm.replace(/^[“"']+|[”"']+$/g, "");
+      if (UNIVERSAL_PHRASES[unquoted]?.[language]) {
+        const trans = UNIVERSAL_PHRASES[unquoted]![language]!;
+        if (norm.startsWith("“") || norm.startsWith('"')) {
+          return `“${trans}”`;
+        }
+        return trans;
+      }
+
+      return text;
+    },
+    [language]
+  );
+
   // Sync document lang, dir, and class
   useEffect(() => {
     const isRtl = currentLanguageMeta.dir === "rtl";
@@ -150,28 +185,77 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   }, [language, currentLanguageMeta]);
 
-  // Universal native DOM translation safety net for static content
+  // Universal native DOM translation engine with original-text caching
   useEffect(() => {
-    if (language === "en") return;
+    const isEnglish = language === "en";
 
     const translateNode = (node: Node) => {
       if (node.nodeType === Node.TEXT_NODE) {
-        const raw = node.nodeValue?.trim();
-        if (!raw || raw.length < 2) return;
+        // Cache original English text on first encounter
+        const anyNode = node as any;
+        if (anyNode.__origText === undefined) {
+          anyNode.__origText = node.nodeValue || "";
+        }
+
+        const original = anyNode.__origText;
+        if (!original || original.trim().length < 2) return;
+
+        // Revert to English if user selected English
+        if (isEnglish) {
+          if (node.nodeValue !== original) {
+            node.nodeValue = original;
+          }
+          return;
+        }
 
         // Strictly preserve brand identifiers and codes
+        const trimmed = original.trim();
         if (
-          raw === "ARSSA" ||
-          raw === "ARS S.A.R.L." ||
-          raw.startsWith("ARSSA ·") ||
-          raw.endsWith("· ARSSA")
+          trimmed === "ARSSA" ||
+          trimmed === "ARS S.A.R.L." ||
+          trimmed === "ARS" ||
+          trimmed.startsWith("ARSSA ·") ||
+          trimmed.endsWith("· ARSSA")
         ) {
           return;
         }
 
-        const match = UNIVERSAL_PHRASES[raw];
-        if (match && match[language]) {
-          node.nodeValue = node.nodeValue!.replace(raw, match[language]!);
+        // Check for direct or normalized match
+        const norm = normalize(trimmed);
+        const match =
+          UNIVERSAL_PHRASES[trimmed]?.[language] ||
+          UNIVERSAL_PHRASES[norm]?.[language];
+
+        if (match) {
+          node.nodeValue = original.replace(trimmed, match);
+          return;
+        }
+
+        // Check unquoted match
+        const unquoted = norm.replace(/^[“"']+|[”"']+$/g, "");
+        const unquotedMatch = UNIVERSAL_PHRASES[unquoted]?.[language];
+        if (unquotedMatch) {
+          const replacement = trimmed.startsWith("“") || trimmed.startsWith('"')
+            ? `“${unquotedMatch}”`
+            : unquotedMatch;
+          node.nodeValue = original.replace(trimmed, replacement);
+          return;
+        }
+
+        // Partial phrase replacement within text node
+        let updated = original;
+        let modified = false;
+        for (const [enPhrase, transMap] of Object.entries(UNIVERSAL_PHRASES)) {
+          if (enPhrase.length > 5 && updated.includes(enPhrase)) {
+            const target = transMap[language];
+            if (target) {
+              updated = updated.split(enPhrase).join(target);
+              modified = true;
+            }
+          }
+        }
+        if (modified) {
+          node.nodeValue = updated;
         }
       } else if (node.nodeType === Node.ELEMENT_NODE) {
         const el = node as HTMLElement;
@@ -193,17 +277,30 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       }
     };
 
-    const container = document.getElementById("main") || document.body;
-    translateNode(container);
+    const runTranslation = () => {
+      const container = document.getElementById("main") || document.body;
+      translateNode(container);
+    };
 
+    // Run immediately
+    runTranslation();
+
+    // Re-run on dynamic DOM mutations
     const observer = new MutationObserver((mutations) => {
       for (const m of mutations) {
         m.addedNodes.forEach(translateNode);
       }
     });
 
-    observer.observe(container, { childList: true, subtree: true });
-    return () => observer.disconnect();
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Re-run on route changes or history navigation
+    window.addEventListener("popstate", runTranslation);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("popstate", runTranslation);
+    };
   }, [language]);
 
   const dict = getDictionary(language);
@@ -219,6 +316,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         languages: LANGUAGES,
         currentLanguageMeta,
         t: augmentedT,
+        translate,
       }}
     >
       {children}
@@ -237,4 +335,9 @@ export function useLanguage() {
 export function useT(): AugmentedTranslation {
   const { t } = useLanguage();
   return t;
+}
+
+export function useTranslate() {
+  const { translate } = useLanguage();
+  return translate;
 }

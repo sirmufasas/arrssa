@@ -1,15 +1,27 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FloatingContact from "../components/FloatingContact";
 import CookieConsent from "../components/CookieConsent";
 import LanguageModal from "../components/LanguageModal";
 import { useEmbed } from "../hooks/useEmbed";
-import { useT } from "../context/LanguageContext";
+import { useLanguage, useT } from "../context/LanguageContext";
 
 export default function MainLayout() {
   const embed = useEmbed();
   const t = useT();
+  const { language } = useLanguage();
+  const location = useLocation();
+
+  useEffect(() => {
+    // When route changes, trigger translation pass on new page elements
+    if (language === "en") return;
+    const timer = setTimeout(() => {
+      window.dispatchEvent(new Event("popstate"));
+    }, 60);
+    return () => clearTimeout(timer);
+  }, [location.pathname, language]);
 
   return (
     <>

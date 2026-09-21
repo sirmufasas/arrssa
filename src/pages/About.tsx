@@ -7,6 +7,7 @@ import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
 import GoogleReviews from "../components/GoogleReviews";
 import { FeatureItem } from "../components/AboutSections";
+import { useT, useTranslate } from "../context/LanguageContext";
 
 const APPROACH = [
   {
@@ -70,6 +71,9 @@ const VALUES = [
 ];
 
 export default function About() {
+  const t = useT();
+  const tr = useTranslate();
+
   return (
     <>
       <SEO
@@ -96,10 +100,10 @@ export default function About() {
                 loading="lazy"
               />
               <div className="showcase-media__overlay">
-                <span className="showcase-media__tag">Strategic Partnership</span>
-                <h3 className="showcase-media__title">Bridging Realities</h3>
+                <span className="showcase-media__tag">{tr("Strategic Partnership")}</span>
+                <h3 className="showcase-media__title">{tr("Bridging Realities")}</h3>
                 <p className="showcase-media__desc">
-                  Providing corporate entities with direct access, regulatory clarity, and dependable on-the-ground support.
+                  {tr("Providing corporate entities with direct access, regulatory clarity, and dependable on-the-ground support.")}
                 </p>
               </div>
             </div>
@@ -108,26 +112,22 @@ export default function About() {
           <div>
             <ScrollReveal>
               <SectionHeading
-                eyebrow="Who We Are"
-                title="The South African (SADAC) extension of ARS S.A.R.L."
-                description="ARSSA is the South African (SADAC) extension of ARS S.A.R.L. in the Democratic Republic of Congo. We exist to give South African (SADAC) businesses a structured, experienced, and accountable partner for operating across the corridor."
+                eyebrow={tr("Who We Are")}
+                title={tr("The South African (SADAC) extension of ARS S.A.R.L.")}
+                description={tr("ARSSA is the South African (SADAC) extension of ARS S.A.R.L. in the Democratic Republic of Congo. We exist to give South African (SADAC) businesses a structured, experienced, and accountable partner for operating across the corridor.")}
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <h3 style={{ fontSize: 20, marginBottom: 12 }}>What We Do</h3>
+              <h3 style={{ fontSize: 20, marginBottom: 12 }}>{tr("What We Do")}</h3>
               <p className="lead" style={{ fontSize: 16, marginBottom: 24 }}>
-                We help businesses navigate the practical challenges of entering and operating
-                in the DRC — from feasibility, registration, and regulatory mapping through
-                workforce mobility, distributor placement, and cross-border trade facilitation.
+                {tr("We help businesses navigate the practical challenges of entering and operating in the DRC — from feasibility, registration, and regulatory mapping through workforce mobility, distributor placement, and cross-border trade facilitation.")}
               </p>
               <p style={{ color: "var(--ink-soft)", fontSize: 15, marginBottom: 28, lineHeight: 1.65 }}>
-                Rather than managing a fragmented chain of separate consultants, freight agents,
-                and local facilitators, our clients work with one integrated partner that
-                coordinates the full expansion lifecycle.
+                {tr("Rather than managing a fragmented chain of separate consultants, freight agents, and local facilitators, our clients work with one integrated partner that coordinates the full expansion lifecycle.")}
               </p>
               <Link to="/services" className="btn btn--primary">
-                Explore Our Services
+                {t.hero.exploreServices}
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </ScrollReveal>
@@ -141,9 +141,9 @@ export default function About() {
           <ScrollReveal>
             <SectionHeading
               center
-              eyebrow="Our Approach"
-              title="How We Deliver Results"
-              description="Disciplined, practical, and relationship-driven — our approach is built specifically for the realities of cross-border commerce."
+              eyebrow={tr("Our Approach")}
+              title={tr("How We Deliver Results")}
+              description={tr("Disciplined, practical, and relationship-driven — our approach is built specifically for the realities of cross-border commerce.")}
             />
           </ScrollReveal>
 
@@ -151,7 +151,7 @@ export default function About() {
             {APPROACH.map((a, i) => (
               <ScrollReveal key={a.title} delay={i * 0.05}>
                 <div className="card" style={{ padding: 28, height: "100%" }}>
-                  <FeatureItem icon={a.icon} title={a.title} text={a.text} />
+                  <FeatureItem icon={a.icon} title={tr(a.title)} text={tr(a.text)} />
                 </div>
               </ScrollReveal>
             ))}
@@ -173,7 +173,7 @@ export default function About() {
                   backdropFilter: "blur(8px)",
                 }}
               >
-                <p className="eyebrow eyebrow--light">Vision</p>
+                <p className="eyebrow eyebrow--light">{tr("Vision")}</p>
                 <p
                   style={{
                     fontFamily: "var(--font-serif)",
@@ -182,9 +182,7 @@ export default function About() {
                     color: "#ffffff",
                   }}
                 >
-                  “To be the leading partner that simplifies and strengthens cross-border
-                  business between South Africa (SADAC) and the DRC, empowering pharmaceutical,
-                  cosmetic, and agri-food companies to expand with confidence.”
+                  &ldquo;{tr("To be the leading partner that simplifies and strengthens cross-border business between South Africa (SADAC) and the DRC, empowering pharmaceutical, cosmetic, and agri-food companies to expand with confidence.")}&rdquo;
                 </p>
               </div>
             </ScrollReveal>
@@ -199,7 +197,7 @@ export default function About() {
                   backdropFilter: "blur(8px)",
                 }}
               >
-                <p className="eyebrow eyebrow--light">Mission</p>
+                <p className="eyebrow eyebrow--light">{tr("Mission")}</p>
                 <p
                   style={{
                     fontFamily: "var(--font-serif)",
@@ -208,10 +206,7 @@ export default function About() {
                     color: "#ffffff",
                   }}
                 >
-                  “To provide structured, ethical, practical, and results-driven solutions
-                  helping SA companies establish, operate, and grow in the DRC through
-                  compliant facilitation, strategic market development, and integrated trade
-                  support.”
+                  &ldquo;{tr("To provide structured, ethical, practical, and results-driven solutions helping SA companies establish, operate, and grow in the DRC through compliant facilitation, strategic market development, and integrated trade support.")}&rdquo;
                 </p>
               </div>
             </ScrollReveal>
@@ -224,9 +219,9 @@ export default function About() {
         <div className="container">
           <ScrollReveal>
             <SectionHeading
-              eyebrow="Core Values"
-              title="The Principles Behind Every Engagement"
-              description="These values govern our operations, client relationships, and cross-border integrity."
+              eyebrow={tr("Core Values")}
+              title={tr("The Principles Behind Every Engagement")}
+              description={tr("These values govern our operations, client relationships, and cross-border integrity.")}
             />
           </ScrollReveal>
 
@@ -238,8 +233,8 @@ export default function About() {
                     {v.num}
                   </span>
                   <div>
-                    <h3>{v.title}</h3>
-                    <p>{v.text}</p>
+                    <h3>{tr(v.title)}</h3>
+                    <p>{tr(v.text)}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -252,10 +247,10 @@ export default function About() {
       <GoogleReviews />
 
       <CTASection
-        headline="Ready to discuss your cross-border strategy?"
-        text="Whether you are assessing market entry or expanding existing operations in the DRC, ARSSA provides the structure and execution you need."
-        primaryLabel="Start an Enquiry"
-        secondaryLabel="Explore Our Services"
+        headline={tr("Ready to discuss your cross-border strategy?")}
+        text={tr("Whether you are assessing market entry or expanding existing operations in the DRC, ARSSA provides the structure and execution you need.")}
+        primaryLabel={t.cta.primary}
+        secondaryLabel={t.hero.exploreServices}
         secondaryPath="/services"
       />
     </>

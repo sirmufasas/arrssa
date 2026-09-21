@@ -4,6 +4,7 @@ import SEO from "../components/SEO";
 import ScrollReveal from "../components/ScrollReveal";
 import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
+import { useT, useTranslate } from "../context/LanguageContext";
 
 const TIMELINE = [
   {
@@ -39,6 +40,9 @@ const TIMELINE = [
 ];
 
 export default function Legacy() {
+  const t = useT();
+  const tr = useTranslate();
+
   return (
     <>
       <SEO
@@ -63,12 +67,11 @@ export default function Legacy() {
                 <AlertTriangle size={24} aria-hidden="true" />
               </span>
               <div>
-                <h3>Important Context Regarding This Track Record</h3>
+                <h3>{tr("Important Context Regarding This Track Record")}</h3>
                 <p>
-                  The historical projects showcased below reflect the <strong>ARS Group legacy and partnership
-                  experience</strong> in the DRC — rather than claiming every historical project was directly
-                  undertaken by ARSSA as a South African (SADAC) entity. This track record underpins the operational
-                  capability, sector knowledge, and corporate relationships that ARSSA brings to South African (SADAC) clients today.
+                  {tr(
+                    "The historical projects showcased below reflect the ARS Group legacy and partnership experience in the DRC — rather than claiming every historical project was directly undertaken by ARSSA as a South African (SADAC) entity. This track record underpins the operational capability, sector knowledge, and corporate relationships that ARSSA brings to South African (SADAC) clients today."
+                  )}
                 </p>
               </div>
             </div>
@@ -81,9 +84,9 @@ export default function Legacy() {
         <div className="container container--narrow">
           <ScrollReveal>
             <SectionHeading
-              eyebrow="The ARS Group Legacy"
-              title="Selected Track Record &amp; Partnership Experience"
-              description="A representative selection of complex civil, medical, financial, and industrial projects executed in the DRC."
+              eyebrow={tr("The ARS Group Legacy")}
+              title={tr("Selected Track Record & Partnership Experience")}
+              description={tr("A representative selection of complex civil, medical, financial, and industrial projects executed in the DRC.")}
             />
           </ScrollReveal>
 
@@ -100,10 +103,10 @@ export default function Legacy() {
                         style={{ display: "inline-flex", alignItems: "center", gap: 8 }}
                       >
                         <Icon size={14} aria-hidden="true" />
-                        {item.tag}
+                        {tr(item.tag)}
                       </span>
-                      <h3>{item.title}</h3>
-                      <p>{item.text}</p>
+                      <h3>{tr(item.title)}</h3>
+                      <p>{tr(item.text)}</p>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -129,7 +132,7 @@ export default function Legacy() {
                 <ShieldCheck size={32} color="var(--brand-gold)" aria-hidden="true" />
               </div>
               <p className="eyebrow eyebrow--light" style={{ justifyContent: "center" }}>
-                What This Demonstrates
+                {tr("What This Demonstrates")}
               </p>
               <p
                 style={{
@@ -141,9 +144,7 @@ export default function Legacy() {
                   color: "#ffffff",
                 }}
               >
-                This legacy demonstrates operational capacity, experience with complex and
-                regulated projects, and long-standing trust with major corporate and
-                government clients.
+                {tr("This legacy demonstrates operational capacity, experience with complex and regulated projects, and long-standing trust with major corporate and government clients.")}
               </p>
             </div>
           </ScrollReveal>
@@ -151,10 +152,10 @@ export default function Legacy() {
       </section>
 
       <CTASection
-        headline="Work with experience you can verify"
-        text="Ask us about the ARS Group's track record in your vertical — we are glad to discuss relevant project execution in detail."
-        primaryLabel="Request a Discussion"
-        secondaryLabel="About ARSSA"
+        headline={tr("Work with experience you can verify")}
+        text={tr("Ask us about the ARS Group's track record in your vertical — we are glad to discuss relevant project execution in detail.")}
+        primaryLabel={tr("Request a Discussion")}
+        secondaryLabel={t.nav.about}
         secondaryPath="/about"
       />
     </>
