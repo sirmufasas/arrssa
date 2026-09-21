@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import FloatingContact from "../components/FloatingContact";
 import CookieConsent from "../components/CookieConsent";
 import LanguageModal from "../components/LanguageModal";
+import LanguageToast from "../components/LanguageToast";
 import { useEmbed } from "../hooks/useEmbed";
 import { useLanguage, useT } from "../context/LanguageContext";
 
@@ -36,6 +37,7 @@ export default function MainLayout() {
       {!embed && <FloatingContact />}
       {!embed && <CookieConsent />}
       {!embed && <LanguageModal />}
+      {!embed && <LanguageToast />}
     </>
   );
 }

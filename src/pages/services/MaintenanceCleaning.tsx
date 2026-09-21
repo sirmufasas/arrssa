@@ -66,7 +66,7 @@ export default function MaintenanceCleaning() {
       />
 
       <PageHero
-        eyebrow="Division 04 — Maintenance, Cleaning & Compliance"
+        eyebrow="Division 05 — Maintenance, Cleaning & Compliance"
         title="Maintenance, Cleaning & Compliance"
         subtitle="Specialised Operational Support for Regulated Industries"
         crumbs={[

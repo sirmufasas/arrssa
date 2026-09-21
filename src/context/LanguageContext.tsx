@@ -137,10 +137,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     try {
       localStorage.setItem(STORAGE_LANG_KEY, next);
       localStorage.setItem(STORAGE_SELECTED_KEY, "true");
+      sessionStorage.setItem("arssa_lang_changed", next);
     } catch {
       /* ignore */
     }
     setShowLanguageModal(false);
+    window.location.reload();
   }, []);
 
   const translate = useCallback(
