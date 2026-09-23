@@ -2,12 +2,13 @@ export type Language =
   | "en" // English
   | "fr" // Français (French - DRC official)
   | "sw" // Kiswahili (Swahili - DRC & East Africa)
+  | "zh" // 简体中文 (Mandarin Chinese - Global Trade)
+  // --- Commented out languages (re-enable as needed) ---
   | "ln" // Lingála (Lingala - DRC national language)
   | "pt" // Português (Portuguese - Angola, Mozambique, SADC)
   | "af" // Afrikaans (South Africa)
   | "zu" // isiZulu (South Africa)
   | "xh" // isiXhosa (South Africa)
-  | "zh" // 简体中文 (Mandarin Chinese - Global Trade)
   | "ar" // العربية (Arabic - MENA, RTL)
   | "es" // Español (Spanish)
   | "de" // Deutsch (German)
@@ -29,7 +30,7 @@ export interface LanguageMeta {
 }
 
 export const LANGUAGES: LanguageMeta[] = [
-  // --- African & Corridor Languages ---
+  // --- Active Languages: English, French, Swahili, Chinese ---
   {
     code: "en",
     name: "English",
@@ -57,6 +58,18 @@ export const LANGUAGES: LanguageMeta[] = [
     flag: "🇹🇿",
     dir: "ltr",
   },
+  {
+    code: "zh",
+    name: "Chinese (Simplified)",
+    nativeName: "简体中文",
+    region: "中国 / 国际贸易",
+    category: "global",
+    flag: "🇨🇳",
+    dir: "ltr",
+  },
+
+  /*
+  // --- Commented out other languages ---
   {
     code: "ln",
     name: "Lingala",
@@ -100,17 +113,6 @@ export const LANGUAGES: LanguageMeta[] = [
     region: "uMzantsi Afrika",
     category: "regional",
     flag: "🇿🇦",
-    dir: "ltr",
-  },
-
-  // --- Global Trade Languages ---
-  {
-    code: "zh",
-    name: "Chinese (Simplified)",
-    nativeName: "简体中文",
-    region: "中国 / 国际贸易",
-    category: "global",
-    flag: "🇨🇳",
     dir: "ltr",
   },
   {
@@ -194,4 +196,5 @@ export const LANGUAGES: LanguageMeta[] = [
     flag: "🇳🇱",
     dir: "ltr",
   },
+  */
 ];

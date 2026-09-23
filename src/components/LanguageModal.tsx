@@ -146,7 +146,7 @@ export default function LanguageModal() {
               className={`lang-modal__tab ${activeTab === "all" ? "active" : ""}`}
               onClick={() => setActiveTab("all")}
             >
-              All (18)
+              All ({languages.length})
             </button>
             <button
               type="button"
