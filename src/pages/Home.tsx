@@ -7,7 +7,10 @@ import {
   Building2,
   CheckCircle2,
   Globe2,
+  Handshake,
   Layers,
+  MapPin,
+  Share2,
   ShieldCheck,
   Sparkles,
   Zap,
@@ -129,27 +132,45 @@ export default function Home() {
           <ScrollReveal>
             <div className="stats" role="list" aria-label="ARSSA at a glance">
               <div role="listitem">
-                <StatCounter value={5} label={t.coreDivisions} />
-              </div>
-              <div role="listitem">
-                <StatCounter value={2} label={t.countriesBridged} variant="gold" />
-              </div>
-              <div role="listitem">
                 <StatCounter
-                  value={1}
-                  suffix="DRC–Southern Africa"
-                  label={t.operatingPresence}
-                  variant="green"
-                  displayText="DRC–Southern Africa"
+                  value={5}
+                  label={tr("Core Divisions")}
+                  variant="blue"
+                  iconVariant="blue"
+                  icon={<Layers size={26} strokeWidth={1.8} />}
                 />
               </div>
               <div role="listitem">
                 <StatCounter
-                  value={4}
-                  suffix="+"
-                  label={t.sectorsSupported}
-                  variant="red"
-                  displayText="Pharma / Mining"
+                  displayText={
+                    <>
+                      <span>DRC</span>
+                      <span className="stat__val-plus">+</span>
+                      <span>SA</span>
+                    </>
+                  }
+                  label={tr("Established Presence")}
+                  variant="white"
+                  iconVariant="gold"
+                  icon={<MapPin size={26} strokeWidth={1.8} />}
+                />
+              </div>
+              <div role="listitem">
+                <StatCounter
+                  displayText="SADC"
+                  label={tr("Regional Reach")}
+                  variant="white"
+                  iconVariant="green"
+                  icon={<Share2 size={26} strokeWidth={1.8} />}
+                />
+              </div>
+              <div role="listitem">
+                <StatCounter
+                  displayText="B2B"
+                  label={tr("Cross-Border Facilitation")}
+                  variant="white"
+                  iconVariant="blue"
+                  icon={<Handshake size={26} strokeWidth={1.8} />}
                 />
               </div>
             </div>

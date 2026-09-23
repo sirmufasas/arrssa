@@ -1,12 +1,17 @@
+import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 
+export type StatIconVariant = "blue" | "gold" | "green";
+
 interface StatCounterProps {
-  value: number;
+  value?: number;
   suffix?: string;
   label: string;
-  variant?: "default" | "red" | "gold" | "green";
-  /** When provided, the value area renders this text instead of the animated number. */
-  displayText?: string;
+  variant?: "default" | "red" | "gold" | "green" | "blue" | "white";
+  iconVariant?: StatIconVariant;
+  icon?: ReactNode;
+  /** When provided, the value area renders this custom node instead of the number. */
+  displayText?: ReactNode;
 }
 
 export default function StatCounter({
@@ -14,16 +19,17 @@ export default function StatCounter({
   suffix = "",
   label,
   variant = "default",
+  iconVariant = "blue",
+  icon,
   displayText,
 }: StatCounterProps) {
   const ref = useRef<HTMLDivElement>(null);
-  // Keep the real value visible immediately. This prevents the language translator
-  // or a delayed viewport observer from leaving a misleading zero on screen.
-  const [display, setDisplay] = useState(value);
+  const [display, setDisplay] = useState(value ?? 0);
 
   useEffect(() => {
-    // Numbers are content, not animation state: always restore the actual value.
-    if (!displayText) setDisplay(value);
+    if (!displayText && value !== undefined) {
+      setDisplay(value);
+    }
   }, [value, displayText]);
 
   const variantClass =
@@ -33,21 +39,32 @@ export default function StatCounter({
       ? "stat__value--gold"
       : variant === "green"
       ? "stat__value--green"
+      : variant === "blue"
+      ? "stat__value--blue"
+      : variant === "white"
+      ? "stat__value--white"
       : "";
 
   return (
     <div className="stat" ref={ref}>
-      {displayText ? (
-        <div className={`stat__value ${variantClass}`} style={{ fontSize: "clamp(26px, 3.4vw, 40px)" }}>
-          {displayText}
-        </div>
-      ) : (
-        <div className={`stat__value ${variantClass}`} aria-label={String(value)}>
-          {display}
-          {suffix}
+      {icon && (
+        <div className={`stat__icon-box stat__icon-box--${iconVariant}`}>
+          {icon}
         </div>
       )}
-      <div className="stat__label">{label}</div>
+      <div className="stat__content">
+        {displayText ? (
+          <div className={`stat__value ${variantClass}`}>
+            {displayText}
+          </div>
+        ) : (
+          <div className={`stat__value ${variantClass}`} aria-label={String(value)}>
+            {display}
+            {suffix}
+          </div>
+        )}
+        <div className="stat__label">{label}</div>
+      </div>
     </div>
   );
 }
